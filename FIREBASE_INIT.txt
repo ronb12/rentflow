@@ -1,0 +1,32 @@
+Firebase is now linked to project: amplifi-a54d9
+
+NEXT STEPS:
+
+1. Enable services in Firebase Console:
+   https://console.firebase.google.com/project/amplifi-a54d9
+
+   Enable these services:
+   - Authentication (Email/Password provider)
+   - Firestore Database (test mode is fine for now)
+   - Storage (test mode is fine for now)
+   - Hosting (already configured)
+   - Functions (for late fees & webhooks)
+
+2. Get your Firebase config:
+   - Go to Project Settings → Your apps
+   - Copy the config values
+   - Add to .env.local file
+
+3. Initialize Firebase services (run this command):
+   firebase init firestore hosting functions
+
+4. Deploy Firestore rules and indexes:
+   firebase deploy --only firestore:rules,firestore:indexes
+
+5. Build and deploy the app:
+   npm run build
+   firebase deploy --only hosting
+
+Note: Using an existing Firebase project is SAFE. Each project can host multiple apps.
+This project (amplifi-a54d9) is now configured for RentFlow and Amplifi separately.
+
