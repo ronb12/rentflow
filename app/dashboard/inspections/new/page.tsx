@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { saveInspectionDraft, savePhoto } from "@/lib/idb";
 import { Camera } from "lucide-react";
 import { Inspection } from "@/types";
+import { compressImage } from "@/lib/image-compression";
 
 export default function NewInspectionPage() {
   const router = useRouter();
@@ -24,9 +25,15 @@ export default function NewInspectionPage() {
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
     for (const file of files) {
-      const id = `photo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      await savePhoto(id, file);
-      setPhotos((prev) => [...prev, id]);
+      try {
+        // Compress image to save Storage quota
+        const compressedBlob = await compressImage(file);
+        const id = `photo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        await savePhoto(id, compressedBlob);
+        setPhotos((prev) => [...prev, id]);
+      } catch (error) {
+        console.error("Failed to process image:", error);
+      }
     }
   };
 

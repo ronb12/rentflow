@@ -18,6 +18,7 @@ import {
   DollarSign,
   Bell,
   Map,
+  BarChart3,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,7 @@ const navigation = [
   { name: "Inspections", href: "/dashboard/inspections", icon: ClipboardCheck },
   { name: "Work Orders", href: "/dashboard/work-orders", icon: Wrench },
   { name: "Reports", href: "/dashboard/reports", icon: FileText },
+  { name: "Usage", href: "/dashboard/usage", icon: BarChart3 },
 ];
 
 interface DashboardLayoutProps {
