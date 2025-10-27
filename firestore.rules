@@ -1,0 +1,115 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to check if user owns the organization
+    function isOrganizationOwner(orgId) {
+      return isAuthenticated() && 
+             exists(/databases/$(database)/documents/organizations/$(orgId)) &&
+             get(/databases/$(database)/documents/organizations/$(orgId)).data.ownerId == request.auth.uid;
+    }
+
+    // Helper function to check if user belongs to the organization
+    function isOrganizationMember(orgId) {
+      return isAuthenticated() && 
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.organizationId == orgId;
+    }
+
+    // Organizations
+    match /organizations/{orgId} {
+      allow read: if isOrganizationMember(orgId);
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationOwner(orgId);
+    }
+
+    // Users
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      allow update: if request.auth.uid == userId;
+      allow delete: if isOrganizationOwner(resource.data.organizationId);
+    }
+
+    // Properties
+    match /properties/{propertyId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Units
+    match /units/{unitId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Lots
+    match /lots/{lotId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Homes
+    match /homes/{homeId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Tenants
+    match /tenants/{tenantId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Leases
+    match /leases/{leaseId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Invoices
+    match /invoices/{invoiceId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Inspections
+    match /inspections/{inspectionId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Work Orders
+    match /workOrders/{orderId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isOrganizationMember(resource.data.organizationId);
+    }
+
+    // Notifications
+    match /notifications/{notificationId} {
+      allow read: if request.auth.uid == resource.data.userId;
+      allow create: if isAuthenticated();
+      allow update: if request.auth.uid == resource.data.userId;
+      allow delete: if request.auth.uid == resource.data.userId;
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
