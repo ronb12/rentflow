@@ -9,7 +9,7 @@ export default function RenterDashboard() {
     <div>
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">My Dashboard</h1>
-        <p className="text-muted-foreground">Welcome back! Here's your rental overview.</p>
+        <p className="text-muted-foreground">Welcome back! Here&apos;s your rental overview.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

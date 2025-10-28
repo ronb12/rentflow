@@ -76,7 +76,7 @@ export default function MessagesPage() {
               </div>
               <div className="flex justify-start">
                 <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
-                  <p>Our maintenance team is scheduled to visit tomorrow morning between 9-11 AM. They'll contact you directly when they arrive.</p>
+                  <p>Our maintenance team is scheduled to visit tomorrow morning between 9-11 AM. They&apos;ll contact you directly when they arrive.</p>
                   <p className="text-xs text-gray-500 mt-1">Dec 20, 2024 3:30 PM</p>
                 </div>
               </div>
