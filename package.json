@@ -10,8 +10,7 @@
     "typecheck": "tsc --noEmit",
     "emulate": "firebase emulators:start",
     "seed": "tsx scripts/seed.ts",
-    "export": "next build && next export",
-    "check-usage": "tsx scripts/monitoring/check-usage.ts"
+    "export": "next build && next export"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
