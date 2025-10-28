@@ -4,7 +4,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
-  output: "export",
+  // Removed "output: export" to enable API routes
   images: {
     unoptimized: true,
   },
