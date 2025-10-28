@@ -216,7 +216,7 @@ class RentFlowTester {
           const response = await fetch('/api/properties');
           return { status: response.status, ok: response.ok };
         } catch (error) {
-          return { status: 0, ok: false, error: error.message };
+          return { status: 0, ok: false, error: (error as Error).message };
         }
       });
       
@@ -232,7 +232,7 @@ class RentFlowTester {
           const response = await fetch('/api/tenants');
           return { status: response.status, ok: response.ok };
         } catch (error) {
-          return { status: 0, ok: false, error: error.message };
+          return { status: 0, ok: false, error: (error as Error).message };
         }
       });
       
