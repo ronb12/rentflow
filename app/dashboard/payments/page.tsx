@@ -135,7 +135,7 @@ export default function PaymentsPage() {
               <ol className="text-sm text-blue-800 space-y-1">
                 <li>1. <strong>Select Amount:</strong> Enter the payment amount (defaults to monthly rent)</li>
                 <li>2. <strong>Choose Method:</strong> Select from saved payment methods (credit card or bank account)</li>
-                <li>3. <strong>Submit Payment:</strong> Click "Pay Now" to process the payment</li>
+                <li>3. <strong>Submit Payment:</strong> Click &quot;Pay Now&quot; to process the payment</li>
                 <li>4. <strong>Backend Processing:</strong> Payment data is sent to our secure API endpoint</li>
                 <li>5. <strong>Payment Gateway:</strong> Integration with Stripe for secure payment processing</li>
                 <li>6. <strong>Confirmation:</strong> Real-time confirmation and receipt generation</li>
