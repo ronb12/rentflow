@@ -12,15 +12,8 @@ export const db = client;
 export async function query(sql: string, params: any[] = []) {
   try {
     const result = await client.execute(sql, params);
-    return result.rows.map(row => {
-      const obj: any = {};
-      if (row) {
-        row.forEach((value: any, key: string) => {
-          obj[key] = value;
-        });
-      }
-      return obj;
-    });
+    // Return raw rows for now - will handle conversion in API routes
+    return result.rows;
   } catch (error) {
     console.error("Database query error:", error);
     throw error;

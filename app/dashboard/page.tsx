@@ -1,19 +1,9 @@
 "use client";
 
-import { useAuth } from "@/hooks/use-auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Users, DollarSign, ClipboardCheck } from "lucide-react";
-import { useCollection } from "react-firebase-hooks/firestore";
-import { collection } from "firebase/firestore";
-import { db } from "@/lib/firebase";
 
 export default function DashboardPage() {
-  const { user } = useAuth();
-
-  // Fetch stats (will be replaced with actual queries)
-  // const [properties] = useCollection(collection(db, "properties"));
-  // const [tenants] = useCollection(collection(db, "tenants"));
-
   return (
     <div>
       <h1 className="text-3xl font-bold mb-8">Dashboard</h1>
