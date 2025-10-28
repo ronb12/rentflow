@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
-import { saveInspectionDraft, savePhoto } from "@/lib/idb";
+import { saveInspectionDraft, savePhoto, updateInspectionStatus } from "@/lib/idb";
 import { Camera } from "lucide-react";
 import { Inspection } from "@/types";
 import { compressImage } from "@/lib/image-compression";
