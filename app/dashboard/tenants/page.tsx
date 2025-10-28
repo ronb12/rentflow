@@ -1,28 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plus, User } from "lucide-react";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
 
 export default function TenantsPage() {
   const [tenants, setTenants] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    loadTenants();
+  }, []);
+
+  const loadTenants = async () => {
+    try {
+      const res = await fetch("/api/tenants");
+      const data = await res.json();
+      setTenants(data);
+    } catch (error) {
+      console.error("Failed to load tenants:", error);
+    }
+  };
+
   const handleAddTenant = async () => {
     setLoading(true);
     try {
-      await addDoc(collection(db, "tenants"), {
-        firstName: "John",
-        lastName: "Doe",
-        email: "john@example.com",
-        phone: "555-0100",
-        organizationId: "org_1",
-        createdAt: new Date(),
-        updatedAt: new Date(),
+      await fetch("/api/tenants", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: "John",
+          lastName: "Doe",
+          email: "john@example.com",
+          phone: "555-0100",
+          organizationId: "org_1",
+        }),
       });
+      await loadTenants();
     } catch (error) {
       console.error("Failed to add tenant:", error);
     } finally {

@@ -1,29 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plus } from "lucide-react";
 import Link from "next/link";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
 
 export default function PropertiesPage() {
   const [properties, setProperties] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    loadProperties();
+  }, []);
+
+  const loadProperties = async () => {
+    try {
+      const res = await fetch("/api/properties");
+      const data = await res.json();
+      setProperties(data);
+    } catch (error) {
+      console.error("Failed to load properties:", error);
+    }
+  };
+
   const handleAddProperty = async () => {
     setLoading(true);
     try {
-      await addDoc(collection(db, "properties"), {
-        name: "Sample Property",
-        address: "123 Main St",
-        type: "apartment",
-        organizationId: "org_1",
-        isActive: true,
-        createdAt: new Date(),
-        updatedAt: new Date(),
+      await fetch("/api/properties", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Sample Property",
+          address: "123 Main St",
+          type: "apartment",
+          organizationId: "org_1",
+          isActive: true,
+        }),
       });
+      await loadProperties();
     } catch (error) {
       console.error("Failed to add property:", error);
     } finally {
