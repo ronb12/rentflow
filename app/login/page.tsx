@@ -20,8 +20,21 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      // Simple auth for now - accept any email/password
-      router.push("/dashboard");
+      // Simple auth for demo - accept test accounts
+      if (
+        (email === "renter@example.com" && password === "Renter!234") ||
+        (email === "manager@example.com" && password === "Manager!234") ||
+        // Allow any email/password for demo purposes
+        (email && password)
+      ) {
+        // Store user email and role in localStorage for role detection
+        const role = email === "manager@example.com" ? "manager" : "renter";
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userRole', role);
+        router.push(`/dashboard?role=${role}`);
+      } else {
+        setError("Invalid credentials. Use renter@example.com/Renter!234 or manager@example.com/Manager!234");
+      }
     } catch (err: any) {
       setError(err.message || "Failed to sign in");
     } finally {
@@ -80,7 +93,7 @@ export default function LoginPage() {
             </p>
             <div className="space-y-2 text-xs">
               <p>
-                <strong>Owner:</strong> owner@example.com / Owner!234
+                <strong>Renter:</strong> renter@example.com / Renter!234
               </p>
               <p>
                 <strong>Manager:</strong> manager@example.com / Manager!234

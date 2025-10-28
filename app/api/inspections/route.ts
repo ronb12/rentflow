@@ -1,9 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { query, initSchema } from "@/lib/db";
+
+// Initialize schema on first request
+let schemaInitialized = false;
+async function ensureSchema() {
+  if (!schemaInitialized) {
+    await initSchema();
+    schemaInitialized = true;
+  }
+}
 
 // GET /api/inspections
 export async function GET() {
   try {
+    await ensureSchema();
     const rows = await query("SELECT * FROM inspections ORDER BY date DESC");
     return NextResponse.json(rows);
   } catch (error) {
@@ -18,6 +28,7 @@ export async function GET() {
 // POST /api/inspections
 export async function POST(req: NextRequest) {
   try {
+    await ensureSchema();
     const data = await req.json();
     const id = `insp_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const now = Date.now();

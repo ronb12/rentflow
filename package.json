@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3004",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,11 +12,18 @@
     "seed": "tsx scripts/seed.ts",
     "export": "next build && next export",
     "test": "npx tsx test-suite.ts",
+    "test:renter": "npx tsx test-renter.ts",
+    "test:renter-functional": "npx tsx test-renter-functional.ts",
+    "test:renter-backend": "npx tsx test-renter-backend.ts",
+    "test:manager": "npx tsx test-suite.ts",
     "test:seed": "npx tsx seed-test-data.ts",
     "test:full": "./run-tests.sh"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-select": "^2.2.6",
     "@stripe/stripe-js": "^5.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

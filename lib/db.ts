@@ -8,16 +8,28 @@ const client = createClient({
 
 export const db = client;
 
-// Helper function to execute queries
+// Helper function to execute queries with retry logic
 export async function query(sql: string, params: any[] = []) {
-  try {
-    const result = await client.execute(sql, params);
-    // Return raw rows for now - will handle conversion in API routes
-    return result.rows;
-  } catch (error) {
-    console.error("Database query error:", error);
-    throw error;
+  const maxRetries = 3;
+  let lastError;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const result = await client.execute(sql, params);
+      // Return raw rows for now - will handle conversion in API routes
+      return result.rows;
+    } catch (error) {
+      lastError = error;
+      console.error(`Database query error (attempt ${attempt}/${maxRetries}):`, error);
+      
+      if (attempt < maxRetries) {
+        // Wait before retry (exponential backoff)
+        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+      }
+    }
   }
+  
+  throw lastError;
 }
 
 // Initialize schema
@@ -85,21 +97,51 @@ export async function initSchema() {
       updated_at INTEGER
     );
 
-    CREATE TABLE IF NOT EXISTS inspections (
-      id TEXT PRIMARY KEY,
-      property_id TEXT,
-      unit_id TEXT,
-      lot_id TEXT,
-      inspection_type TEXT,
-      date INTEGER,
-      condition_notes TEXT,
-      photos TEXT,
-      status TEXT,
-      synced_at INTEGER,
-      organization_id TEXT,
-      created_at INTEGER,
-      updated_at INTEGER
-    );
+        CREATE TABLE IF NOT EXISTS inspections (
+          id TEXT PRIMARY KEY,
+          property_id TEXT,
+          unit_id TEXT,
+          lot_id TEXT,
+          inspection_type TEXT,
+          date INTEGER,
+          condition_notes TEXT,
+          photos TEXT,
+          status TEXT,
+          synced_at INTEGER,
+          organization_id TEXT,
+          created_at INTEGER,
+          updated_at INTEGER
+        );
+
+        CREATE TABLE IF NOT EXISTS payments (
+          id TEXT PRIMARY KEY,
+          tenant_id TEXT,
+          amount INTEGER,
+          payment_method TEXT,
+          status TEXT,
+          created_at INTEGER,
+          updated_at INTEGER
+        );
+
+        CREATE TABLE IF NOT EXISTS maintenance_requests (
+          id TEXT PRIMARY KEY,
+          tenant_id TEXT,
+          issue_type TEXT,
+          description TEXT,
+          priority TEXT,
+          status TEXT,
+          created_at INTEGER,
+          updated_at INTEGER
+        );
+
+        CREATE TABLE IF NOT EXISTS messages (
+          id TEXT PRIMARY KEY,
+          tenant_id TEXT,
+          message TEXT,
+          status TEXT,
+          created_at INTEGER,
+          updated_at INTEGER
+        );
   `;
 
   try {
