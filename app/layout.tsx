@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     icon: "/icon-192.svg",
     apple: "/icon-192.svg",
   },
+  other: {
+    "mobile-web-app-capable": "yes",
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="mobile-web-app-capable" content="yes" />
+      </head>
       <body className={inter.className}>
         <PWAProvider>{children}</PWAProvider>
       </body>

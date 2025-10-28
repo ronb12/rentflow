@@ -20,6 +20,7 @@ import {
   CreditCard,
   MessageSquare,
   Menu,
+  X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const pathname = usePathname();
 
   const [userRole, setUserRole] = useState<'manager' | 'renter' | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const role = resolveClientRole();
@@ -68,8 +70,17 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     router.push("/login");
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+      {/* Desktop Sidebar */}
       <div className="hidden border-r bg-muted/40 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
@@ -104,14 +115,78 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="fixed inset-0 bg-black/50" onClick={closeMobileMenu} />
+          <div className="fixed left-0 top-0 h-full w-64 bg-white shadow-lg">
+            <div className="flex h-14 items-center justify-between border-b px-4">
+              <Link href="/" className="flex items-center gap-2 font-semibold" onClick={closeMobileMenu}>
+                <Building2 className="h-6 w-6" />
+                <span>RentFlow</span>
+              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={closeMobileMenu}
+                className="h-8 w-8 p-0"
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+            <nav className="flex-1 px-2 py-4">
+              <div className="space-y-1">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMobileMenu}
+                    className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                      pathname === item.href 
+                        ? "bg-primary text-primary-foreground" 
+                        : "text-muted-foreground hover:text-primary hover:bg-muted"
+                    }`}
+                  >
+                    <item.icon className="h-4 w-4" />
+                    {item.label}
+                  </Link>
+                ))}
+                <Button
+                  onClick={() => {
+                    closeMobileMenu();
+                    handleLogout();
+                  }}
+                  className="mt-4 w-full justify-start gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted"
+                  variant="ghost"
+                >
+                  <LogOut className="h-4 w-4" />
+                  Logout
+                </Button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-col">
         <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="md:hidden"
+            onClick={toggleMobileMenu}
+          >
+            <Menu className="h-5 w-5" />
+          </Button>
+          
           <div className="w-full flex-1">
             <div className="flex items-center justify-between">
               <h1 className="text-lg font-semibold">
                 {userRole === 'manager' ? 'Property Management' : 'My Rental'}
               </h1>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground hidden sm:block">
                 {userRole === 'manager' ? 'Manager Dashboard' : 'Tenant Portal'}
               </div>
             </div>

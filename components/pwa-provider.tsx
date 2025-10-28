@@ -13,10 +13,16 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
       navigator.serviceWorker
         .register("/sw.js")
         .then((registration) => {
-          console.log("Service Worker registered:", registration.scope);
+          // Only log in development
+          if (process.env.NODE_ENV === 'development') {
+            console.log("Service Worker registered:", registration.scope);
+          }
         })
         .catch((error) => {
-          console.log("Service Worker registration failed:", error);
+          // Only log errors in development
+          if (process.env.NODE_ENV === 'development') {
+            console.log("Service Worker registration failed:", error);
+          }
         });
 
       // Listen for updates
@@ -36,12 +42,20 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
 
     // Handle install prompt
     const handleBeforeInstallPrompt = (e: Event) => {
+      // Prevent the default mini-infobar from appearing on mobile
       e.preventDefault();
+      // Stash the event so it can be triggered later
       setDeferredPrompt(e);
       setIsInstallable(true);
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+    // Handle successful installation
+    window.addEventListener("appinstalled", () => {
+      setIsInstallable(false);
+      setDeferredPrompt(null);
+    });
 
     return () => {
       window.removeEventListener("online", updateOnlineStatus);
@@ -53,10 +67,18 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
   const handleInstall = async () => {
     if (!deferredPrompt) return;
 
+    // Show the install prompt
     deferredPrompt.prompt();
+    
+    // Wait for the user to respond to the prompt
     const { outcome } = await deferredPrompt.userChoice;
-    console.log(`User response to install prompt: ${outcome}`);
+    
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`User response to install prompt: ${outcome}`);
+    }
 
+    // Clear the deferredPrompt
     setDeferredPrompt(null);
     setIsInstallable(false);
   };
@@ -72,10 +94,16 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
 
       {/* Install prompt */}
       {isInstallable && (
-        <div className="fixed bottom-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg z-50">
-          <button onClick={handleInstall} className="font-semibold">
-            Install RentFlow
-          </button>
+        <div className="fixed bottom-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg z-50 max-w-sm">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-sm">Install RentFlow for better experience</span>
+            <button 
+              onClick={handleInstall} 
+              className="bg-white text-primary px-3 py-1 rounded text-sm font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Install
+            </button>
+          </div>
         </div>
       )}
 
