@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { query, initSchema } from "@/lib/db";
 import Stripe from 'stripe';
 
-// Initialize Stripe
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+// Initialize Stripe (only if key is provided)
+const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2025-02-24.acacia',
-});
+}) : null;
 
 // Initialize schema on first request
 let schemaInitialized = false;
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     const body = await req.text();
     const signature = req.headers.get('stripe-signature');
 
-    if (!signature || !process.env.STRIPE_WEBHOOK_SECRET) {
+    if (!stripe || !signature || !process.env.STRIPE_WEBHOOK_SECRET) {
       console.warn("Stripe webhook signature or secret not configured");
       return NextResponse.json({ received: true });
     }
