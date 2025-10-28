@@ -38,7 +38,16 @@ export function getRoleFromUrl(): 'manager' | 'renter' | null {
 // Determine role on client preferring URL, then localStorage
 export function resolveClientRole(): 'manager' | 'renter' {
   if (typeof window === 'undefined') return 'renter';
+  
+  // First check URL parameter
   const fromUrl = getRoleFromUrl();
-  if (fromUrl) return fromUrl;
-  return getCurrentUserRole();
+  if (fromUrl) {
+    // Store in localStorage for consistency
+    localStorage.setItem('userRole', fromUrl);
+    return fromUrl;
+  }
+  
+  // Then check localStorage
+  const fromStorage = getCurrentUserRole();
+  return fromStorage;
 }
