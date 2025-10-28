@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Wrench, Plus, Search, Calendar, User, Building2, AlertCircle, CheckCircle, Clock, Filter } from "lucide-react";
+import { Wrench, Plus, Search, Calendar, User, Building2, AlertCircle, CheckCircle, Clock, Filter, Edit, Trash2 } from "lucide-react";
 
 export default function WorkOrdersPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,6 +13,11 @@ export default function WorkOrdersPage() {
   const [filterPriority, setFilterPriority] = useState("all");
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showAssignModal, setShowAssignModal] = useState(false);
+  const [showScheduleModal, setShowScheduleModal] = useState(false);
+  const [selectedWorkOrder, setSelectedWorkOrder] = useState<any>(null);
+  const [newAssignee, setNewAssignee] = useState("");
+  const [newDueDate, setNewDueDate] = useState("");
 
   // Sample work order data
   const [workOrders, setWorkOrders] = useState([
@@ -110,6 +115,56 @@ export default function WorkOrdersPage() {
         workOrder.id === workOrderId ? { ...workOrder, status: newStatus } : workOrder
       )
     );
+  };
+
+  const handleAssignTechnician = (workOrder: any) => {
+    setSelectedWorkOrder(workOrder);
+    setNewAssignee(workOrder.assignedTo);
+    setShowAssignModal(true);
+  };
+
+  const handleScheduleWorkOrder = (workOrder: any) => {
+    setSelectedWorkOrder(workOrder);
+    setNewDueDate(workOrder.dueDate);
+    setShowScheduleModal(true);
+  };
+
+  const handleUpdateAssignee = () => {
+    if (!selectedWorkOrder || !newAssignee.trim()) return;
+    
+    setWorkOrders(prev => 
+      prev.map(workOrder => 
+        workOrder.id === selectedWorkOrder.id 
+          ? { ...workOrder, assignedTo: newAssignee.trim() }
+          : workOrder
+      )
+    );
+    
+    setShowAssignModal(false);
+    setSelectedWorkOrder(null);
+    setNewAssignee("");
+  };
+
+  const handleUpdateDueDate = () => {
+    if (!selectedWorkOrder || !newDueDate) return;
+    
+    setWorkOrders(prev => 
+      prev.map(workOrder => 
+        workOrder.id === selectedWorkOrder.id 
+          ? { ...workOrder, dueDate: newDueDate }
+          : workOrder
+      )
+    );
+    
+    setShowScheduleModal(false);
+    setSelectedWorkOrder(null);
+    setNewDueDate("");
+  };
+
+  const handleDeleteWorkOrder = (workOrderId: string) => {
+    if (confirm('Are you sure you want to delete this work order?')) {
+      setWorkOrders(prev => prev.filter(wo => wo.id !== workOrderId));
+    }
   };
 
   const filteredWorkOrders = workOrders.filter(workOrder => {
@@ -430,11 +485,37 @@ export default function WorkOrdersPage() {
                       </td>
                       <td className="p-2">
                         <div className="flex gap-1">
-                          <Button variant="outline" size="sm">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => handleAssignTechnician(workOrder)}
+                            title="Assign Technician"
+                          >
                             <User className="h-4 w-4" />
                           </Button>
-                          <Button variant="outline" size="sm">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => handleScheduleWorkOrder(workOrder)}
+                            title="Schedule/Update Due Date"
+                          >
                             <Calendar className="h-4 w-4" />
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            title="Edit Work Order"
+                          >
+                            <Edit className="h-4 w-4" />
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => handleDeleteWorkOrder(workOrder.id)}
+                            title="Delete Work Order"
+                            className="text-red-600 hover:text-red-700"
+                          >
+                            <Trash2 className="h-4 w-4" />
                           </Button>
                         </div>
                       </td>
@@ -446,6 +527,96 @@ export default function WorkOrdersPage() {
           )}
         </CardContent>
       </Card>
+
+      {/* Assign Technician Modal */}
+      {showAssignModal && selectedWorkOrder && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-full max-w-md">
+            <h3 className="text-lg font-semibold mb-4">Assign Technician</h3>
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="workOrderTitle">Work Order</Label>
+                <Input
+                  id="workOrderTitle"
+                  value={selectedWorkOrder.title}
+                  disabled
+                  className="bg-gray-50"
+                />
+              </div>
+              <div>
+                <Label htmlFor="assignee">Assign To</Label>
+                <Input
+                  id="assignee"
+                  value={newAssignee}
+                  onChange={(e) => setNewAssignee(e.target.value)}
+                  placeholder="Enter technician name"
+                  required
+                />
+              </div>
+            </div>
+            <div className="flex gap-2 mt-6">
+              <Button onClick={handleUpdateAssignee} disabled={!newAssignee.trim()}>
+                Update Assignment
+              </Button>
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  setShowAssignModal(false);
+                  setSelectedWorkOrder(null);
+                  setNewAssignee("");
+                }}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Schedule Work Order Modal */}
+      {showScheduleModal && selectedWorkOrder && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-full max-w-md">
+            <h3 className="text-lg font-semibold mb-4">Schedule Work Order</h3>
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="workOrderTitleSchedule">Work Order</Label>
+                <Input
+                  id="workOrderTitleSchedule"
+                  value={selectedWorkOrder.title}
+                  disabled
+                  className="bg-gray-50"
+                />
+              </div>
+              <div>
+                <Label htmlFor="dueDate">Due Date</Label>
+                <Input
+                  id="dueDate"
+                  type="date"
+                  value={newDueDate}
+                  onChange={(e) => setNewDueDate(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            <div className="flex gap-2 mt-6">
+              <Button onClick={handleUpdateDueDate} disabled={!newDueDate}>
+                Update Schedule
+              </Button>
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  setShowScheduleModal(false);
+                  setSelectedWorkOrder(null);
+                  setNewDueDate("");
+                }}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

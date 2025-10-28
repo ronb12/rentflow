@@ -47,6 +47,11 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
       // Stash the event so it can be triggered later
       setDeferredPrompt(e);
       setIsInstallable(true);
+      
+      // Only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('PWA: Install prompt available');
+      }
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);

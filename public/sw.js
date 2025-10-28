@@ -7,8 +7,8 @@ const PRECACHE_ASSETS = [
   "/login",
   "/dashboard",
   "/manifest.json",
-  "/icon-192.png",
-  "/icon-512.png",
+  "/icon-192.svg",
+  "/icon-512.svg",
 ];
 
 // Install event - cache app shell
@@ -16,7 +16,18 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Service Worker: Pre-caching app shell");
-      return cache.addAll(PRECACHE_ASSETS);
+      return cache.addAll(PRECACHE_ASSETS).catch((error) => {
+        console.warn("Service Worker: Some assets failed to cache:", error);
+        // Cache what we can
+        return Promise.allSettled(
+          PRECACHE_ASSETS.map(asset => 
+            cache.add(asset).catch(err => {
+              console.warn(`Failed to cache ${asset}:`, err);
+              return null;
+            })
+          )
+        );
+      });
     })
   );
   self.skipWaiting();
