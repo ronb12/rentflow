@@ -52,7 +52,7 @@ class RentFlowTester {
   async navigateTo(url: string) {
     if (!this.page) throw new Error('Page not initialized');
     await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 10000 });
-    await this.page.waitForTimeout(1000);
+    await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
   async testHomePage() {
@@ -89,7 +89,7 @@ class RentFlowTester {
         await this.page!.click('button[type="submit"]');
         
         // Wait for navigation
-        await this.page!.waitForTimeout(2000);
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
         const currentUrl = this.page!.url();
         if (currentUrl.includes('/dashboard')) {
