@@ -12,7 +12,13 @@ export const db = client;
 export async function query(sql: string, params: any[] = []) {
   try {
     const result = await client.execute(sql, params);
-    return result.rows;
+    return result.rows.map(row => {
+      const obj: any = {};
+      row.forEach((value: any, key: string) => {
+        obj[key] = value;
+      });
+      return obj;
+    });
   } catch (error) {
     console.error("Database query error:", error);
     throw error;
@@ -22,6 +28,18 @@ export async function query(sql: string, params: any[] = []) {
 // Initialize schema
 export async function initSchema() {
   const schema = `
+    CREATE TABLE IF NOT EXISTS users (
+      id TEXT PRIMARY KEY,
+      email TEXT UNIQUE NOT NULL,
+      display_name TEXT,
+      password TEXT,
+      password_hash TEXT,
+      role TEXT DEFAULT 'manager',
+      organization_id TEXT,
+      created_at INTEGER,
+      updated_at INTEGER
+    );
+
     CREATE TABLE IF NOT EXISTS properties (
       id TEXT PRIMARY KEY,
       name TEXT NOT NULL,
@@ -96,4 +114,3 @@ export async function initSchema() {
     console.error("Schema initialization error:", error);
   }
 }
-
