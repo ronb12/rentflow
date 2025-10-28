@@ -105,15 +105,27 @@ export default function LoginPage() {
         return;
       }
 
-      // Simulate password reset email
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSuccess(`Password reset instructions sent to ${email}`);
-      
-      setTimeout(() => {
-        setMode("login");
-        setEmail("");
-        setSuccess("");
-      }, 3000);
+      // Call the password reset API
+      const response = await fetch('/api/auth/reset-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccess(data.message);
+        setTimeout(() => {
+          setMode("login");
+          setEmail("");
+          setSuccess("");
+        }, 3000);
+      } else {
+        setError(data.error || "Failed to send reset email");
+      }
       
     } catch (err: any) {
       setError(err.message || "Failed to send reset email");
