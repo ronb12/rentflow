@@ -55,11 +55,8 @@ export default function NewInspectionPage() {
         updatedAt: new Date(),
       };
 
-      await saveInspectionDraft(inspection);
-      
       // Save to IndexedDB first (offline)
-      const draftInspection = { ...inspection, status: "queued" };
-      await saveInspectionDraft(draftInspection);
+      await saveInspectionDraft(inspection);
 
       // Try to sync if online
       if (navigator.onLine) {
@@ -67,7 +64,7 @@ export default function NewInspectionPage() {
           await fetch("/api/inspections", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(draftInspection),
+            body: JSON.stringify(inspection),
           });
           await updateInspectionStatus(inspection.id, "synced");
         } catch (error) {
