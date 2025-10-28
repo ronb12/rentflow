@@ -15,9 +15,20 @@ export default function WorkOrdersPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [showScheduleModal, setShowScheduleModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   const [selectedWorkOrder, setSelectedWorkOrder] = useState<any>(null);
   const [newAssignee, setNewAssignee] = useState("");
   const [newDueDate, setNewDueDate] = useState("");
+  const [editForm, setEditForm] = useState({
+    title: "",
+    description: "",
+    tenantName: "",
+    property: "",
+    priority: "medium",
+    assignedTo: "",
+    dueDate: "",
+    estimatedCost: ""
+  });
 
   // Sample work order data
   const [workOrders, setWorkOrders] = useState([
@@ -159,6 +170,56 @@ export default function WorkOrdersPage() {
     setShowScheduleModal(false);
     setSelectedWorkOrder(null);
     setNewDueDate("");
+  };
+
+  const handleEditWorkOrder = (workOrder: any) => {
+    setSelectedWorkOrder(workOrder);
+    setEditForm({
+      title: workOrder.title,
+      description: workOrder.description,
+      tenantName: workOrder.tenantName,
+      property: workOrder.property,
+      priority: workOrder.priority,
+      assignedTo: workOrder.assignedTo,
+      dueDate: workOrder.dueDate,
+      estimatedCost: workOrder.estimatedCost.toString()
+    });
+    setShowEditModal(true);
+  };
+
+  const handleUpdateWorkOrder = () => {
+    if (!selectedWorkOrder) return;
+    
+    setWorkOrders(prev => 
+      prev.map(workOrder => 
+        workOrder.id === selectedWorkOrder.id 
+          ? { 
+              ...workOrder, 
+              title: editForm.title,
+              description: editForm.description,
+              tenantName: editForm.tenantName,
+              property: editForm.property,
+              priority: editForm.priority,
+              assignedTo: editForm.assignedTo,
+              dueDate: editForm.dueDate,
+              estimatedCost: parseFloat(editForm.estimatedCost)
+            }
+          : workOrder
+      )
+    );
+    
+    setShowEditModal(false);
+    setSelectedWorkOrder(null);
+    setEditForm({
+      title: "",
+      description: "",
+      tenantName: "",
+      property: "",
+      priority: "medium",
+      assignedTo: "",
+      dueDate: "",
+      estimatedCost: ""
+    });
   };
 
   const handleDeleteWorkOrder = (workOrderId: string) => {
@@ -504,6 +565,7 @@ export default function WorkOrdersPage() {
                           <Button 
                             variant="outline" 
                             size="sm"
+                            onClick={() => handleEditWorkOrder(workOrder)}
                             title="Edit Work Order"
                           >
                             <Edit className="h-4 w-4" />
@@ -609,6 +671,133 @@ export default function WorkOrdersPage() {
                   setShowScheduleModal(false);
                   setSelectedWorkOrder(null);
                   setNewDueDate("");
+                }}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Edit Work Order Modal */}
+      {showEditModal && selectedWorkOrder && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            <h3 className="text-lg font-semibold mb-4">Edit Work Order</h3>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="editTitle">Work Order Title</Label>
+                  <Input
+                    id="editTitle"
+                    value={editForm.title}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, title: e.target.value }))}
+                    placeholder="Enter work order title"
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="editPriority">Priority</Label>
+                  <select
+                    id="editPriority"
+                    value={editForm.priority}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, priority: e.target.value }))}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    required
+                  >
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+                <div>
+                  <Label htmlFor="editTenantName">Tenant Name</Label>
+                  <Input
+                    id="editTenantName"
+                    value={editForm.tenantName}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, tenantName: e.target.value }))}
+                    placeholder="Enter tenant name"
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="editProperty">Property Address</Label>
+                  <Input
+                    id="editProperty"
+                    value={editForm.property}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, property: e.target.value }))}
+                    placeholder="Enter property address"
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="editAssignedTo">Assign To</Label>
+                  <Input
+                    id="editAssignedTo"
+                    value={editForm.assignedTo}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, assignedTo: e.target.value }))}
+                    placeholder="Enter technician name"
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="editDueDate">Due Date</Label>
+                  <Input
+                    id="editDueDate"
+                    type="date"
+                    value={editForm.dueDate}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, dueDate: e.target.value }))}
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="editEstimatedCost">Estimated Cost</Label>
+                  <Input
+                    id="editEstimatedCost"
+                    type="number"
+                    value={editForm.estimatedCost}
+                    onChange={(e) => setEditForm(prev => ({ ...prev, estimatedCost: e.target.value }))}
+                    placeholder="0.00"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="editDescription">Description</Label>
+                <textarea
+                  id="editDescription"
+                  value={editForm.description}
+                  onChange={(e) => setEditForm(prev => ({ ...prev, description: e.target.value }))}
+                  placeholder="Enter detailed description of the work needed"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  rows={3}
+                  required
+                />
+              </div>
+            </div>
+            <div className="flex gap-2 mt-6">
+              <Button 
+                onClick={handleUpdateWorkOrder} 
+                disabled={!editForm.title.trim() || !editForm.description.trim() || !editForm.tenantName.trim() || !editForm.property.trim() || !editForm.assignedTo.trim() || !editForm.dueDate || !editForm.estimatedCost}
+              >
+                Update Work Order
+              </Button>
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  setShowEditModal(false);
+                  setSelectedWorkOrder(null);
+                  setEditForm({
+                    title: "",
+                    description: "",
+                    tenantName: "",
+                    property: "",
+                    priority: "medium",
+                    assignedTo: "",
+                    dueDate: "",
+                    estimatedCost: ""
+                  });
                 }}
               >
                 Cancel
