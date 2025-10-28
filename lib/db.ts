@@ -14,9 +14,11 @@ export async function query(sql: string, params: any[] = []) {
     const result = await client.execute(sql, params);
     return result.rows.map(row => {
       const obj: any = {};
-      row.forEach((value: any, key: string) => {
-        obj[key] = value;
-      });
+      if (row) {
+        row.forEach((value: any, key: string) => {
+          obj[key] = value;
+        });
+      }
       return obj;
     });
   } catch (error) {
