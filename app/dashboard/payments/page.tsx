@@ -3,13 +3,32 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { DollarSign, Calendar, CreditCard, Download } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { DollarSign, Calendar, CreditCard, Download, Plus, Edit, Trash2 } from "lucide-react";
 
 export default function PaymentsPage() {
   const [paymentAmount, setPaymentAmount] = useState("1200");
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+
+  // Sample payment methods
+  const [paymentMethods, setPaymentMethods] = useState([
+    {
+      id: "card_1",
+      type: "credit_card",
+      name: "Visa ending in 1234",
+      expiry: "12/25",
+      isDefault: true
+    },
+    {
+      id: "bank_1", 
+      type: "bank_account",
+      name: "Bank Account ending in 5678",
+      accountType: "Checking",
+      isDefault: false
+    }
+  ]);
 
   const handlePayment = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,6 +61,21 @@ export default function PaymentsPage() {
       setMessage("Failed to submit payment. Please try again.");
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleAddPaymentMethod = () => {
+    alert("Add Payment Method: This would open a secure form to add a new credit card or bank account. The form would include:\n\n• Card number, expiry, CVV for credit cards\n• Bank routing and account numbers for ACH\n• Billing address verification\n• Security questions for verification\n\nAll data is encrypted and PCI compliant.");
+  };
+
+  const handleEditPaymentMethod = (methodId: string) => {
+    alert(`Edit Payment Method ${methodId}: This would open a form to update the payment method details while maintaining security compliance.`);
+  };
+
+  const handleDeletePaymentMethod = (methodId: string) => {
+    if (confirm("Are you sure you want to delete this payment method?")) {
+      setPaymentMethods(prev => prev.filter(method => method.id !== methodId));
+      alert(`Payment method ${methodId} deleted successfully.`);
     }
   };
   return (
@@ -86,6 +120,40 @@ export default function PaymentsPage() {
         </Card>
       </div>
 
+      {/* Payment Feature Explanation */}
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle className="flex items-center">
+            <CreditCard className="mr-2 h-5 w-5" />
+            How the Payment Feature Works
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h4 className="font-medium text-blue-900 mb-2">Payment Processing Flow:</h4>
+              <ol className="text-sm text-blue-800 space-y-1">
+                <li>1. <strong>Select Amount:</strong> Enter the payment amount (defaults to monthly rent)</li>
+                <li>2. <strong>Choose Method:</strong> Select from saved payment methods (credit card or bank account)</li>
+                <li>3. <strong>Submit Payment:</strong> Click "Pay Now" to process the payment</li>
+                <li>4. <strong>Backend Processing:</strong> Payment data is sent to our secure API endpoint</li>
+                <li>5. <strong>Payment Gateway:</strong> Integration with Stripe for secure payment processing</li>
+                <li>6. <strong>Confirmation:</strong> Real-time confirmation and receipt generation</li>
+              </ol>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h4 className="font-medium text-green-900 mb-2">Security Features:</h4>
+              <ul className="text-sm text-green-800 space-y-1">
+                <li>• <strong>PCI Compliance:</strong> All payment data is encrypted and PCI compliant</li>
+                <li>• <strong>Tokenization:</strong> Sensitive data is tokenized for secure storage</li>
+                <li>• <strong>SSL Encryption:</strong> All communications are encrypted in transit</li>
+                <li>• <strong>Fraud Protection:</strong> Advanced fraud detection and prevention</li>
+              </ul>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
@@ -109,28 +177,26 @@ export default function PaymentsPage() {
               <div>
                 <label className="text-sm font-medium">Payment Method</label>
                 <div className="mt-1 space-y-2">
-                  <label className="flex items-center">
-                    <input 
-                      type="radio" 
-                      name="payment" 
-                      value="card" 
-                      checked={paymentMethod === "card"}
-                      onChange={(e) => setPaymentMethod(e.target.value)}
-                      className="mr-2" 
-                    />
-                    Credit/Debit Card (**** 1234)
-                  </label>
-                  <label className="flex items-center">
-                    <input 
-                      type="radio" 
-                      name="payment" 
-                      value="bank" 
-                      checked={paymentMethod === "bank"}
-                      onChange={(e) => setPaymentMethod(e.target.value)}
-                      className="mr-2" 
-                    />
-                    Bank Account (**** 5678)
-                  </label>
+                  {paymentMethods.map((method) => (
+                    <label key={method.id} className="flex items-center justify-between p-2 border rounded-md">
+                      <div className="flex items-center">
+                        <input 
+                          type="radio" 
+                          name="payment" 
+                          value={method.type}
+                          checked={paymentMethod === method.type}
+                          onChange={(e) => setPaymentMethod(e.target.value)}
+                          className="mr-2" 
+                        />
+                        <div>
+                          <div className="font-medium">{method.name}</div>
+                          {method.expiry && <div className="text-xs text-muted-foreground">Expires {method.expiry}</div>}
+                          {method.accountType && <div className="text-xs text-muted-foreground">{method.accountType} Account</div>}
+                        </div>
+                      </div>
+                      {method.isDefault && <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Default</span>}
+                    </label>
+                  ))}
                 </div>
               </div>
               {message && (
@@ -190,6 +256,67 @@ export default function PaymentsPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Payment Methods Management */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center justify-between">
+            <span className="flex items-center">
+              <CreditCard className="mr-2 h-5 w-5" />
+              Payment Methods
+            </span>
+            <Button onClick={handleAddPaymentMethod} size="sm">
+              <Plus className="mr-2 h-4 w-4" />
+              Add Payment Method
+            </Button>
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {paymentMethods.map((method) => (
+              <div key={method.id} className="flex items-center justify-between p-4 border rounded-lg">
+                <div className="flex items-center space-x-3">
+                  <CreditCard className={`h-6 w-6 ${method.type === 'credit_card' ? 'text-blue-500' : 'text-green-500'}`} />
+                  <div>
+                    <p className="font-medium">{method.name}</p>
+                    {method.expiry && <p className="text-sm text-muted-foreground">Expires {method.expiry}</p>}
+                    {method.accountType && <p className="text-sm text-muted-foreground">{method.accountType} Account</p>}
+                    {method.isDefault && <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Default</span>}
+                  </div>
+                </div>
+                <div className="flex space-x-2">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => handleEditPaymentMethod(method.id)}
+                  >
+                    <Edit className="h-4 w-4" />
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => handleDeletePaymentMethod(method.id)}
+                    className="text-red-600 hover:text-red-700"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            ))}
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-medium mb-2">Payment Method Management Features:</h4>
+              <ul className="text-sm text-muted-foreground space-y-1">
+                <li>• <strong>Add New:</strong> Securely add credit cards or bank accounts</li>
+                <li>• <strong>Edit Existing:</strong> Update payment method details</li>
+                <li>• <strong>Set Default:</strong> Choose your preferred payment method</li>
+                <li>• <strong>Delete:</strong> Remove unused payment methods</li>
+                <li>• <strong>Security:</strong> All data encrypted and PCI compliant</li>
+              </ul>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

@@ -13,7 +13,60 @@ export default function MyLeasePage() {
       description: "12-month lease with standard terms and conditions",
       lastUpdated: "January 1, 2024",
       pages: 8,
-      size: "2.3 MB"
+      size: "2.3 MB",
+      content: `
+        RESIDENTIAL LEASE AGREEMENT
+        
+        This Lease Agreement ("Agreement") is entered into on January 1, 2024, between:
+        
+        LANDLORD: RentFlow Properties LLC
+        Address: 123 Main Street, Anytown, ST 12345
+        
+        TENANT: John Doe
+        Address: Sunset Apartments, Unit 3B, 123 Main Street, Anytown, ST 12345
+        
+        PROPERTY DESCRIPTION:
+        The leased premises consist of a 2-bedroom, 1.5-bathroom apartment located at:
+        Sunset Apartments, Unit 3B, 123 Main Street, Anytown, ST 12345
+        
+        LEASE TERMS:
+        1. TERM: This lease shall commence on January 1, 2024, and terminate on December 31, 2024.
+        2. RENT: Monthly rent of $1,200.00, due on the 1st of each month.
+        3. SECURITY DEPOSIT: $1,200.00 (one month's rent)
+        4. PET DEPOSIT: $300.00 (if applicable)
+        5. LATE FEE: $50.00 if rent is not paid by the 5th of the month
+        
+        TENANT RESPONSIBILITIES:
+        - Pay rent on time
+        - Keep premises clean and sanitary
+        - Notify landlord of needed repairs
+        - No illegal activities on premises
+        - No subletting without written permission
+        
+        LANDLORD RESPONSIBILITIES:
+        - Maintain structural integrity
+        - Provide heat, water, and electricity
+        - Make necessary repairs
+        - Respect tenant privacy
+        
+        UTILITIES:
+        Tenant pays: Electricity, gas, internet
+        Landlord pays: Water, sewer, trash
+        
+        PET POLICY:
+        Maximum 2 pets allowed
+        Pet deposit: $300 per pet
+        Monthly pet rent: $25 per pet
+        Breed restrictions apply
+        
+        TERMINATION:
+        Either party may terminate with 30 days written notice
+        Early termination fee may apply
+        
+        SIGNATURES:
+        Landlord: _________________ Date: _________
+        Tenant: _________________ Date: _________
+      `
     },
     {
       id: "lease_month_to_month",
@@ -22,7 +75,26 @@ export default function MyLeasePage() {
       description: "Flexible monthly rental agreement",
       lastUpdated: "January 1, 2024",
       pages: 6,
-      size: "1.8 MB"
+      size: "1.8 MB",
+      content: `
+        MONTH-TO-MONTH RENTAL AGREEMENT
+        
+        This Month-to-Month Rental Agreement is entered into on January 1, 2024, between:
+        
+        LANDLORD: RentFlow Properties LLC
+        TENANT: John Doe
+        
+        PROPERTY: Sunset Apartments, Unit 3B
+        
+        TERMS:
+        1. RENTAL PERIOD: This agreement renews automatically each month
+        2. RENT: $1,200.00 per month, due on the 1st
+        3. SECURITY DEPOSIT: $1,200.00
+        4. NOTICE TO TERMINATE: 30 days written notice required
+        
+        This agreement provides flexibility for both parties while maintaining
+        standard rental protections and responsibilities.
+      `
     },
     {
       id: "lease_commercial",
@@ -31,7 +103,27 @@ export default function MyLeasePage() {
       description: "Commercial property lease for business use",
       lastUpdated: "January 1, 2024",
       pages: 12,
-      size: "3.1 MB"
+      size: "3.1 MB",
+      content: `
+        COMMERCIAL LEASE AGREEMENT
+        
+        This Commercial Lease Agreement is entered into for business purposes:
+        
+        LANDLORD: RentFlow Properties LLC
+        TENANT: [Business Name]
+        
+        PROPERTY: Commercial space at [Address]
+        
+        COMMERCIAL TERMS:
+        1. BUSINESS USE: Premises may only be used for approved business purposes
+        2. HOURS OF OPERATION: As specified in addendum
+        3. SIGNAGE: Subject to landlord approval
+        4. INSURANCE: Tenant must maintain commercial liability insurance
+        5. COMPLIANCE: Must comply with all local business regulations
+        
+        This agreement includes additional commercial-specific terms and conditions
+        for business operations and compliance requirements.
+      `
     },
     {
       id: "lease_trailer_park",
@@ -40,7 +132,27 @@ export default function MyLeasePage() {
       description: "Lot rental agreement for mobile homes",
       lastUpdated: "January 1, 2024",
       pages: 7,
-      size: "2.0 MB"
+      size: "2.0 MB",
+      content: `
+        TRAILER PARK LOT LEASE AGREEMENT
+        
+        This Trailer Park Lot Lease is entered into for mobile home lot rental:
+        
+        PARK OWNER: RentFlow Properties LLC
+        TENANT: John Doe
+        
+        LOT: Trailer Park Lot #15
+        
+        LOT RENTAL TERMS:
+        1. LOT RENT: $400.00 per month
+        2. UTILITIES: Water and sewer included
+        3. MOBILE HOME: Tenant owns mobile home
+        4. LOT MAINTENANCE: Park owner maintains common areas
+        5. PETS: Subject to park rules
+        
+        This agreement covers lot rental for mobile home placement and
+        includes specific terms for trailer park living.
+      `
     },
     {
       id: "lease_furnished",
@@ -49,18 +161,79 @@ export default function MyLeasePage() {
       description: "Lease agreement for furnished rental units",
       lastUpdated: "January 1, 2024",
       pages: 10,
-      size: "2.7 MB"
+      size: "2.7 MB",
+      content: `
+        FURNISHED APARTMENT LEASE AGREEMENT
+        
+        This Furnished Apartment Lease includes furniture and appliances:
+        
+        LANDLORD: RentFlow Properties LLC
+        TENANT: John Doe
+        
+        PROPERTY: Furnished Unit 3B
+        
+        FURNISHED TERMS:
+        1. FURNITURE INCLUDED: Living room, bedroom, dining room furniture
+        2. APPLIANCES: Refrigerator, stove, dishwasher, washer/dryer
+        3. DAMAGE DEPOSIT: Additional $500 for furniture protection
+        4. INVENTORY: Detailed furniture inventory attached
+        5. MAINTENANCE: Landlord maintains all furniture and appliances
+        
+        This agreement includes detailed inventory of all furniture and
+        appliances provided with the rental unit.
+      `
     }
   ];
 
-  const handleDownload = (documentId: string) => {
-    // Simulate document download
-    alert(`Downloading ${documentId}... (This would download the actual PDF)`);
+  const handleDownload = (documentId: string, documentName: string) => {
+    // Simulate PDF download
+    const doc = leaseDocuments.find(d => d.id === documentId);
+    if (doc) {
+      // Create a blob with the content
+      const blob = new Blob([doc.content], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${documentName.replace(/\s+/g, '_')}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    alert(`Downloading ${documentName}... (Sample content downloaded as text file)`);
   };
 
-  const handleView = (documentId: string) => {
-    // Simulate document viewing
-    alert(`Opening ${documentId} for viewing... (This would open a PDF viewer)`);
+  const handleView = (documentId: string, documentName: string) => {
+    // Simulate PDF viewing
+    const doc = leaseDocuments.find(d => d.id === documentId);
+    if (doc) {
+      // Create a new window with the content
+      const newWindow = window.open('', '_blank', 'width=800,height=600');
+      if (newWindow) {
+        newWindow.document.write(`
+          <html>
+            <head>
+              <title>${documentName}</title>
+              <style>
+                body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+                h1 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
+                .header { background: #f5f5f5; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+                pre { white-space: pre-wrap; font-family: inherit; }
+              </style>
+            </head>
+            <body>
+              <div class="header">
+                <h1>${documentName}</h1>
+                <p><strong>Type:</strong> ${doc.type} | <strong>Pages:</strong> ${doc.pages} | <strong>Size:</strong> ${doc.size}</p>
+                <p><strong>Last Updated:</strong> ${doc.lastUpdated}</p>
+              </div>
+              <pre>${doc.content}</pre>
+            </body>
+          </html>
+        `);
+        newWindow.document.close();
+      }
+    }
   };
 
   return (
@@ -151,7 +324,7 @@ export default function MyLeasePage() {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleView(doc.id)}
+                    onClick={() => handleView(doc.id, doc.name)}
                   >
                     <Eye className="h-4 w-4 mr-1" />
                     View
@@ -159,7 +332,7 @@ export default function MyLeasePage() {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleDownload(doc.id)}
+                    onClick={() => handleDownload(doc.id, doc.name)}
                   >
                     <Download className="h-4 w-4 mr-1" />
                     Download
