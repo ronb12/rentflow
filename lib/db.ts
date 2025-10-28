@@ -119,6 +119,10 @@ export async function initSchema() {
           amount INTEGER,
           payment_method TEXT,
           status TEXT,
+          stripe_payment_intent_id TEXT,
+          stripe_charge_id TEXT,
+          currency TEXT DEFAULT 'usd',
+          failure_reason TEXT,
           created_at INTEGER,
           updated_at INTEGER
         );
