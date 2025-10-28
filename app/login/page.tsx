@@ -386,7 +386,7 @@ export default function LoginPage() {
             <form onSubmit={handleForgotPassword} className="space-y-6">
               <div className="text-center mb-6">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">Reset Your Password</h3>
-                <p className="text-sm text-gray-600">Enter your email address and we'll send you instructions to reset your password.</p>
+                <p className="text-sm text-gray-600">Enter your email address and we&apos;ll send you instructions to reset your password.</p>
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
