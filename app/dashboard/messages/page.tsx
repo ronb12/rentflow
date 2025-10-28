@@ -109,11 +109,32 @@ export default function MessagesPage() {
             <CardTitle>Quick Actions</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Button className="w-full justify-start" variant="outline">
+            <Button 
+              className="w-full justify-start" 
+              variant="outline"
+              onClick={() => {
+                // Scroll to message input
+                const messageInput = document.querySelector('input[type="text"]') as HTMLInputElement;
+                if (messageInput) {
+                  messageInput.focus();
+                  messageInput.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <Plus className="mr-2 h-4 w-4" />
               New Message
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button 
+              className="w-full justify-start" 
+              variant="outline"
+              onClick={() => {
+                // Show all messages in conversation
+                const conversation = document.querySelector('.space-y-4.h-96.overflow-y-auto');
+                if (conversation) {
+                  conversation.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <MessageSquare className="mr-2 h-4 w-4" />
               View All Messages
             </Button>
