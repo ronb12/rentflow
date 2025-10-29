@@ -75,9 +75,8 @@ export default function NewInspectionPage() {
       // Register background sync
       if ("serviceWorker" in navigator && "sync" in (self as any).registration) {
         try {
-          await (navigator.serviceWorker.ready as any).then((registration: any) =>
-            registration.sync.register("sync-inspections")
-          );
+          const registration = await (navigator.serviceWorker as any).ready;
+          await registration.sync.register("sync-inspections");
         } catch (err) {
           console.log("Background sync not available:", err);
         }

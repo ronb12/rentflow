@@ -15,6 +15,9 @@ export default function LeasesPage() {
   const loadLeases = async () => {
     try {
       const res = await fetch("/api/leases");
+      if (!res.ok) {
+        throw new Error(`Failed to load leases: ${res.status} ${res.statusText}`);
+      }
       const data = await res.json();
       setLeases(data);
     } catch (error) {

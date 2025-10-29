@@ -15,6 +15,9 @@ export default function PropertiesPage() {
   const loadProperties = async () => {
     try {
       const res = await fetch("/api/properties");
+      if (!res.ok) {
+        throw new Error(`Failed to load properties: ${res.status} ${res.statusText}`);
+      }
       const data = await res.json();
       setProperties(data);
     } catch (error) {
