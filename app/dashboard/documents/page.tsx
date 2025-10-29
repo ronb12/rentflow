@@ -130,17 +130,17 @@ export default function DocumentsPage() {
     }
   };
 
-  const handleDownloadDocument = async (document: Document) => {
+  const handleDownloadDocument = async (doc: Document) => {
     try {
-      if (document.fileName) {
+      if (doc.fileName) {
         // If document has a file, download it
-        const response = await fetch(`/api/documents/${document.id}/file`);
+        const response = await fetch(`/api/documents/${doc.id}/file`);
         if (response.ok) {
           const blob = await response.blob();
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement('a');
           a.href = url;
-          a.download = document.fileName || `document-${document.id}`;
+          a.download = doc.fileName || `document-${doc.id}`;
           document.body.appendChild(a);
           a.click();
           window.URL.revokeObjectURL(url);
