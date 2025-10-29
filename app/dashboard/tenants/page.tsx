@@ -15,6 +15,9 @@ export default function TenantsPage() {
   const loadTenants = async () => {
     try {
       const res = await fetch("/api/tenants");
+      if (!res.ok) {
+        throw new Error(`Failed to load tenants: ${res.status} ${res.statusText}`);
+      }
       const data = await res.json();
       setTenants(data);
     } catch (error) {

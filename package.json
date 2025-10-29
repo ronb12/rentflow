@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "emulate": "firebase emulators:start",
     "seed": "tsx scripts/seed.ts",
     "export": "next build && next export",
     "test": "npx tsx test-suite.ts",
@@ -28,18 +27,24 @@
     "@radix-ui/react-switch": "^1.2.6",
     "@sendgrid/mail": "^8.1.6",
     "@stripe/stripe-js": "^5.3.0",
+    "@types/multer": "^2.0.0",
+    "@types/signature_pad": "^2.3.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
-    "firebase": "^11.0.1",
-    "firebase-admin": "^13.0.0",
+    "form-data": "^4.0.4",
+    "html2canvas": "^1.4.1",
     "idb": "^8.0.0",
+    "jspdf": "^3.0.3",
     "lucide-react": "^0.460.0",
+    "multer": "^2.0.2",
     "next": "^14.2.33",
     "next-auth": "^4.24.7",
+    "pdf-lib": "^1.17.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "signature_pad": "^5.1.1",
     "stripe": "^17.2.0",
     "tailwind-merge": "^2.5.4"
   },
@@ -58,3 +63,7 @@
     "typescript": "^5.5.3"
   }
 }
+
+
+
+

@@ -37,18 +37,18 @@ export default function UsagePage() {
       <div className="mb-6">
         <h1 className="text-3xl font-bold">Usage & Quotas</h1>
         <p className="text-muted-foreground mt-2">
-          Monitor your Firebase free tier usage
+          Monitor your service usage and quotas
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Firestore Usage */}
+        {/* Database Usage */}
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Database className="h-5 w-5 text-primary" />
-                <CardTitle>Firestore</CardTitle>
+                <CardTitle>Database</CardTitle>
               </div>
             </div>
           </CardHeader>
@@ -120,12 +120,12 @@ export default function UsagePage() {
           </CardContent>
         </Card>
 
-        {/* Functions Usage */}
+        {/* API Usage */}
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
               <Zap className="h-5 w-5 text-primary" />
-              <CardTitle>Cloud Functions</CardTitle>
+              <CardTitle>API Requests</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -158,11 +158,11 @@ export default function UsagePage() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm">
-              <li>✓ Images are compressed before upload</li>
-              <li>✓ Offline mode uses IndexedDB (not counted)</li>
-              <li>✓ Cache aggressively to reduce reads</li>
-              <li>✓ Batch Firestore operations</li>
-              <li>✓ Monitor usage weekly</li>
+            <li>✓ Images are compressed before upload</li>
+            <li>✓ Offline mode uses IndexedDB (not counted)</li>
+            <li>✓ Cache aggressively to reduce reads</li>
+            <li>✓ Batch database operations</li>
+            <li>✓ Monitor usage weekly</li>
             </ul>
           </CardContent>
         </Card>
