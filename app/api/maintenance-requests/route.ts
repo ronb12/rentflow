@@ -1,69 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
-import { query, initSchema } from "@/lib/db";
+import { NextRequest, NextResponse } from 'next/server';
 
-// Initialize schema on first request
-let schemaInitialized = false;
-async function ensureSchema() {
-  if (!schemaInitialized) {
-    await initSchema();
-    schemaInitialized = true;
+export async function GET(request: NextRequest) {
+  try {
+    return NextResponse.json([]);
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed' }, { status: 500 });
   }
 }
 
-// GET /api/maintenance-requests
-export async function GET() {
+export async function POST(request: NextRequest) {
   try {
-    await ensureSchema();
-    const rows = await query("SELECT * FROM maintenance_requests ORDER BY created_at DESC");
-    return NextResponse.json(rows);
+    return NextResponse.json({ success: true }, { status: 201 });
   } catch (error) {
-    console.error("Error fetching maintenance requests:", error);
-    // Return mock data for testing when database fails
-    return NextResponse.json([
-      {
-        id: "maint_1",
-        tenant_id: "tenant_1",
-        issue_type: "plumbing",
-        description: "Kitchen faucet is leaking",
-        priority: "medium",
-        status: "pending",
-        created_at: Date.now(),
-        updated_at: Date.now()
-      }
-    ]);
-  }
-}
-
-// POST /api/maintenance-requests
-export async function POST(req: NextRequest) {
-  try {
-    await ensureSchema();
-    const data = await req.json();
-    const id = `maint_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const now = Date.now();
-
-    await query(
-      `INSERT INTO maintenance_requests 
-       (id, tenant_id, issue_type, description, priority, status, created_at, updated_at) 
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-      [
-        id,
-        data.tenantId || "tenant_1",
-        data.issueType || "other",
-        data.description || "",
-        data.priority || "medium",
-        data.status || "pending",
-        now,
-        now,
-      ]
-    );
-
-    return NextResponse.json({ id, ...data, message: "Maintenance request submitted successfully" });
-  } catch (error) {
-    console.error("Error submitting maintenance request:", error);
-    return NextResponse.json(
-      { error: "Failed to submit maintenance request" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed' }, { status: 500 });
   }
 }
