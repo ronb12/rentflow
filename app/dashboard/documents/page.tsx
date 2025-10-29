@@ -151,18 +151,18 @@ export default function DocumentsPage() {
       } else {
         // Generate a basic document info file
         const content = `Document Information\n\n` +
-          `Name: ${document.name}\n` +
-          `Type: ${document.type}\n` +
-          `Category: ${document.category}\n` +
-          `Status: ${document.status}\n` +
-          `Created: ${new Date(document.createdAt).toLocaleDateString()}\n` +
-          `Updated: ${new Date(document.updatedAt).toLocaleDateString()}\n`;
+          `Name: ${doc.name}\n` +
+          `Type: ${doc.type}\n` +
+          `Category: ${doc.category}\n` +
+          `Status: ${doc.status}\n` +
+          `Created: ${new Date(doc.createdAt).toLocaleDateString()}\n` +
+          `Updated: ${new Date(doc.updatedAt).toLocaleDateString()}\n`;
         
         const blob = new Blob([content], { type: 'text/plain' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${document.name || 'document'}.txt`;
+        a.download = `${doc.name || 'document'}.txt`;
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
