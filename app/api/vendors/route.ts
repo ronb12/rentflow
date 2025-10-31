@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
       email: row.email,
       phone: row.phone,
       serviceType: row.service_type,
-      hourlyRate: row.hourly_rate || 0,
+      hourlyRate: row.hourly_rate ? Number(row.hourly_rate) / 100 : 0,
       rating: row.rating || null,
       isActive: row.is_active === 1,
       createdAt: row.created_at,
