@@ -54,3 +54,7 @@ test-real-email.js
 test-business-sender.js
 test-sendgrid*.js
 diagnose-sendgrid.js
+
+# Ignore Next.js build output
+.next
+build-log.txt
