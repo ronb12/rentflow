@@ -38,6 +38,8 @@ export default function VendorsPage() {
   const [showEditor, setShowEditor] = useState(false);
   const [selectedVendor, setSelectedVendor] = useState<Vendor | null>(null);
   const [activeTab, setActiveTab] = useState<"vendors" | "assignments" | "sla">("vendors");
+  const [slaRules, setSlaRules] = useState<Array<{ id: string; serviceType: string; priority: string; targetHours: number; isActive: boolean }>>([]);
+  const [slaForm, setSlaForm] = useState<{ id?: string; serviceType: string; priority: string; targetHours: string; isActive: boolean }>({ serviceType: '', priority: 'normal', targetHours: '24', isActive: true });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -52,6 +54,7 @@ export default function VendorsPage() {
   useEffect(() => {
     fetchVendors();
     fetchAssignments();
+    fetchSla();
   }, []);
 
   const fetchVendors = async () => {
@@ -79,6 +82,16 @@ export default function VendorsPage() {
     } catch (error) {
       console.error("Error fetching assignments:", error);
     }
+  };
+
+  const fetchSla = async () => {
+    try {
+      const res = await fetch('/api/vendors/sla');
+      if (res.ok) {
+        const data = await res.json();
+        setSlaRules(data.rules || []);
+      }
+    } catch {}
   };
 
   const handleSave = async () => {
@@ -174,7 +187,7 @@ export default function VendorsPage() {
           onClick={() => setActiveTab("sla")}
         >
           <Settings className="mr-2 h-4 w-4" />
-          SLA Rules
+          Response & Resolution Targets
         </Button>
       </div>
 
@@ -330,8 +343,12 @@ export default function VendorsPage() {
               </div>
             ) : (
               <div className="space-y-4">
-                {assignments.map((assignment) => (
-                  <Card key={assignment.id} className="p-4">
+                {assignments.map((assignment) => {
+                  const rule = slaRules.find(r => r.isActive && r.serviceType?.toLowerCase() === (vendors.find(v => v.id === assignment.vendorId)?.serviceType || '').toLowerCase());
+                  const targetMs = rule ? rule.targetHours * 3600 * 1000 : 0;
+                  const overdue = assignment.status !== 'completed' && assignment.scheduledDate && (Date.now() - assignment.scheduledDate) > targetMs && targetMs > 0;
+                  return (
+                  <Card key={assignment.id} className={`p-4 ${overdue ? 'border-red-300' : ''}`}>
                     <div className="flex items-start justify-between">
                       <div className="space-y-2">
                         <div className="font-medium">{assignment.vendorName}</div>
@@ -346,6 +363,9 @@ export default function VendorsPage() {
                             </span>
                           )}
                         </div>
+                        {overdue && (
+                          <div className="text-xs text-red-700">Overdue based on target ({rule?.targetHours}h)</div>
+                        )}
                       </div>
                       <span className={`px-2 py-1 text-xs rounded ${
                         assignment.status === "completed" ? "bg-green-100 text-green-800" :
@@ -356,7 +376,8 @@ export default function VendorsPage() {
                       </span>
                     </div>
                   </Card>
-                ))}
+                  );
+                })}
               </div>
             )}
           </CardContent>
@@ -367,11 +388,65 @@ export default function VendorsPage() {
       {activeTab === "sla" && (
         <Card>
           <CardHeader>
-            <CardTitle>SLA (Service Level Agreement) Rules</CardTitle>
+            <CardTitle>Response & Resolution Targets</CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="text-center py-8 text-muted-foreground">
-              SLA rules management coming soon. Configure target response times for different service types and priorities.
+          <CardContent className="space-y-4">
+            <div className="overflow-x-auto rounded-md border">
+              <table className="w-full text-sm">
+                <thead className="bg-muted/40">
+                  <tr>
+                    <th className="text-left px-3 py-2 font-medium">Service Type</th>
+                    <th className="text-left px-3 py-2 font-medium">Priority</th>
+                    <th className="text-left px-3 py-2 font-medium">Target (hours)</th>
+                    <th className="text-left px-3 py-2 font-medium">Active</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {slaRules.map(r => (
+                    <tr key={r.id} className="border-t">
+                      <td className="px-3 py-2">{r.serviceType}</td>
+                      <td className="px-3 py-2">{r.priority}</td>
+                      <td className="px-3 py-2">{r.targetHours}</td>
+                      <td className="px-3 py-2">{r.isActive ? 'Yes' : 'No'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-4">
+              <div>
+                <Label>Service Type</Label>
+                <Input value={slaForm.serviceType} onChange={(e) => setSlaForm({ ...slaForm, serviceType: e.target.value })} placeholder="plumbing" />
+              </div>
+              <div>
+                <Label>Priority</Label>
+                <Select value={slaForm.priority} onValueChange={(v) => setSlaForm({ ...slaForm, priority: v })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="low">Low</SelectItem>
+                    <SelectItem value="normal">Normal</SelectItem>
+                    <SelectItem value="high">High</SelectItem>
+                    <SelectItem value="emergency">Emergency</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <Label>Target Hours</Label>
+                <Input type="number" min="0" value={slaForm.targetHours} onChange={(e) => setSlaForm({ ...slaForm, targetHours: e.target.value })} />
+              </div>
+              <div className="flex items-end">
+                <Button onClick={async () => {
+                  try {
+                    const res = await fetch('/api/vendors/sla', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ serviceType: slaForm.serviceType, priority: slaForm.priority, targetHours: Number(slaForm.targetHours), isActive: slaForm.isActive }) });
+                    if (!res.ok) throw new Error('Failed to save');
+                    setSlaForm({ serviceType: '', priority: 'normal', targetHours: '24', isActive: true });
+                    fetchSla();
+                  } catch {
+                    alert('Failed to save target');
+                  }
+                }}>Save Target</Button>
+              </div>
             </div>
           </CardContent>
         </Card>

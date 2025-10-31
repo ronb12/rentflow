@@ -4093,3 +4093,3301 @@ Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
  ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 3.5s (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 1826ms (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 1649ms (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 4.1s (941 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 1314ms (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 1990ms (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 845ms (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ○ Compiling /dashboard/vendors ...
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /dashboard/vendors in 8.8s (880 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/vendors. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments/requests 200 in 10878ms
+ GET /dashboard/payments/requests 200 in 2793ms
+ GET /dashboard/vendors 200 in 11170ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /manifest.webmanifest in 1787ms (426 modules)
+ GET /manifest.webmanifest 200 in 4556ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ○ Compiling /api/billing/status ...
+ ✓ Compiled /api/billing/status in 1876ms (456 modules)
+ ✓ Compiled (458 modules)
+Database schema initialized
+Database schema initialized
+ GET /api/payment-schedules/change-requests?status=pending 200 in 3862ms
+ GET /api/payment-schedules/change-requests?status=pending 200 in 3899ms
+Database schema initialized
+Database query error (attempt 1/3): LibsqlError: SQLITE_ERROR: no such column: subscription_status
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: no such column: subscription_status
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at GET (webpack-internal:///(rsc)/./app/api/billing/status/route.ts:15:74)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Database query error (attempt 2/3): LibsqlError: SQLITE_ERROR: no such column: subscription_status
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: no such column: subscription_status
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async GET (webpack-internal:///(rsc)/./app/api/billing/status/route.ts:15:22)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Database query error (attempt 3/3): LibsqlError: SQLITE_ERROR: no such column: subscription_status
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 21 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: no such column: subscription_status
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processTimers (node:internal/timers:526:9)
+      at async GET (webpack-internal:///(rsc)/./app/api/billing/status/route.ts:15:22)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+ GET /api/billing/status 200 in 7009ms
+ ○ Compiling /api/payment-schedules/change-requests/[id] ...
+ ✓ Compiled /api/payment-schedules/change-requests/[id] in 562ms (460 modules)
+Database schema initialized
+ PATCH /api/payment-schedules/change-requests/scr_1761933131575_nbuscnm 200 in 801ms
+Database schema initialized
+ GET /api/payment-schedules/change-requests?status=pending 200 in 241ms
+ PATCH /api/payment-schedules/change-requests/scr_1761933131575_nbuscnm 200 in 87ms
+ GET /api/payment-schedules/change-requests?status=pending 200 in 143ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/vendors. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled /api/vendors/assignments in 476ms (462 modules)
+ ⨯ ./app/api/vendors/sla/route.ts
+Error: 
+  [31mx[0m the name `NextResponse` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [31;1m                      ^^^^^^|^^^^^[0m
+    :                             [31;1m`-- [31;1mprevious definition of `NextResponse` here[0m[0m
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [33;1m                      ^^^^^^|^^^^^[0m
+    :                             [33;1m`-- [33;1m`NextResponse` redefined here[0m[0m
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    `----
+
+  [31mx[0m the name `query` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m                     ^^|^^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `query` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m         ^^|^^[0m
+    :            [33;1m`-- [33;1m`query` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `initSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m         ^^^^^|^^^^[0m
+    :               [31;1m`-- [31;1mprevious definition of `initSchema` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m                ^^^^^|^^^^[0m
+    :                      [33;1m`-- [33;1m`initSchema` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `schemaInitialized` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+    : [31;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [31;1m`-- [31;1mprevious definition of `schemaInitialized` here[0m[0m
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    : [33;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [33;1m`-- [33;1m`schemaInitialized` redefined here[0m[0m
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+    `----
+
+  [31mx[0m the name `ensureSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:2:1]
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+    : [31;1m               ^^^^^^|^^^^^[0m
+    :                      [31;1m`-- [31;1mprevious definition of `ensureSchema` here[0m[0m
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    : [33;1m               ^^^^^^|^^^^^[0m
+    :                      [33;1m`-- [33;1m`ensureSchema` redefined here[0m[0m
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+    `----
+
+  [31mx[0m the name `GET` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:10:1]
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+    : [31;1m                      ^|^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `GET` here[0m[0m
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+ [2m64[0m |   }
+ [2m65[0m | }
+ [2m66[0m | 
+ [2m67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m68[0m | export async function GET(request: NextRequest) {
+    : [33;1m                      ^|^[0m
+    :                        [33;1m`-- [33;1m`GET` redefined here[0m[0m
+ [2m69[0m |   try {
+ [2m70[0m |     await ensureSchema();
+ [2m71[0m |     const { searchParams } = new URL(request.url);
+    `----
+
+  [31mx[0m the name `POST` is defined multiple times
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:32:1]
+ [2m 32[0m | }
+ [2m 33[0m | 
+ [2m 34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m 35[0m | export async function POST(request: NextRequest) {
+     : [31;1m                      ^^|^[0m
+     :                         [31;1m`-- [31;1mprevious definition of `POST` here[0m[0m
+ [2m 36[0m |   try {
+ [2m 37[0m |     await ensureSchema();
+ [2m 38[0m |     const data = await request.json();
+ [2m 39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m 40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m 41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m 42[0m |     }
+ [2m 43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m 44[0m |     const now = Date.now();
+ [2m 45[0m |     await query(
+ [2m 46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m 47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m 48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m 49[0m |     );
+ [2m 50[0m |     return NextResponse.json({ id });
+ [2m 51[0m |   } catch (e) {
+ [2m 52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m 53[0m |   }
+ [2m 54[0m | }
+ [2m 55[0m | 
+ [2m 56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 57[0m | import { query, initSchema } from '@/lib/db';
+ [2m 58[0m | 
+ [2m 59[0m | let schemaInitialized = false;
+ [2m 60[0m | async function ensureSchema() {
+ [2m 61[0m |   if (!schemaInitialized) {
+ [2m 62[0m |     await initSchema();
+ [2m 63[0m |     schemaInitialized = true;
+ [2m 64[0m |   }
+ [2m 65[0m | }
+ [2m 66[0m | 
+ [2m 67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m 68[0m | export async function GET(request: NextRequest) {
+ [2m 69[0m |   try {
+ [2m 70[0m |     await ensureSchema();
+ [2m 71[0m |     const { searchParams } = new URL(request.url);
+ [2m 72[0m |     const serviceType = searchParams.get('serviceType');
+ [2m 73[0m |     const priority = searchParams.get('priority');
+ [2m 74[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m 75[0m | 
+ [2m 76[0m |     let sql = `SELECT * FROM service_sla_rules WHERE organization_id = ? AND is_active = 1`;
+ [2m 77[0m |     const params: any[] = [organizationId];
+ [2m 78[0m | 
+ [2m 79[0m |     if (serviceType) {
+ [2m 80[0m |       sql += ` AND service_type = ?`;
+ [2m 81[0m |       params.push(serviceType);
+ [2m 82[0m |     }
+ [2m 83[0m | 
+ [2m 84[0m |     if (priority) {
+ [2m 85[0m |       sql += ` AND priority = ?`;
+ [2m 86[0m |       params.push(priority);
+ [2m 87[0m |     }
+ [2m 88[0m | 
+ [2m 89[0m |     sql += ` ORDER BY service_type, priority`;
+ [2m 90[0m | 
+ [2m 91[0m |     const rows = await query(sql, params);
+ [2m 92[0m | 
+ [2m 93[0m |     const rules = rows.map((row: any) => ({
+ [2m 94[0m |       id: row.id,
+ [2m 95[0m |       serviceType: row.service_type,
+ [2m 96[0m |       priority: row.priority,
+ [2m 97[0m |       targetHours: row.target_hours,
+ [2m 98[0m |       isActive: row.is_active === 1,
+ [2m 99[0m |       createdAt: row.created_at,
+ [2m100[0m |       updatedAt: row.updated_at,
+ [2m101[0m |     }));
+ [2m102[0m | 
+ [2m103[0m |     return NextResponse.json({ rules });
+ [2m104[0m |   } catch (error) {
+ [2m105[0m |     console.error('Error fetching SLA rules:', error);
+ [2m106[0m |     return NextResponse.json(
+ [2m107[0m |       { error: 'Failed to fetch SLA rules' },
+ [2m108[0m |       { status: 500 }
+ [2m109[0m |     );
+ [2m110[0m |   }
+ [2m111[0m | }
+ [2m112[0m | 
+ [2m113[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m114[0m | export async function POST(request: NextRequest) {
+     : [33;1m                      ^^|^[0m
+     :                         [33;1m`-- [33;1m`POST` redefined here[0m[0m
+ [2m115[0m |   try {
+ [2m116[0m |     await ensureSchema();
+ [2m117[0m |     const data = await request.json();
+     `----
+
+Import trace for requested module:
+./app/api/vendors/sla/route.ts
+ ○ Compiling /api/vendors/[id] ...
+ ⨯ ./app/api/vendors/sla/route.ts
+Error: 
+  [31mx[0m the name `NextResponse` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [31;1m                      ^^^^^^|^^^^^[0m
+    :                             [31;1m`-- [31;1mprevious definition of `NextResponse` here[0m[0m
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [33;1m                      ^^^^^^|^^^^^[0m
+    :                             [33;1m`-- [33;1m`NextResponse` redefined here[0m[0m
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    `----
+
+  [31mx[0m the name `query` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m                     ^^|^^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `query` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m         ^^|^^[0m
+    :            [33;1m`-- [33;1m`query` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `initSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m         ^^^^^|^^^^[0m
+    :               [31;1m`-- [31;1mprevious definition of `initSchema` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m                ^^^^^|^^^^[0m
+    :                      [33;1m`-- [33;1m`initSchema` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `schemaInitialized` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+    : [31;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [31;1m`-- [31;1mprevious definition of `schemaInitialized` here[0m[0m
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    : [33;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [33;1m`-- [33;1m`schemaInitialized` redefined here[0m[0m
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+    `----
+
+  [31mx[0m the name `ensureSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:2:1]
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+    : [31;1m               ^^^^^^|^^^^^[0m
+    :                      [31;1m`-- [31;1mprevious definition of `ensureSchema` here[0m[0m
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    : [33;1m               ^^^^^^|^^^^^[0m
+    :                      [33;1m`-- [33;1m`ensureSchema` redefined here[0m[0m
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+    `----
+
+  [31mx[0m the name `GET` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:10:1]
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+    : [31;1m                      ^|^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `GET` here[0m[0m
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+ [2m64[0m |   }
+ [2m65[0m | }
+ [2m66[0m | 
+ [2m67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m68[0m | export async function GET(request: NextRequest) {
+    : [33;1m                      ^|^[0m
+    :                        [33;1m`-- [33;1m`GET` redefined here[0m[0m
+ [2m69[0m |   try {
+ [2m70[0m |     await ensureSchema();
+ [2m71[0m |     const { searchParams } = new URL(request.url);
+    `----
+
+  [31mx[0m the name `POST` is defined multiple times
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:32:1]
+ [2m 32[0m | }
+ [2m 33[0m | 
+ [2m 34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m 35[0m | export async function POST(request: NextRequest) {
+     : [31;1m                      ^^|^[0m
+     :                         [31;1m`-- [31;1mprevious definition of `POST` here[0m[0m
+ [2m 36[0m |   try {
+ [2m 37[0m |     await ensureSchema();
+ [2m 38[0m |     const data = await request.json();
+ [2m 39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m 40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m 41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m 42[0m |     }
+ [2m 43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m 44[0m |     const now = Date.now();
+ [2m 45[0m |     await query(
+ [2m 46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m 47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m 48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m 49[0m |     );
+ [2m 50[0m |     return NextResponse.json({ id });
+ [2m 51[0m |   } catch (e) {
+ [2m 52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m 53[0m |   }
+ [2m 54[0m | }
+ [2m 55[0m | 
+ [2m 56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 57[0m | import { query, initSchema } from '@/lib/db';
+ [2m 58[0m | 
+ [2m 59[0m | let schemaInitialized = false;
+ [2m 60[0m | async function ensureSchema() {
+ [2m 61[0m |   if (!schemaInitialized) {
+ [2m 62[0m |     await initSchema();
+ [2m 63[0m |     schemaInitialized = true;
+ [2m 64[0m |   }
+ [2m 65[0m | }
+ [2m 66[0m | 
+ [2m 67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m 68[0m | export async function GET(request: NextRequest) {
+ [2m 69[0m |   try {
+ [2m 70[0m |     await ensureSchema();
+ [2m 71[0m |     const { searchParams } = new URL(request.url);
+ [2m 72[0m |     const serviceType = searchParams.get('serviceType');
+ [2m 73[0m |     const priority = searchParams.get('priority');
+ [2m 74[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m 75[0m | 
+ [2m 76[0m |     let sql = `SELECT * FROM service_sla_rules WHERE organization_id = ? AND is_active = 1`;
+ [2m 77[0m |     const params: any[] = [organizationId];
+ [2m 78[0m | 
+ [2m 79[0m |     if (serviceType) {
+ [2m 80[0m |       sql += ` AND service_type = ?`;
+ [2m 81[0m |       params.push(serviceType);
+ [2m 82[0m |     }
+ [2m 83[0m | 
+ [2m 84[0m |     if (priority) {
+ [2m 85[0m |       sql += ` AND priority = ?`;
+ [2m 86[0m |       params.push(priority);
+ [2m 87[0m |     }
+ [2m 88[0m | 
+ [2m 89[0m |     sql += ` ORDER BY service_type, priority`;
+ [2m 90[0m | 
+ [2m 91[0m |     const rows = await query(sql, params);
+ [2m 92[0m | 
+ [2m 93[0m |     const rules = rows.map((row: any) => ({
+ [2m 94[0m |       id: row.id,
+ [2m 95[0m |       serviceType: row.service_type,
+ [2m 96[0m |       priority: row.priority,
+ [2m 97[0m |       targetHours: row.target_hours,
+ [2m 98[0m |       isActive: row.is_active === 1,
+ [2m 99[0m |       createdAt: row.created_at,
+ [2m100[0m |       updatedAt: row.updated_at,
+ [2m101[0m |     }));
+ [2m102[0m | 
+ [2m103[0m |     return NextResponse.json({ rules });
+ [2m104[0m |   } catch (error) {
+ [2m105[0m |     console.error('Error fetching SLA rules:', error);
+ [2m106[0m |     return NextResponse.json(
+ [2m107[0m |       { error: 'Failed to fetch SLA rules' },
+ [2m108[0m |       { status: 500 }
+ [2m109[0m |     );
+ [2m110[0m |   }
+ [2m111[0m | }
+ [2m112[0m | 
+ [2m113[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m114[0m | export async function POST(request: NextRequest) {
+     : [33;1m                      ^^|^[0m
+     :                         [33;1m`-- [33;1m`POST` redefined here[0m[0m
+ [2m115[0m |   try {
+ [2m116[0m |     await ensureSchema();
+ [2m117[0m |     const data = await request.json();
+     `----
+
+Import trace for requested module:
+./app/api/vendors/sla/route.ts
+ ⨯ ./app/api/vendors/sla/route.ts
+Error: 
+  [31mx[0m the name `NextResponse` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [31;1m                      ^^^^^^|^^^^^[0m
+    :                             [31;1m`-- [31;1mprevious definition of `NextResponse` here[0m[0m
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [33;1m                      ^^^^^^|^^^^^[0m
+    :                             [33;1m`-- [33;1m`NextResponse` redefined here[0m[0m
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    `----
+
+  [31mx[0m the name `query` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m                     ^^|^^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `query` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m         ^^|^^[0m
+    :            [33;1m`-- [33;1m`query` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `initSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m         ^^^^^|^^^^[0m
+    :               [31;1m`-- [31;1mprevious definition of `initSchema` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m                ^^^^^|^^^^[0m
+    :                      [33;1m`-- [33;1m`initSchema` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `schemaInitialized` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+    : [31;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [31;1m`-- [31;1mprevious definition of `schemaInitialized` here[0m[0m
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    : [33;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [33;1m`-- [33;1m`schemaInitialized` redefined here[0m[0m
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+    `----
+
+  [31mx[0m the name `ensureSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:2:1]
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+    : [31;1m               ^^^^^^|^^^^^[0m
+    :                      [31;1m`-- [31;1mprevious definition of `ensureSchema` here[0m[0m
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    : [33;1m               ^^^^^^|^^^^^[0m
+    :                      [33;1m`-- [33;1m`ensureSchema` redefined here[0m[0m
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+    `----
+
+  [31mx[0m the name `GET` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:10:1]
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+    : [31;1m                      ^|^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `GET` here[0m[0m
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+ [2m64[0m |   }
+ [2m65[0m | }
+ [2m66[0m | 
+ [2m67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m68[0m | export async function GET(request: NextRequest) {
+    : [33;1m                      ^|^[0m
+    :                        [33;1m`-- [33;1m`GET` redefined here[0m[0m
+ [2m69[0m |   try {
+ [2m70[0m |     await ensureSchema();
+ [2m71[0m |     const { searchParams } = new URL(request.url);
+    `----
+
+  [31mx[0m the name `POST` is defined multiple times
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:32:1]
+ [2m 32[0m | }
+ [2m 33[0m | 
+ [2m 34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m 35[0m | export async function POST(request: NextRequest) {
+     : [31;1m                      ^^|^[0m
+     :                         [31;1m`-- [31;1mprevious definition of `POST` here[0m[0m
+ [2m 36[0m |   try {
+ [2m 37[0m |     await ensureSchema();
+ [2m 38[0m |     const data = await request.json();
+ [2m 39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m 40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m 41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m 42[0m |     }
+ [2m 43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m 44[0m |     const now = Date.now();
+ [2m 45[0m |     await query(
+ [2m 46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m 47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m 48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m 49[0m |     );
+ [2m 50[0m |     return NextResponse.json({ id });
+ [2m 51[0m |   } catch (e) {
+ [2m 52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m 53[0m |   }
+ [2m 54[0m | }
+ [2m 55[0m | 
+ [2m 56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 57[0m | import { query, initSchema } from '@/lib/db';
+ [2m 58[0m | 
+ [2m 59[0m | let schemaInitialized = false;
+ [2m 60[0m | async function ensureSchema() {
+ [2m 61[0m |   if (!schemaInitialized) {
+ [2m 62[0m |     await initSchema();
+ [2m 63[0m |     schemaInitialized = true;
+ [2m 64[0m |   }
+ [2m 65[0m | }
+ [2m 66[0m | 
+ [2m 67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m 68[0m | export async function GET(request: NextRequest) {
+ [2m 69[0m |   try {
+ [2m 70[0m |     await ensureSchema();
+ [2m 71[0m |     const { searchParams } = new URL(request.url);
+ [2m 72[0m |     const serviceType = searchParams.get('serviceType');
+ [2m 73[0m |     const priority = searchParams.get('priority');
+ [2m 74[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m 75[0m | 
+ [2m 76[0m |     let sql = `SELECT * FROM service_sla_rules WHERE organization_id = ? AND is_active = 1`;
+ [2m 77[0m |     const params: any[] = [organizationId];
+ [2m 78[0m | 
+ [2m 79[0m |     if (serviceType) {
+ [2m 80[0m |       sql += ` AND service_type = ?`;
+ [2m 81[0m |       params.push(serviceType);
+ [2m 82[0m |     }
+ [2m 83[0m | 
+ [2m 84[0m |     if (priority) {
+ [2m 85[0m |       sql += ` AND priority = ?`;
+ [2m 86[0m |       params.push(priority);
+ [2m 87[0m |     }
+ [2m 88[0m | 
+ [2m 89[0m |     sql += ` ORDER BY service_type, priority`;
+ [2m 90[0m | 
+ [2m 91[0m |     const rows = await query(sql, params);
+ [2m 92[0m | 
+ [2m 93[0m |     const rules = rows.map((row: any) => ({
+ [2m 94[0m |       id: row.id,
+ [2m 95[0m |       serviceType: row.service_type,
+ [2m 96[0m |       priority: row.priority,
+ [2m 97[0m |       targetHours: row.target_hours,
+ [2m 98[0m |       isActive: row.is_active === 1,
+ [2m 99[0m |       createdAt: row.created_at,
+ [2m100[0m |       updatedAt: row.updated_at,
+ [2m101[0m |     }));
+ [2m102[0m | 
+ [2m103[0m |     return NextResponse.json({ rules });
+ [2m104[0m |   } catch (error) {
+ [2m105[0m |     console.error('Error fetching SLA rules:', error);
+ [2m106[0m |     return NextResponse.json(
+ [2m107[0m |       { error: 'Failed to fetch SLA rules' },
+ [2m108[0m |       { status: 500 }
+ [2m109[0m |     );
+ [2m110[0m |   }
+ [2m111[0m | }
+ [2m112[0m | 
+ [2m113[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m114[0m | export async function POST(request: NextRequest) {
+     : [33;1m                      ^^|^[0m
+     :                         [33;1m`-- [33;1m`POST` redefined here[0m[0m
+ [2m115[0m |   try {
+ [2m116[0m |     await ensureSchema();
+ [2m117[0m |     const data = await request.json();
+     `----
+
+Import trace for requested module:
+./app/api/vendors/sla/route.ts
+ GET /api/vendors?isActive=true 500 in 53741ms
+ GET /api/vendors?isActive=true 500 in 53892ms
+ ⨯ ./app/api/vendors/sla/route.ts
+Error: 
+  [31mx[0m the name `NextResponse` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [31;1m                      ^^^^^^|^^^^^[0m
+    :                             [31;1m`-- [31;1mprevious definition of `NextResponse` here[0m[0m
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [33;1m                      ^^^^^^|^^^^^[0m
+    :                             [33;1m`-- [33;1m`NextResponse` redefined here[0m[0m
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    `----
+
+  [31mx[0m the name `query` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m                     ^^|^^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `query` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m         ^^|^^[0m
+    :            [33;1m`-- [33;1m`query` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `initSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m         ^^^^^|^^^^[0m
+    :               [31;1m`-- [31;1mprevious definition of `initSchema` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m                ^^^^^|^^^^[0m
+    :                      [33;1m`-- [33;1m`initSchema` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `schemaInitialized` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+    : [31;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [31;1m`-- [31;1mprevious definition of `schemaInitialized` here[0m[0m
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    : [33;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [33;1m`-- [33;1m`schemaInitialized` redefined here[0m[0m
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+    `----
+
+  [31mx[0m the name `ensureSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:2:1]
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+    : [31;1m               ^^^^^^|^^^^^[0m
+    :                      [31;1m`-- [31;1mprevious definition of `ensureSchema` here[0m[0m
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    : [33;1m               ^^^^^^|^^^^^[0m
+    :                      [33;1m`-- [33;1m`ensureSchema` redefined here[0m[0m
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+    `----
+
+  [31mx[0m the name `GET` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:10:1]
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+    : [31;1m                      ^|^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `GET` here[0m[0m
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+ [2m64[0m |   }
+ [2m65[0m | }
+ [2m66[0m | 
+ [2m67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m68[0m | export async function GET(request: NextRequest) {
+    : [33;1m                      ^|^[0m
+    :                        [33;1m`-- [33;1m`GET` redefined here[0m[0m
+ [2m69[0m |   try {
+ [2m70[0m |     await ensureSchema();
+ [2m71[0m |     const { searchParams } = new URL(request.url);
+    `----
+
+  [31mx[0m the name `POST` is defined multiple times
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:32:1]
+ [2m 32[0m | }
+ [2m 33[0m | 
+ [2m 34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m 35[0m | export async function POST(request: NextRequest) {
+     : [31;1m                      ^^|^[0m
+     :                         [31;1m`-- [31;1mprevious definition of `POST` here[0m[0m
+ [2m 36[0m |   try {
+ [2m 37[0m |     await ensureSchema();
+ [2m 38[0m |     const data = await request.json();
+ [2m 39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m 40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m 41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m 42[0m |     }
+ [2m 43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m 44[0m |     const now = Date.now();
+ [2m 45[0m |     await query(
+ [2m 46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m 47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m 48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m 49[0m |     );
+ [2m 50[0m |     return NextResponse.json({ id });
+ [2m 51[0m |   } catch (e) {
+ [2m 52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m 53[0m |   }
+ [2m 54[0m | }
+ [2m 55[0m | 
+ [2m 56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 57[0m | import { query, initSchema } from '@/lib/db';
+ [2m 58[0m | 
+ [2m 59[0m | let schemaInitialized = false;
+ [2m 60[0m | async function ensureSchema() {
+ [2m 61[0m |   if (!schemaInitialized) {
+ [2m 62[0m |     await initSchema();
+ [2m 63[0m |     schemaInitialized = true;
+ [2m 64[0m |   }
+ [2m 65[0m | }
+ [2m 66[0m | 
+ [2m 67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m 68[0m | export async function GET(request: NextRequest) {
+ [2m 69[0m |   try {
+ [2m 70[0m |     await ensureSchema();
+ [2m 71[0m |     const { searchParams } = new URL(request.url);
+ [2m 72[0m |     const serviceType = searchParams.get('serviceType');
+ [2m 73[0m |     const priority = searchParams.get('priority');
+ [2m 74[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m 75[0m | 
+ [2m 76[0m |     let sql = `SELECT * FROM service_sla_rules WHERE organization_id = ? AND is_active = 1`;
+ [2m 77[0m |     const params: any[] = [organizationId];
+ [2m 78[0m | 
+ [2m 79[0m |     if (serviceType) {
+ [2m 80[0m |       sql += ` AND service_type = ?`;
+ [2m 81[0m |       params.push(serviceType);
+ [2m 82[0m |     }
+ [2m 83[0m | 
+ [2m 84[0m |     if (priority) {
+ [2m 85[0m |       sql += ` AND priority = ?`;
+ [2m 86[0m |       params.push(priority);
+ [2m 87[0m |     }
+ [2m 88[0m | 
+ [2m 89[0m |     sql += ` ORDER BY service_type, priority`;
+ [2m 90[0m | 
+ [2m 91[0m |     const rows = await query(sql, params);
+ [2m 92[0m | 
+ [2m 93[0m |     const rules = rows.map((row: any) => ({
+ [2m 94[0m |       id: row.id,
+ [2m 95[0m |       serviceType: row.service_type,
+ [2m 96[0m |       priority: row.priority,
+ [2m 97[0m |       targetHours: row.target_hours,
+ [2m 98[0m |       isActive: row.is_active === 1,
+ [2m 99[0m |       createdAt: row.created_at,
+ [2m100[0m |       updatedAt: row.updated_at,
+ [2m101[0m |     }));
+ [2m102[0m | 
+ [2m103[0m |     return NextResponse.json({ rules });
+ [2m104[0m |   } catch (error) {
+ [2m105[0m |     console.error('Error fetching SLA rules:', error);
+ [2m106[0m |     return NextResponse.json(
+ [2m107[0m |       { error: 'Failed to fetch SLA rules' },
+ [2m108[0m |       { status: 500 }
+ [2m109[0m |     );
+ [2m110[0m |   }
+ [2m111[0m | }
+ [2m112[0m | 
+ [2m113[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m114[0m | export async function POST(request: NextRequest) {
+     : [33;1m                      ^^|^[0m
+     :                         [33;1m`-- [33;1m`POST` redefined here[0m[0m
+ [2m115[0m |   try {
+ [2m116[0m |     await ensureSchema();
+ [2m117[0m |     const data = await request.json();
+     `----
+
+Import trace for requested module:
+./app/api/vendors/sla/route.ts
+ GET /api/vendors/sla 500 in 61265ms
+ GET /api/vendors/sla 500 in 61198ms
+ GET /api/vendors/assignments 500 in 61356ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /api/vendors/assignments 500 in 61227ms
+ GET /dashboard/vendors 500 in 743ms
+ GET /_next/static/webpack/6bb470aeb2cce5a7.webpack.hot-update.json 500 in 126ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /manifest.webmanifest 500 in 517ms
+ GET /dashboard/payments/schedules 500 in 907ms
+ GET /manifest.webmanifest 500 in 340ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/ronellbradley/Desktop/RentFlow/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/Users/ronellbradley/Desktop/RentFlow/.next/cache/webpack/client-development-fallback/0.pack.gz'
+ GET /api/vendors?isActive=true 500 in 3320ms
+ GET /api/vendors?isActive=true 500 in 3819ms
+ GET /api/billing/status 500 in 3829ms
+ GET /api/vendors/sla 500 in 4672ms
+ GET /api/vendors/assignments 500 in 4682ms
+ GET /api/vendors/assignments 500 in 4420ms
+ ⨯ ./app/api/vendors/sla/route.ts
+Error: 
+  [31mx[0m the name `NextResponse` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [31;1m                      ^^^^^^|^^^^^[0m
+    :                             [31;1m`-- [31;1mprevious definition of `NextResponse` here[0m[0m
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [33;1m                      ^^^^^^|^^^^^[0m
+    :                             [33;1m`-- [33;1m`NextResponse` redefined here[0m[0m
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    `----
+
+  [31mx[0m the name `query` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m                     ^^|^^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `query` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m         ^^|^^[0m
+    :            [33;1m`-- [33;1m`query` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `initSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m         ^^^^^|^^^^[0m
+    :               [31;1m`-- [31;1mprevious definition of `initSchema` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m                ^^^^^|^^^^[0m
+    :                      [33;1m`-- [33;1m`initSchema` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `schemaInitialized` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+    : [31;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [31;1m`-- [31;1mprevious definition of `schemaInitialized` here[0m[0m
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    : [33;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [33;1m`-- [33;1m`schemaInitialized` redefined here[0m[0m
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+    `----
+
+  [31mx[0m the name `ensureSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:2:1]
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+    : [31;1m               ^^^^^^|^^^^^[0m
+    :                      [31;1m`-- [31;1mprevious definition of `ensureSchema` here[0m[0m
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    : [33;1m               ^^^^^^|^^^^^[0m
+    :                      [33;1m`-- [33;1m`ensureSchema` redefined here[0m[0m
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+    `----
+
+  [31mx[0m the name `GET` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:10:1]
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+    : [31;1m                      ^|^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `GET` here[0m[0m
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+ [2m64[0m |   }
+ [2m65[0m | }
+ [2m66[0m | 
+ [2m67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m68[0m | export async function GET(request: NextRequest) {
+    : [33;1m                      ^|^[0m
+    :                        [33;1m`-- [33;1m`GET` redefined here[0m[0m
+ [2m69[0m |   try {
+ [2m70[0m |     await ensureSchema();
+ [2m71[0m |     const { searchParams } = new URL(request.url);
+    `----
+
+  [31mx[0m the name `POST` is defined multiple times
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:32:1]
+ [2m 32[0m | }
+ [2m 33[0m | 
+ [2m 34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m 35[0m | export async function POST(request: NextRequest) {
+     : [31;1m                      ^^|^[0m
+     :                         [31;1m`-- [31;1mprevious definition of `POST` here[0m[0m
+ [2m 36[0m |   try {
+ [2m 37[0m |     await ensureSchema();
+ [2m 38[0m |     const data = await request.json();
+ [2m 39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m 40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m 41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m 42[0m |     }
+ [2m 43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m 44[0m |     const now = Date.now();
+ [2m 45[0m |     await query(
+ [2m 46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m 47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m 48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m 49[0m |     );
+ [2m 50[0m |     return NextResponse.json({ id });
+ [2m 51[0m |   } catch (e) {
+ [2m 52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m 53[0m |   }
+ [2m 54[0m | }
+ [2m 55[0m | 
+ [2m 56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 57[0m | import { query, initSchema } from '@/lib/db';
+ [2m 58[0m | 
+ [2m 59[0m | let schemaInitialized = false;
+ [2m 60[0m | async function ensureSchema() {
+ [2m 61[0m |   if (!schemaInitialized) {
+ [2m 62[0m |     await initSchema();
+ [2m 63[0m |     schemaInitialized = true;
+ [2m 64[0m |   }
+ [2m 65[0m | }
+ [2m 66[0m | 
+ [2m 67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m 68[0m | export async function GET(request: NextRequest) {
+ [2m 69[0m |   try {
+ [2m 70[0m |     await ensureSchema();
+ [2m 71[0m |     const { searchParams } = new URL(request.url);
+ [2m 72[0m |     const serviceType = searchParams.get('serviceType');
+ [2m 73[0m |     const priority = searchParams.get('priority');
+ [2m 74[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m 75[0m | 
+ [2m 76[0m |     let sql = `SELECT * FROM service_sla_rules WHERE organization_id = ? AND is_active = 1`;
+ [2m 77[0m |     const params: any[] = [organizationId];
+ [2m 78[0m | 
+ [2m 79[0m |     if (serviceType) {
+ [2m 80[0m |       sql += ` AND service_type = ?`;
+ [2m 81[0m |       params.push(serviceType);
+ [2m 82[0m |     }
+ [2m 83[0m | 
+ [2m 84[0m |     if (priority) {
+ [2m 85[0m |       sql += ` AND priority = ?`;
+ [2m 86[0m |       params.push(priority);
+ [2m 87[0m |     }
+ [2m 88[0m | 
+ [2m 89[0m |     sql += ` ORDER BY service_type, priority`;
+ [2m 90[0m | 
+ [2m 91[0m |     const rows = await query(sql, params);
+ [2m 92[0m | 
+ [2m 93[0m |     const rules = rows.map((row: any) => ({
+ [2m 94[0m |       id: row.id,
+ [2m 95[0m |       serviceType: row.service_type,
+ [2m 96[0m |       priority: row.priority,
+ [2m 97[0m |       targetHours: row.target_hours,
+ [2m 98[0m |       isActive: row.is_active === 1,
+ [2m 99[0m |       createdAt: row.created_at,
+ [2m100[0m |       updatedAt: row.updated_at,
+ [2m101[0m |     }));
+ [2m102[0m | 
+ [2m103[0m |     return NextResponse.json({ rules });
+ [2m104[0m |   } catch (error) {
+ [2m105[0m |     console.error('Error fetching SLA rules:', error);
+ [2m106[0m |     return NextResponse.json(
+ [2m107[0m |       { error: 'Failed to fetch SLA rules' },
+ [2m108[0m |       { status: 500 }
+ [2m109[0m |     );
+ [2m110[0m |   }
+ [2m111[0m | }
+ [2m112[0m | 
+ [2m113[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m114[0m | export async function POST(request: NextRequest) {
+     : [33;1m                      ^^|^[0m
+     :                         [33;1m`-- [33;1m`POST` redefined here[0m[0m
+ [2m115[0m |   try {
+ [2m116[0m |     await ensureSchema();
+ [2m117[0m |     const data = await request.json();
+     `----
+
+Import trace for requested module:
+./app/api/vendors/sla/route.ts
+ ⨯ ./app/api/vendors/sla/route.ts
+Error: 
+  [31mx[0m the name `NextResponse` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [31;1m                      ^^^^^^|^^^^^[0m
+    :                             [31;1m`-- [31;1mprevious definition of `NextResponse` here[0m[0m
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+    : [33;1m                      ^^^^^^|^^^^^[0m
+    :                             [33;1m`-- [33;1m`NextResponse` redefined here[0m[0m
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    `----
+
+  [31mx[0m the name `query` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m                     ^^|^^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `query` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m         ^^|^^[0m
+    :            [33;1m`-- [33;1m`query` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `initSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+    : [31;1m         ^^^^^|^^^^[0m
+    :               [31;1m`-- [31;1mprevious definition of `initSchema` here[0m[0m
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+    : [33;1m                ^^^^^|^^^^[0m
+    :                      [33;1m`-- [33;1m`initSchema` redefined here[0m[0m
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    `----
+
+  [31mx[0m the name `schemaInitialized` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:1:1]
+ [2m 1[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+    : [31;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [31;1m`-- [31;1mprevious definition of `schemaInitialized` here[0m[0m
+ [2m 5[0m | async function ensureSchema() {
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+    : [33;1m    ^^^^^^^^|^^^^^^^^[0m
+    :             [33;1m`-- [33;1m`schemaInitialized` redefined here[0m[0m
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+    `----
+
+  [31mx[0m the name `ensureSchema` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:2:1]
+ [2m 2[0m | import { initSchema, query } from '@/lib/db';
+ [2m 3[0m | 
+ [2m 4[0m | let schemaInitialized = false;
+ [2m 5[0m | async function ensureSchema() {
+    : [31;1m               ^^^^^^|^^^^^[0m
+    :                      [31;1m`-- [31;1mprevious definition of `ensureSchema` here[0m[0m
+ [2m 6[0m |   if (!schemaInitialized) {
+ [2m 7[0m |     await initSchema();
+ [2m 8[0m |     schemaInitialized = true;
+ [2m 9[0m |   }
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+    : [33;1m               ^^^^^^|^^^^^[0m
+    :                      [33;1m`-- [33;1m`ensureSchema` redefined here[0m[0m
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+    `----
+
+  [31mx[0m the name `GET` is defined multiple times
+    ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:10:1]
+ [2m10[0m | }
+ [2m11[0m | 
+ [2m12[0m | // GET /api/vendors/sla - List SLA rules
+ [2m13[0m | export async function GET(request: NextRequest) {
+    : [31;1m                      ^|^[0m
+    :                        [31;1m`-- [31;1mprevious definition of `GET` here[0m[0m
+ [2m14[0m |   try {
+ [2m15[0m |     await ensureSchema();
+ [2m16[0m |     const { searchParams } = new URL(request.url);
+ [2m17[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m18[0m |     const rows = await query(`SELECT * FROM service_sla_rules WHERE organization_id = ? ORDER BY service_type, priority`, [organizationId]);
+ [2m19[0m |     const rules = rows.map((r: any) => ({
+ [2m20[0m |       id: r.id,
+ [2m21[0m |       serviceType: r.service_type,
+ [2m22[0m |       priority: r.priority,
+ [2m23[0m |       targetHours: r.target_hours,
+ [2m24[0m |       isActive: r.is_active === 1,
+ [2m25[0m |       createdAt: r.created_at,
+ [2m26[0m |       updatedAt: r.updated_at,
+ [2m27[0m |     }));
+ [2m28[0m |     return NextResponse.json({ rules });
+ [2m29[0m |   } catch (e) {
+ [2m30[0m |     return NextResponse.json({ error: 'Failed to fetch SLA rules' }, { status: 500 });
+ [2m31[0m |   }
+ [2m32[0m | }
+ [2m33[0m | 
+ [2m34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m35[0m | export async function POST(request: NextRequest) {
+ [2m36[0m |   try {
+ [2m37[0m |     await ensureSchema();
+ [2m38[0m |     const data = await request.json();
+ [2m39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m42[0m |     }
+ [2m43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m44[0m |     const now = Date.now();
+ [2m45[0m |     await query(
+ [2m46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m49[0m |     );
+ [2m50[0m |     return NextResponse.json({ id });
+ [2m51[0m |   } catch (e) {
+ [2m52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m53[0m |   }
+ [2m54[0m | }
+ [2m55[0m | 
+ [2m56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m57[0m | import { query, initSchema } from '@/lib/db';
+ [2m58[0m | 
+ [2m59[0m | let schemaInitialized = false;
+ [2m60[0m | async function ensureSchema() {
+ [2m61[0m |   if (!schemaInitialized) {
+ [2m62[0m |     await initSchema();
+ [2m63[0m |     schemaInitialized = true;
+ [2m64[0m |   }
+ [2m65[0m | }
+ [2m66[0m | 
+ [2m67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m68[0m | export async function GET(request: NextRequest) {
+    : [33;1m                      ^|^[0m
+    :                        [33;1m`-- [33;1m`GET` redefined here[0m[0m
+ [2m69[0m |   try {
+ [2m70[0m |     await ensureSchema();
+ [2m71[0m |     const { searchParams } = new URL(request.url);
+    `----
+
+  [31mx[0m the name `POST` is defined multiple times
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/api/vendors/sla/route.ts[0m:32:1]
+ [2m 32[0m | }
+ [2m 33[0m | 
+ [2m 34[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m 35[0m | export async function POST(request: NextRequest) {
+     : [31;1m                      ^^|^[0m
+     :                         [31;1m`-- [31;1mprevious definition of `POST` here[0m[0m
+ [2m 36[0m |   try {
+ [2m 37[0m |     await ensureSchema();
+ [2m 38[0m |     const data = await request.json();
+ [2m 39[0m |     const { serviceType, priority, targetHours, isActive = true, organizationId = 'org_1' } = data;
+ [2m 40[0m |     if (!serviceType || !priority || targetHours == null) {
+ [2m 41[0m |       return NextResponse.json({ error: 'serviceType, priority, targetHours are required' }, { status: 400 });
+ [2m 42[0m |     }
+ [2m 43[0m |     const id = `sla_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+ [2m 44[0m |     const now = Date.now();
+ [2m 45[0m |     await query(
+ [2m 46[0m |       `INSERT INTO service_sla_rules (id, service_type, priority, target_hours, is_active, organization_id, created_at, updated_at)
+ [2m 47[0m |        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+ [2m 48[0m |       [id, serviceType, priority, Number(targetHours), isActive ? 1 : 0, organizationId, now, now]
+ [2m 49[0m |     );
+ [2m 50[0m |     return NextResponse.json({ id });
+ [2m 51[0m |   } catch (e) {
+ [2m 52[0m |     return NextResponse.json({ error: 'Failed to create SLA rule' }, { status: 500 });
+ [2m 53[0m |   }
+ [2m 54[0m | }
+ [2m 55[0m | 
+ [2m 56[0m | import { NextRequest, NextResponse } from 'next/server';
+ [2m 57[0m | import { query, initSchema } from '@/lib/db';
+ [2m 58[0m | 
+ [2m 59[0m | let schemaInitialized = false;
+ [2m 60[0m | async function ensureSchema() {
+ [2m 61[0m |   if (!schemaInitialized) {
+ [2m 62[0m |     await initSchema();
+ [2m 63[0m |     schemaInitialized = true;
+ [2m 64[0m |   }
+ [2m 65[0m | }
+ [2m 66[0m | 
+ [2m 67[0m | // GET /api/vendors/sla - Get SLA rules
+ [2m 68[0m | export async function GET(request: NextRequest) {
+ [2m 69[0m |   try {
+ [2m 70[0m |     await ensureSchema();
+ [2m 71[0m |     const { searchParams } = new URL(request.url);
+ [2m 72[0m |     const serviceType = searchParams.get('serviceType');
+ [2m 73[0m |     const priority = searchParams.get('priority');
+ [2m 74[0m |     const organizationId = searchParams.get('organizationId') || 'org_1';
+ [2m 75[0m | 
+ [2m 76[0m |     let sql = `SELECT * FROM service_sla_rules WHERE organization_id = ? AND is_active = 1`;
+ [2m 77[0m |     const params: any[] = [organizationId];
+ [2m 78[0m | 
+ [2m 79[0m |     if (serviceType) {
+ [2m 80[0m |       sql += ` AND service_type = ?`;
+ [2m 81[0m |       params.push(serviceType);
+ [2m 82[0m |     }
+ [2m 83[0m | 
+ [2m 84[0m |     if (priority) {
+ [2m 85[0m |       sql += ` AND priority = ?`;
+ [2m 86[0m |       params.push(priority);
+ [2m 87[0m |     }
+ [2m 88[0m | 
+ [2m 89[0m |     sql += ` ORDER BY service_type, priority`;
+ [2m 90[0m | 
+ [2m 91[0m |     const rows = await query(sql, params);
+ [2m 92[0m | 
+ [2m 93[0m |     const rules = rows.map((row: any) => ({
+ [2m 94[0m |       id: row.id,
+ [2m 95[0m |       serviceType: row.service_type,
+ [2m 96[0m |       priority: row.priority,
+ [2m 97[0m |       targetHours: row.target_hours,
+ [2m 98[0m |       isActive: row.is_active === 1,
+ [2m 99[0m |       createdAt: row.created_at,
+ [2m100[0m |       updatedAt: row.updated_at,
+ [2m101[0m |     }));
+ [2m102[0m | 
+ [2m103[0m |     return NextResponse.json({ rules });
+ [2m104[0m |   } catch (error) {
+ [2m105[0m |     console.error('Error fetching SLA rules:', error);
+ [2m106[0m |     return NextResponse.json(
+ [2m107[0m |       { error: 'Failed to fetch SLA rules' },
+ [2m108[0m |       { status: 500 }
+ [2m109[0m |     );
+ [2m110[0m |   }
+ [2m111[0m | }
+ [2m112[0m | 
+ [2m113[0m | // POST /api/vendors/sla - Create SLA rule
+ [2m114[0m | export async function POST(request: NextRequest) {
+     : [33;1m                      ^^|^[0m
+     :                         [33;1m`-- [33;1m`POST` redefined here[0m[0m
+ [2m115[0m |   try {
+ [2m116[0m |     await ensureSchema();
+ [2m117[0m |     const data = await request.json();
+     `----
+
+Import trace for requested module:
+./app/api/vendors/sla/route.ts
+ GET /api/billing/status 500 in 6651ms
+ GET /api/vendors/sla 500 in 7584ms
+ GET /api/payment-schedules 500 in 7179ms
+ GET /api/payment-schedules 500 in 6265ms
