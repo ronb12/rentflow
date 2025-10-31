@@ -1,14 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calculator, DollarSign } from "lucide-react";
+import { resolveClientRole } from "@/lib/auth";
+import { useRouter } from "next/navigation";
 
 export default function ProratePage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     leaseId: "",
     startDate: "",
@@ -19,6 +22,13 @@ export default function ProratePage() {
 
   const [result, setResult] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const role = resolveClientRole();
+    if (role !== 'manager') {
+      router.replace('/dashboard');
+    }
+  }, [router]);
 
   const handleCalculate = async () => {
     try {

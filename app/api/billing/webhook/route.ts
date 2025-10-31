@@ -45,6 +45,25 @@ export async function POST(req: NextRequest) {
       await query(`UPDATE companies SET subscription_status = ? WHERE id = 'default'`, [status]);
     }
 
+    // Invoices: auto-sync status
+    if (t === 'invoice.finalized' || t === 'invoice.payment_succeeded' || t === 'invoice.payment_failed' || t === 'charge.refunded') {
+      const stripeInvoiceId = obj.id || obj.invoice || null;
+      const status = (obj.status || (t === 'charge.refunded' ? 'refunded' : null)) as string | null;
+      if (stripeInvoiceId) {
+        // Ensure column exists
+        await query(`ALTER TABLE invoices ADD COLUMN stripe_invoice_id TEXT`).catch(() => {});
+        if (status) {
+          // Try to update by stripe_invoice_id
+          await query(`UPDATE invoices SET status = ?, updated_at = ? WHERE stripe_invoice_id = ?`, [status, now, stripeInvoiceId]);
+        }
+        // If not found by stripe id, and we have number, attempt match by invoice_number
+        const number = obj.number || obj.invoice_number || null;
+        if (number && status) {
+          await query(`UPDATE invoices SET status = ?, updated_at = ?, stripe_invoice_id = COALESCE(stripe_invoice_id, ?) WHERE invoice_number = ?`, [status, now, stripeInvoiceId, String(number)]);
+        }
+      }
+    }
+
     return NextResponse.json({ received: true });
   } catch (e) {
     return NextResponse.json({ error: 'Webhook handling failed' }, { status: 500 });

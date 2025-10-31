@@ -81,11 +81,30 @@ export async function POST(request: NextRequest) {
         'Residential Lease Agreement',
         'lease',
         1,
-        '<h1>RESIDENTIAL LEASE AGREEMENT</h1><p>Property: {{property_address}}</p><p>Tenant: {{tenant_name}}</p><p>Rent: {{rent_amount}}</p>',
+        '<style>body{font-family:ui-sans-serif,system-ui,-apple-system} h1,h2{margin:12px 0} p{margin:8px 0;line-height:1.5} .section{margin:16px 0} .signature{margin-top:24px;padding-top:12px;border-top:1px solid #ddd;display:flex;gap:24px} .sig-block{flex:1}</style>'+
+        '<h1>RESIDENTIAL LEASE AGREEMENT</h1>'+
+        '<div class="section"><strong>Property:</strong> {{property_address}}</div>'+
+        '<div class="section"><strong>Tenant:</strong> {{tenant_name}} &nbsp; <strong>Email:</strong> {{tenant_email}}</div>'+
+        '<div class="section"><strong>Monthly Rent:</strong> {{rent_amount}} &nbsp; <strong>Due Date:</strong> {{due_date}}</div>'+
+        '<h2>1. Term</h2><p>The term commences on {{date}} and continues month-to-month unless terminated per this Agreement.</p>'+
+        '<h2>2. Rent</h2><p>Tenant agrees to pay {{rent_amount}} per month on or before {{due_date}}. Late fees may apply as permitted by law.</p>'+
+        '<h2>3. Use and Occupancy</h2><p>The premises shall be used exclusively as a private residence by the Tenant and occupants listed on the application.</p>'+
+        '<h2>4. Maintenance and Repairs</h2><p>Tenant shall keep the premises clean and sanitary and promptly notify Landlord of needed repairs.</p>'+
+        '<h2>5. Utilities</h2><p>Unless otherwise stated, Tenant is responsible for payment of utilities and services for the Premises.</p>'+
+        '<h2>6. Rules</h2><p>Tenant shall comply with all house rules, HOA rules (if any), and local ordinances.</p>'+
+        '<h2>7. Entry</h2><p>Landlord may enter the Premises for inspection, repairs, or to show to prospective tenants with reasonable notice.</p>'+
+        '<h2>8. Default</h2><p>Failure to pay rent or comply with this Agreement may result in termination as permitted by law.</p>'+
+        '<h2>9. Entire Agreement</h2><p>This document constitutes the entire agreement and supersedes prior understandings.</p>'+
+        '<div class="signature">'+
+        '  <div class="sig-block"><strong>Landlord/Manager</strong><p>Printed Name: ______________________</p><p>Signature: __________________________</p><p>Date: _____________</p></div>'+
+        '  <div class="sig-block"><strong>Tenant</strong><p>Printed Name: {{tenant_name}}</p><p>Signature: __________________________</p><p>Date: _____________</p></div>'+
+        '</div>',
         JSON.stringify([
           { name: 'tenant_name', type: 'text' },
           { name: 'property_address', type: 'text' },
           { name: 'rent_amount', type: 'currency' },
+          { name: 'tenant_email', type: 'text' },
+          { name: 'due_date', type: 'text' },
         ]),
         1,
         orgId,
@@ -95,6 +114,53 @@ export async function POST(request: NextRequest) {
       ]
     );
     results.templates = 'created';
+
+    // Optional: Insert a second, explicitly labeled full template for testing
+    const tplFullId = `tpl_${Date.now()}_full`;
+    await query(
+      `INSERT OR REPLACE INTO document_templates 
+       (id, name, category, version, template_content, merge_fields, is_active, 
+        organization_id, created_by, created_at, updated_at) 
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        tplFullId,
+        'Residential Lease Agreement (Full)',
+        'lease',
+        1,
+        '<style>body{font-family:ui-sans-serif,system-ui,-apple-system} h1,h2{margin:12px 0} p{margin:8px 0;line-height:1.5} .section{margin:16px 0} .signature{margin-top:24px;padding-top:12px;border-top:1px solid #ddd;display:flex;gap:24px} .sig-block{flex:1}</style>'+
+        '<h1>RESIDENTIAL LEASE AGREEMENT (FULL)</h1>'+
+        '<div class="section"><strong>Property:</strong> {{property_address}}</div>'+
+        '<div class="section"><strong>Tenant:</strong> {{tenant_name}} ({{tenant_email}})</div>'+
+        '<div class="section"><strong>Monthly Rent:</strong> {{rent_amount}} — <strong>Due:</strong> {{due_date}}</div>'+
+        '<h2>1. Parties</h2><p>This Agreement is between Landlord and Tenant listed herein.</p>'+
+        '<h2>2. Premises</h2><p>The Premises at {{property_address}} is leased to Tenant.</p>'+
+        '<h2>3. Term</h2><p>Start: {{date}}. Renewal and termination by applicable statute and terms below.</p>'+
+        '<h2>4. Rent; Fees</h2><p>Rent is {{rent_amount}} monthly, due {{due_date}}. Late fees may apply per policy.</p>'+
+        '<h2>5. Security Deposit</h2><p>Held in accordance with state law and returned less lawful deductions.</p>'+
+        '<h2>6. Use</h2><p>Residential use only; no unlawful activity; compliance with rules/ordinances.</p>'+
+        '<h2>7. Maintenance</h2><p>Tenant responsibilities and Landlord obligations are defined herein.</p>'+
+        '<h2>8. Utilities</h2><p>Unless stated otherwise, Tenant pays utilities.</p>'+
+        '<h2>9. Entry</h2><p>Entry with notice for inspection, repairs, or showing.</p>'+
+        '<h2>10. Default</h2><p>Nonpayment or breach may lead to termination as permitted by law.</p>'+
+        '<h2>11. Miscellaneous</h2><p>Severability; entire agreement; amendments in writing.</p>'+
+        '<div class="signature">'+
+        '  <div class="sig-block"><strong>Landlord/Manager</strong><p>Printed Name: ______________________</p><p>Signature: __________________________</p><p>Date: _____________</p></div>'+
+        '  <div class="sig-block"><strong>Tenant</strong><p>Printed Name: {{tenant_name}}</p><p>Signature: __________________________</p><p>Date: _____________</p></div>'+
+        '</div>',
+        JSON.stringify([
+          { name: 'tenant_name', type: 'text' },
+          { name: 'property_address', type: 'text' },
+          { name: 'rent_amount', type: 'currency' },
+          { name: 'tenant_email', type: 'text' },
+          { name: 'due_date', type: 'text' },
+        ]),
+        1,
+        orgId,
+        'system',
+        now,
+        now,
+      ]
+    );
 
     // 5. Vendors
     const vendorId = `vendor_${Date.now()}_1`;
@@ -131,15 +197,16 @@ export async function POST(request: NextRequest) {
     );
     results.paymentMethods = 'created';
 
-    // 7. Payment Schedules
-    const psId = `ps_${Date.now()}_1`;
+    // 7. Payment Schedules — reset org and insert deterministic IDs to avoid duplicates
+    await query(`DELETE FROM payment_schedules WHERE organization_id = ?`, [orgId]);
+    const ps1 = `ps_lease1_main`;
     await query(
       `INSERT OR REPLACE INTO payment_schedules 
        (id, lease_id, rent_amount, due_day, start_date, end_date, 
         is_active, organization_id, created_at, updated_at) 
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
-        psId,
+        ps1,
         'lease_1',
         120000,
         1,
@@ -151,7 +218,47 @@ export async function POST(request: NextRequest) {
         now,
       ]
     );
-    results.paymentSchedules = 'created';
+
+    const ps2 = `ps_lease1_installment`;
+    await query(
+      `INSERT OR REPLACE INTO payment_schedules 
+       (id, lease_id, rent_amount, due_day, start_date, end_date, 
+        is_active, organization_id, created_at, updated_at) 
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        ps2,
+        'lease_1',
+        95000,
+        15,
+        new Date('2024-02-01').getTime(),
+        new Date('2024-06-30').getTime(),
+        1,
+        orgId,
+        now,
+        now,
+      ]
+    );
+
+    const ps3 = `ps_lease2_ongoing`;
+    await query(
+      `INSERT OR REPLACE INTO payment_schedules 
+       (id, lease_id, rent_amount, due_day, start_date, end_date, 
+        is_active, organization_id, created_at, updated_at) 
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        ps3,
+        'lease_2',
+        145000,
+        5,
+        new Date('2024-03-01').getTime(),
+        null,
+        1,
+        orgId,
+        now,
+        now,
+      ]
+    );
+    results.paymentSchedules = 'created 3';
 
     // 8. Dunning Settings
     const dsId = `ds_${Date.now()}_1`;

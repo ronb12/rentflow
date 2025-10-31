@@ -9,7 +9,7 @@ async function ensureSchema() {
   }
 }
 
-// GET /api/templates/[name]/versions - Get all versions of a template
+// GET /api/templates/versions/[name] - Get all versions of a template by name
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ name: string }> }
@@ -49,4 +49,5 @@ export async function GET(
     );
   }
 }
+
 

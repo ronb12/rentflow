@@ -147,60 +147,49 @@ export default function OwnerStatementsPage() {
         </Card>
       )}
 
-      {/* Statements List */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {loading ? (
-          <div className="col-span-full text-center py-8">Loading statements...</div>
-        ) : statements.length === 0 ? (
-          <div className="col-span-full text-center py-8 text-muted-foreground">
-          No owner statements generated yet.
-          </div>
-        ) : (
-          statements.map((statement) => (
-            <Card key={statement.id}>
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>Statement</span>
-                  <Button variant="ghost" size="sm">
-                    <Download className="h-4 w-4" />
-                  </Button>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <div className="text-sm text-muted-foreground">
-                    Owner: {statement.ownerId}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    Period: {formatDate(statement.statementPeriodStart)} - {formatDate(statement.statementPeriodEnd)}
-                  </div>
-                </div>
-
-                <div className="space-y-2 pt-4 border-t">
-                  <div className="flex justify-between">
-                    <span className="text-sm">Collections:</span>
-                    <span className="font-medium text-green-600">{formatCurrency(statement.totalCollections)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm">Expenses:</span>
-                    <span className="font-medium text-red-600">{formatCurrency(statement.totalExpenses)}</span>
-                  </div>
-                  <div className="flex justify-between pt-2 border-t">
-                    <span className="font-medium">Net Amount:</span>
-                    <span className={`font-bold ${statement.netAmount >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                      {formatCurrency(statement.netAmount)}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="text-xs text-muted-foreground">
-                  Generated: {formatDate(statement.generatedAt)}
-                </div>
-              </CardContent>
-            </Card>
-          ))
-        )}
-      </div>
+      {/* Statements List - Table */}
+      {loading ? (
+        <div className="text-center py-8">Loading statements...</div>
+      ) : statements.length === 0 ? (
+        <div className="text-center py-8 text-muted-foreground">No owner statements generated yet.</div>
+      ) : (
+        <div className="overflow-x-auto rounded-md border">
+          <table className="w-full text-sm">
+            <thead className="bg-muted/40">
+              <tr>
+                <th className="text-left px-3 py-2 font-medium">Owner</th>
+                <th className="text-left px-3 py-2 font-medium">Period</th>
+                <th className="text-left px-3 py-2 font-medium">Collections</th>
+                <th className="text-left px-3 py-2 font-medium">Expenses</th>
+                <th className="text-left px-3 py-2 font-medium">Net</th>
+                <th className="text-left px-3 py-2 font-medium">Generated</th>
+                <th className="text-left px-3 py-2 font-medium">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {statements.map((s) => (
+                <tr key={s.id} className="border-t">
+                  <td className="px-3 py-2 font-medium">{s.ownerId}</td>
+                  <td className="px-3 py-2">{formatDate(s.statementPeriodStart)} – {formatDate(s.statementPeriodEnd)}</td>
+                  <td className="px-3 py-2 text-green-700 font-medium">{formatCurrency(s.totalCollections)}</td>
+                  <td className="px-3 py-2 text-red-700 font-medium">{formatCurrency(s.totalExpenses)}</td>
+                  <td className="px-3 py-2">
+                    <span className={`font-bold ${s.netAmount >= 0 ? 'text-green-700' : 'text-red-700'}`}>{formatCurrency(s.netAmount)}</span>
+                  </td>
+                  <td className="px-3 py-2 text-muted-foreground">{formatDate(s.generatedAt)}</td>
+                  <td className="px-3 py-2">
+                    <a href={`/api/accounting/owner-statements/${s.id}/pdf`} target="_blank" rel="noreferrer">
+                      <Button size="sm" variant="outline">
+                        <Download className="h-4 w-4 mr-1" /> PDF
+                      </Button>
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }

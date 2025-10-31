@@ -125,8 +125,9 @@ export default function MessagesPage() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
+                  data-testid="msg-input"
                 />
-                <Button type="submit" disabled={isSubmitting}>
+                <Button type="submit" disabled={isSubmitting} data-testid="msg-send">
                   <Send className="h-4 w-4" />
                 </Button>
               </form>

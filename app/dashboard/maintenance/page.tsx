@@ -78,6 +78,7 @@ export default function MaintenancePage() {
               <div>
                 <label className="text-sm font-medium">Description</label>
                 <textarea 
+                  data-testid="maint-description"
                   className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md h-24"
                   placeholder="Describe the issue in detail..."
                   value={description}
@@ -103,7 +104,7 @@ export default function MaintenancePage() {
                   {message}
                 </div>
               )}
-              <Button type="submit" disabled={isSubmitting} className="w-full">
+              <Button type="submit" disabled={isSubmitting} className="w-full" data-testid="maint-submit">
                 <Wrench className="mr-2 h-4 w-4" />
                 {isSubmitting ? 'Submitting...' : 'Submit Request'}
               </Button>

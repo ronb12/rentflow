@@ -333,6 +333,21 @@ export async function initSchema() {
           updated_at INTEGER
         );
 
+        CREATE TABLE IF NOT EXISTS schedule_change_requests (
+          id TEXT PRIMARY KEY,
+          schedule_id TEXT NOT NULL,
+          tenant_id TEXT,
+          requested_due_day INTEGER,
+          requested_start_date INTEGER,
+          reason TEXT,
+          status TEXT DEFAULT 'pending',
+          manager_note TEXT,
+          effective_date INTEGER,
+          organization_id TEXT,
+          created_at INTEGER,
+          updated_at INTEGER
+        );
+
         CREATE TABLE IF NOT EXISTS proration_rules (
           id TEXT PRIMARY KEY,
           lease_id TEXT,
@@ -401,6 +416,8 @@ export async function initSchema() {
     // Best-effort upgrades for messages table
     try { await client.execute("ALTER TABLE messages ADD COLUMN sender_role TEXT"); } catch (e) {}
     try { await client.execute("ALTER TABLE messages ADD COLUMN is_read INTEGER DEFAULT 0"); } catch (e) {}
+    // Best-effort upgrade for invoices: add stripe_invoice_id
+    try { await client.execute("ALTER TABLE invoices ADD COLUMN stripe_invoice_id TEXT"); } catch (e) {}
     // Ensure company_settings table exists (no-op if already)
     try {
       await client.execute("CREATE TABLE IF NOT EXISTS company_settings (id TEXT PRIMARY KEY, company_name TEXT, company_address TEXT, company_email TEXT, company_phone TEXT, logo_url TEXT, updated_at INTEGER)");
@@ -420,6 +437,7 @@ export async function initSchema() {
       "CREATE TABLE IF NOT EXISTS vendor_ratings (id TEXT PRIMARY KEY, vendor_id TEXT NOT NULL, work_order_id TEXT, rating INTEGER, comment TEXT, organization_id TEXT, created_at INTEGER)",
       "CREATE TABLE IF NOT EXISTS payment_methods (id TEXT PRIMARY KEY, tenant_id TEXT NOT NULL, type TEXT NOT NULL, stripe_payment_method_id TEXT, bank_account_last4 TEXT, bank_account_type TEXT, is_default INTEGER DEFAULT 0, is_active INTEGER DEFAULT 1, organization_id TEXT, created_at INTEGER, updated_at INTEGER)",
       "CREATE TABLE IF NOT EXISTS payment_schedules (id TEXT PRIMARY KEY, lease_id TEXT NOT NULL, rent_amount INTEGER NOT NULL, due_day INTEGER DEFAULT 1, start_date INTEGER, end_date INTEGER, is_active INTEGER DEFAULT 1, organization_id TEXT, created_at INTEGER, updated_at INTEGER)",
+      "CREATE TABLE IF NOT EXISTS schedule_change_requests (id TEXT PRIMARY KEY, schedule_id TEXT NOT NULL, tenant_id TEXT, requested_due_day INTEGER, requested_start_date INTEGER, reason TEXT, status TEXT DEFAULT 'pending', manager_note TEXT, effective_date INTEGER, organization_id TEXT, created_at INTEGER, updated_at INTEGER)",
       "CREATE TABLE IF NOT EXISTS proration_rules (id TEXT PRIMARY KEY, lease_id TEXT, proration_method TEXT DEFAULT 'daily', days_in_month INTEGER DEFAULT 30, organization_id TEXT, created_at INTEGER, updated_at INTEGER)",
       "CREATE TABLE IF NOT EXISTS dunning_settings (id TEXT PRIMARY KEY, organization_id TEXT, first_notice_days INTEGER DEFAULT 3, second_notice_days INTEGER DEFAULT 7, third_notice_days INTEGER DEFAULT 14, final_notice_days INTEGER DEFAULT 30, is_active INTEGER DEFAULT 1, created_at INTEGER, updated_at INTEGER)",
       "CREATE TABLE IF NOT EXISTS notification_preferences (id TEXT PRIMARY KEY, user_id TEXT NOT NULL, tenant_id TEXT, email_enabled INTEGER DEFAULT 1, sms_enabled INTEGER DEFAULT 0, rent_due_reminder INTEGER DEFAULT 1, late_notice INTEGER DEFAULT 1, maintenance_update INTEGER DEFAULT 1, document_signing INTEGER DEFAULT 1, organization_id TEXT, created_at INTEGER, updated_at INTEGER)",

@@ -29,17 +29,28 @@ export async function GET(request: NextRequest) {
 
     const rows = await query(sql, params);
 
-    const schedules = rows.map((row: any) => ({
+    // Normalize and de-duplicate schedules by a composite key
+    const normalized = rows.map((row: any) => ({
       id: row.id,
       leaseId: row.lease_id,
-      rentAmount: row.rent_amount,
-      dueDay: row.due_day || 1,
+      rentAmount: Number(row.rent_amount || 0),
+      dueDay: Number(row.due_day || 1),
       startDate: row.start_date,
       endDate: row.end_date,
       isActive: row.is_active === 1,
       createdAt: row.created_at,
       updatedAt: row.updated_at,
     }));
+
+    const dedupedMap = new Map<string, typeof normalized[number]>();
+    for (const s of normalized) {
+      const key = [s.leaseId, s.rentAmount, s.dueDay, s.startDate ?? 'null', s.endDate ?? 'null'].join('|');
+      const existing = dedupedMap.get(key);
+      if (!existing || (Number(s.updatedAt || 0) > Number(existing.updatedAt || 0))) {
+        dedupedMap.set(key, s);
+      }
+    }
+    const schedules = Array.from(dedupedMap.values());
 
     return NextResponse.json({ schedules });
   } catch (error) {

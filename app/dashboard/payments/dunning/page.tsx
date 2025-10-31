@@ -14,7 +14,7 @@ interface DunningSettings {
   finalNoticeDays: number;
 }
 
-export default function DunningPage() {
+export default function LatePaymentsPage() {
   const [settings, setSettings] = useState<DunningSettings>({
     firstNoticeDays: 3,
     secondNoticeDays: 7,
@@ -66,7 +66,7 @@ export default function DunningPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Dunning Management</h1>
+        <h1 className="text-3xl font-bold">Late Payment Reminders</h1>
         <p className="text-muted-foreground mt-2">
           Configure automated payment reminder notices for overdue rent
         </p>
@@ -76,7 +76,7 @@ export default function DunningPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <AlertCircle className="h-5 w-5" />
-            Dunning Schedule
+            Reminder Schedule
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -145,11 +145,11 @@ export default function DunningPage() {
           <div className="pt-4 border-t">
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
               <Clock className="h-4 w-4" />
-              <span>Dunning notices will be automatically sent based on these schedules when payments are overdue.</span>
+              <span>Reminders will be automatically sent based on these schedules when payments are overdue.</span>
             </div>
             <Button onClick={handleSave} disabled={saving}>
               <Save className="mr-2 h-4 w-4" />
-              {saving ? "Saving..." : "Save Dunning Settings"}
+              {saving ? "Saving..." : "Save Reminder Settings"}
             </Button>
           </div>
         </CardContent>
@@ -157,7 +157,7 @@ export default function DunningPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Dunning Flow Example</CardTitle>
+          <CardTitle>Reminder Flow Example</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-3 text-sm">

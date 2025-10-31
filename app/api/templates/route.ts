@@ -83,8 +83,9 @@ export async function POST(request: NextRequest) {
       [name, organizationId]
     );
 
-    const maxVersion = existingRows[0]?.max_version || 0;
-    const newVersion = createNewVersion ? maxVersion + 1 : (maxVersion > 0 ? maxVersion : 1);
+    const maxVersionRaw = existingRows[0]?.max_version;
+    const maxVersion: number = typeof maxVersionRaw === 'number' ? maxVersionRaw : Number(maxVersionRaw || 0);
+    const newVersion: number = createNewVersion ? maxVersion + 1 : (maxVersion > 0 ? maxVersion : 1);
 
     // If not creating new version and template exists, update it
     if (!createNewVersion && maxVersion > 0) {

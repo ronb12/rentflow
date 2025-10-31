@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FileText, Plus, Edit, History, Eye, Save, X } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 interface Template {
   id: string;
@@ -35,6 +36,8 @@ export default function TemplatesPage() {
   const [showVersions, setShowVersions] = useState(false);
   const [selectedTemplate, setSelectedTemplate] = useState<Template | null>(null);
   const [versions, setVersions] = useState<TemplateVersion[]>([]);
+  const [versionsLoading, setVersionsLoading] = useState(false);
+  const [versionsError, setVersionsError] = useState<string | null>(null);
   const [showPreview, setShowPreview] = useState(false);
   const [previewContent, setPreviewContent] = useState("");
 
@@ -68,14 +71,19 @@ export default function TemplatesPage() {
 
   const fetchVersions = async (templateName: string) => {
     try {
-      const response = await fetch(`/api/templates/versions/${encodeURIComponent(templateName)}`);
+      setVersionsLoading(true);
+      setVersionsError(null);
+      setShowVersions(true);
+      const response = await fetch(`/api/templates/versions/${encodeURIComponent(templateName)}`, { cache: 'no-store' });
       if (!response.ok) throw new Error("Failed to fetch versions");
-      
       const data = await response.json();
       setVersions(data.versions || []);
-      setShowVersions(true);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error fetching versions:", error);
+      setVersionsError(error?.message || 'Failed to fetch versions');
+      setVersions([]);
+    } finally {
+      setVersionsLoading(false);
     }
   };
 
@@ -207,7 +215,9 @@ export default function TemplatesPage() {
             </div>
 
             <div className="space-y-2">
-              <Label>Template Content (HTML allowed, use {{field_name}} for merge fields)</Label>
+              <Label>
+                Template Content (HTML allowed, use {"{"}{"{"}field_name{"}"}{"}"} for merge fields)
+              </Label>
               <textarea
                 className="w-full min-h-[300px] p-3 border rounded-md font-mono text-sm"
                 value={formData.templateContent}
@@ -271,113 +281,97 @@ export default function TemplatesPage() {
         </Card>
       )}
 
-      {/* Preview Modal */}
-      {showPreview && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Template Preview</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div
-              className="prose max-w-none p-4 border rounded-md"
-              dangerouslySetInnerHTML={{ __html: previewContent }}
-            />
-            <Button
-              className="mt-4"
-              variant="outline"
-              onClick={() => setShowPreview(false)}
-            >
-              Close Preview
-            </Button>
-          </CardContent>
-        </Card>
+      {/* Preview Modal (Manager) */}
+      <Dialog open={showPreview} onOpenChange={(open) => setShowPreview(open)}>
+        <DialogContent className="max-w-4xl w-[90vw] max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Template Preview</DialogTitle>
+          </DialogHeader>
+          <div
+            className="prose max-w-none p-4 border rounded-md bg-white"
+            dangerouslySetInnerHTML={{ __html: previewContent }}
+          />
+          <div className="flex justify-end mt-4">
+            <Button variant="outline" onClick={() => setShowPreview(false)}>Close</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Templates List - Compact Table */}
+      {loading ? (
+        <div className="text-center py-8">Loading templates...</div>
+      ) : templates.length === 0 ? (
+        <div className="text-center py-8 text-muted-foreground">
+          No templates found. Create your first template to get started.
+        </div>
+      ) : (
+        <div className="overflow-x-auto rounded-md border">
+          <table className="w-full text-sm">
+            <thead className="bg-muted/40">
+              <tr>
+                <th className="text-left px-3 py-2 font-medium">Name</th>
+                <th className="text-left px-3 py-2 font-medium">Category</th>
+                <th className="text-left px-3 py-2 font-medium">Version</th>
+                <th className="text-left px-3 py-2 font-medium">Merge Fields</th>
+                <th className="text-left px-3 py-2 font-medium">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {templates.map((template) => (
+                <tr key={template.id} className="border-t">
+                  <td className="px-3 py-2 font-medium">{template.name}</td>
+                  <td className="px-3 py-2 text-muted-foreground">{template.category || 'Uncategorized'}</td>
+                  <td className="px-3 py-2">v{template.version}</td>
+                  <td className="px-3 py-2">{template.mergeFields.length}</td>
+                  <td className="px-3 py-2">
+                    <div className="flex gap-2 flex-wrap">
+                      <Button size="sm" variant="outline" onClick={() => handlePreview(template)}>
+                        <Eye className="mr-1 h-3 w-3" /> Preview
+                      </Button>
+                      <Button size="sm" variant="outline" onClick={() => { setSelectedTemplate(template); fetchVersions(template.name); }}>
+                        <History className="mr-1 h-3 w-3" /> Versions
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
 
-      {/* Templates List */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {loading ? (
-          <div className="col-span-full text-center py-8">Loading templates...</div>
-        ) : templates.length === 0 ? (
-          <div className="col-span-full text-center py-8 text-muted-foreground">
-            No templates found. Create your first template to get started.
-          </div>
-        ) : (
-          templates.map((template) => (
-            <Card key={template.id}>
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>{template.name}</span>
-                  <span className="text-xs text-muted-foreground">v{template.version}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-sm text-muted-foreground">
-                  Category: {template.category || "Uncategorized"}
-                </div>
-                <div className="text-sm">
-                  Merge Fields: {template.mergeFields.length}
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => handlePreview(template)}
-                  >
-                    <Eye className="mr-1 h-3 w-3" />
-                    Preview
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => fetchVersions(template.name)}
-                  >
-                    <History className="mr-1 h-3 w-3" />
-                    Versions
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))
-        )}
-      </div>
-
       {/* Versions Modal */}
-      {showVersions && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Template Versions</CardTitle>
-          </CardHeader>
-          <CardContent>
+      <Dialog open={showVersions} onOpenChange={(open) => setShowVersions(open)}>
+        <DialogContent className="max-w-xl w-[90vw] max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Template Versions {selectedTemplate ? `- ${selectedTemplate.name}` : ''}</DialogTitle>
+          </DialogHeader>
+          {versionsLoading ? (
+            <div className="py-8 text-center text-muted-foreground">Loading versions…</div>
+          ) : versionsError ? (
+            <div className="py-4 text-sm text-red-600">{versionsError}</div>
+          ) : versions.length === 0 ? (
+            <div className="py-8 text-center text-muted-foreground">No versions found.</div>
+          ) : (
             <div className="space-y-2">
               {versions.map((version) => (
-                <div
-                  key={version.id}
-                  className="flex items-center justify-between p-2 border rounded"
-                >
+                <div key={version.id} className="flex items-center justify-between p-2 border rounded">
                   <div>
                     <div className="font-medium">Version {version.version}</div>
-                    <div className="text-sm text-muted-foreground">
-                      Created: {new Date(version.createdAt).toLocaleDateString()}
-                    </div>
+                    <div className="text-sm text-muted-foreground">Created: {new Date(version.createdAt).toLocaleDateString()}</div>
                   </div>
                   {version.isActive && (
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
-                      Active
-                    </span>
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
                   )}
                 </div>
               ))}
             </div>
-            <Button
-              className="mt-4"
-              variant="outline"
-              onClick={() => setShowVersions(false)}
-            >
-              Close
-            </Button>
-          </CardContent>
-        </Card>
-      )}
+          )}
+          <div className="flex justify-end mt-4">
+            <Button variant="outline" onClick={() => setShowVersions(false)}>Close</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

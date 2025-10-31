@@ -37,15 +37,26 @@ export async function POST(request: NextRequest) {
     }
 
     const template = rows[0];
-    let content = template.template_content;
-    const mergeFields = template.merge_fields ? JSON.parse(template.merge_fields) : [];
+    let content: string = String(template.template_content ?? "");
+    // Safely parse merge_fields regardless of underlying storage type
+    const rawMergeFields = template.merge_fields as unknown;
+    let mergeFields: any[] = [];
+    if (Array.isArray(rawMergeFields)) {
+      mergeFields = rawMergeFields as any[];
+    } else if (rawMergeFields !== null && rawMergeFields !== undefined) {
+      try {
+        mergeFields = JSON.parse(String(rawMergeFields));
+      } catch {
+        mergeFields = [];
+      }
+    }
     const fieldValues = mergeFieldValues || {};
 
     // Replace merge fields with values
     mergeFields.forEach((field: any) => {
       const placeholder = `{{${field.name}}}`;
       const value = fieldValues[field.name] || field.defaultValue || '';
-      content = content.replace(new RegExp(placeholder, 'g'), value);
+      content = content.replace(new RegExp(placeholder, 'g'), String(value));
     });
 
     // Replace common placeholders
@@ -60,7 +71,7 @@ export async function POST(request: NextRequest) {
     };
 
     Object.entries(commonFields).forEach(([placeholder, value]) => {
-      content = content.replace(new RegExp(placeholder, 'g'), value);
+      content = content.replace(new RegExp(placeholder, 'g'), String(value));
     });
 
     return NextResponse.json({ preview: content });
