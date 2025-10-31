@@ -1,0 +1,14 @@
+🧪 Starting Complete App Testing...
+
+1️⃣ Testing as MANAGER...
+
+   🔑 Logging in as manager...
+❌ Error during testing: TimeoutError: Navigation timeout of 60000 ms exceeded
+    at new Deferred (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:60:34)
+    at Deferred.create (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:21:16)
+    at new LifecycleWatcher (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/LifecycleWatcher.js:69:60)
+    at CdpFrame.goto (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:29)
+    at CdpFrame.<anonymous> (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/decorators.js:109:27)
+    at CdpPage.goto (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:574:43)
+    at testAsManager (/Users/ronellbradley/Desktop/RentFlow/test-entire-app.js:39:14)
+    at testEntireApp (/Users/ronellbradley/Desktop/RentFlow/test-entire-app.js:22:11)

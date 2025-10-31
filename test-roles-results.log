@@ -1,0 +1,105 @@
+🚀 Starting Role-Based Feature Testing...
+
+
+👔 ======================================
+   MANAGER FEATURE TESTING
+======================================
+
+1. Logging in as Manager...
+   ✅ Manager logged in successfully
+
+2. Testing Manager Dashboard...
+   ✅ Manager Dashboard loaded
+
+3. Testing Manager Navigation Items...
+   ✅ Properties page loaded
+   ✅ Tenants page loaded
+   ✅ Leases page loaded
+   ✅ Invoices page loaded
+   ✅ Inspections page loaded
+   ✅ Work Orders page loaded
+   ✅ Reports page loaded
+   ❌ Settings page failed: Navigation timeout of 30000 ms exceeded
+
+4. Testing Manager Actions...
+   ✅ Add Tenant button accessible
+
+5. Logging out...
+
+🏠 ======================================
+   RENTER FEATURE TESTING
+======================================
+
+1. Logging in as Renter...
+   ✅ Renter logged in successfully
+
+2. Testing Renter Dashboard...
+   ✅ Renter Dashboard loaded
+
+3. Testing Renter Navigation Items...
+   ✅ My Lease page loaded
+   ✅ Payments page loaded
+   ✅ Maintenance page loaded
+   ✅ Messages page loaded
+   ✅ Settings page loaded
+
+4. Testing Renter Features...
+   ✅ Maintenance request form accessible
+   ✅ Message interface accessible
+
+
+============================================================
+📊 COMPREHENSIVE ROLE TESTING SUMMARY
+============================================================
+
+👔 MANAGER FEATURES:
+   Total Tests: 11
+   ✅ Passed: 10
+   ❌ Failed: 1
+   Success Rate: 90.9%
+
+   Failed Tests:
+     ❌ Settings Page: Navigation timeout of 30000 ms exceeded
+
+   Passed Tests:
+     ✅ Manager Login
+     ✅ Manager Dashboard
+     ✅ Properties Page
+     ✅ Tenants Page
+     ✅ Leases Page
+     ✅ Invoices Page
+     ✅ Inspections Page
+     ✅ Work Orders Page
+     ✅ Reports Page
+     ✅ Add Tenant Action
+
+🏠 RENTER FEATURES:
+   Total Tests: 9
+   ✅ Passed: 9
+   ❌ Failed: 0
+   Success Rate: 100.0%
+
+   Passed Tests:
+     ✅ Renter Login
+     ✅ Renter Dashboard
+     ✅ My Lease Page
+     ✅ Payments Page
+     ✅ Maintenance Page
+     ✅ Messages Page
+     ✅ Settings Page
+     ✅ Maintenance Request Form
+     ✅ Messages Interface
+
+============================================================
+OVERALL SUMMARY
+============================================================
+Total Tests Run: 20
+Total Passed: 19
+Total Failed: 1
+Overall Success Rate: 95.0%
+
+⚠️  Some tests failed. Please review the issues above.
+============================================================
+
+
+✅ Role testing completed successfully!

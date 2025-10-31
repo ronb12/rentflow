@@ -165,13 +165,13 @@ export function DocumentUploadModal({ isOpen, onClose, onSuccess }: DocumentUplo
               <SelectTrigger>
                 <SelectValue placeholder="Select document type" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="lease">Lease Agreement</SelectItem>
-                <SelectItem value="contract">Contract</SelectItem>
-                <SelectItem value="invoice">Invoice</SelectItem>
-                <SelectItem value="receipt">Receipt</SelectItem>
-                <SelectItem value="notice">Notice</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+              <SelectContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                <SelectItem value="lease" className="text-gray-900 dark:text-gray-100">Lease Agreement</SelectItem>
+                <SelectItem value="contract" className="text-gray-900 dark:text-gray-100">Contract</SelectItem>
+                <SelectItem value="invoice" className="text-gray-900 dark:text-gray-100">Invoice</SelectItem>
+                <SelectItem value="receipt" className="text-gray-900 dark:text-gray-100">Receipt</SelectItem>
+                <SelectItem value="notice" className="text-gray-900 dark:text-gray-100">Notice</SelectItem>
+                <SelectItem value="other" className="text-gray-900 dark:text-gray-100">Other</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -183,12 +183,12 @@ export function DocumentUploadModal({ isOpen, onClose, onSuccess }: DocumentUplo
               <SelectTrigger>
                 <SelectValue placeholder="Select category" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="legal">Legal</SelectItem>
-                <SelectItem value="financial">Financial</SelectItem>
-                <SelectItem value="maintenance">Maintenance</SelectItem>
-                <SelectItem value="communication">Communication</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+              <SelectContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                <SelectItem value="legal" className="text-gray-900 dark:text-gray-100">Legal</SelectItem>
+                <SelectItem value="financial" className="text-gray-900 dark:text-gray-100">Financial</SelectItem>
+                <SelectItem value="maintenance" className="text-gray-900 dark:text-gray-100">Maintenance</SelectItem>
+                <SelectItem value="communication" className="text-gray-900 dark:text-gray-100">Communication</SelectItem>
+                <SelectItem value="other" className="text-gray-900 dark:text-gray-100">Other</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -228,6 +228,7 @@ export function DocumentUploadModal({ isOpen, onClose, onSuccess }: DocumentUplo
     </Dialog>
   );
 }
+
 
 
 

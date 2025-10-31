@@ -1,0 +1,21 @@
+RentFlow Document Management Test
+
+This is a sample document to demonstrate the file upload functionality.
+
+Document Details:
+- Property: 123 Main Street
+- Tenant: John Doe
+- Rent Amount: cd /Users/ronellbradley/Desktop/RentFlow && echo "RentFlow Document Management Test
+
+This is a sample document to demonstrate the file upload functionality.
+
+Document Details:
+- Property: 123 Main Street
+- Tenant: John Doe
+- Rent Amount: $1,200/month
+- Due Date: 1st of each month
+
+This document shows that the file upload system is working correctly." > sample-document.txt,200/month
+- Due Date: 1st of each month
+
+This document shows that the file upload system is working correctly.

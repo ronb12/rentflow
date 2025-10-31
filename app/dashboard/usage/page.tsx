@@ -158,11 +158,11 @@ export default function UsagePage() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm">
-            <li>✓ Images are compressed before upload</li>
-            <li>✓ Offline mode uses IndexedDB (not counted)</li>
-            <li>✓ Cache aggressively to reduce reads</li>
+              <li>✓ Images are compressed before upload</li>
+              <li>✓ Offline mode uses IndexedDB (not counted)</li>
+              <li>✓ Cache aggressively to reduce reads</li>
             <li>✓ Batch database operations</li>
-            <li>✓ Monitor usage weekly</li>
+              <li>✓ Monitor usage weekly</li>
             </ul>
           </CardContent>
         </Card>

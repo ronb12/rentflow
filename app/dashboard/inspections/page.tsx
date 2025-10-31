@@ -106,8 +106,10 @@ export default function InspectionsPage() {
                 <div className="flex justify-between items-start">
                   <div>
                     <CardTitle className="text-lg">
-                      {inspection.inspectionType.charAt(0).toUpperCase() +
-                        inspection.inspectionType.slice(1)}{" "}
+                      {inspection.inspectionType
+                        ? inspection.inspectionType.charAt(0).toUpperCase() +
+                          inspection.inspectionType.slice(1)
+                        : "Inspection"}{" "}
                       Inspection
                     </CardTitle>
                     <p className="text-sm text-muted-foreground mt-1">

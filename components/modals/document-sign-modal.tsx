@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import SignaturePad from 'signature_pad';
+import { resolveClientRole } from '@/lib/auth';
 
 interface Document {
   id: string;
@@ -27,10 +28,19 @@ export function DocumentSignModal({ isOpen, onClose, document, onSuccess }: Docu
   const [signerName, setSignerName] = useState('');
   const [signerEmail, setSignerEmail] = useState('');
   const [signing, setSigning] = useState(false);
+  const [role, setRole] = useState<'manager' | 'renter' | null>(null);
 
   useEffect(() => {
-    if (isOpen && canvasRef.current) {
+    setRole(resolveClientRole());
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    let cleanup: (() => void) | undefined;
+    const init = () => {
+      if (!canvasRef.current) return;
       const canvas = canvasRef.current;
+      // Initialize pad
       signaturePadRef.current = new SignaturePad(canvas, {
         backgroundColor: 'rgba(255, 255, 255, 0)',
         penColor: 'rgb(0, 0, 0)',
@@ -38,22 +48,33 @@ export function DocumentSignModal({ isOpen, onClose, document, onSuccess }: Docu
         maxWidth: 3,
       });
 
-      // Make canvas responsive
       const resizeCanvas = () => {
         const ratio = Math.max(window.devicePixelRatio || 1, 1);
-        canvas.width = canvas.offsetWidth * ratio;
-        canvas.height = canvas.offsetHeight * ratio;
-        canvas.getContext('2d')?.scale(ratio, ratio);
+        const width = canvas.offsetWidth || 300;
+        const height = canvas.offsetHeight || 128;
+        canvas.width = Math.floor(width * ratio);
+        canvas.height = Math.floor(height * ratio);
+        const ctx = canvas.getContext('2d');
+        if (ctx) ctx.scale(ratio, ratio);
         signaturePadRef.current?.clear();
       };
 
+      // Size after dialog paint
       resizeCanvas();
       window.addEventListener('resize', resizeCanvas);
-
-      return () => {
+      cleanup = () => {
         window.removeEventListener('resize', resizeCanvas);
+        signaturePadRef.current?.off();
+        signaturePadRef.current = null;
       };
-    }
+    };
+
+    // Defer one frame so the modal has measured layout
+    const raf = requestAnimationFrame(() => init());
+    return () => {
+      cancelAnimationFrame(raf);
+      cleanup?.();
+    };
   }, [isOpen]);
 
   const handleSign = async () => {
@@ -72,9 +93,14 @@ export function DocumentSignModal({ isOpen, onClose, document, onSuccess }: Docu
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           documentId: document?.id,
+          documentName: document?.name,
+          documentType: (document as any)?.type,
+          documentCategory: (document as any)?.category,
+          templateData: (document as any)?.templateData,
           signatureData,
           signerName,
-          signerEmail
+          signerEmail,
+          signerRole: role || 'renter'
         })
       });
 
@@ -112,7 +138,7 @@ export function DocumentSignModal({ isOpen, onClose, document, onSuccess }: Docu
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg">
+      <DialogContent className="sm:max-w-lg max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Sign Document: {document.name}</DialogTitle>
         </DialogHeader>
@@ -202,6 +228,7 @@ export function DocumentSignModal({ isOpen, onClose, document, onSuccess }: Docu
     </Dialog>
   );
 }
+
 
 
 

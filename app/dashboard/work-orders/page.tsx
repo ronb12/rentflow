@@ -1,13 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Wrench, Plus, Search, Calendar, User, Building2, AlertCircle, CheckCircle, Clock, Filter, Edit, Trash2 } from "lucide-react";
+import { WorkOrderEditModal } from "@/components/modals/work-order-edit-modal";
+import { WorkOrderAssignModal } from "@/components/modals/work-order-assign-modal";
+import { WorkOrderScheduleModal } from "@/components/modals/work-order-schedule-modal";
 
 export default function WorkOrdersPage() {
+  const [recentRequests, setRecentRequests] = useState<Array<{ id: string; tenant_id: string; issue_type: string; description: string; priority: string; status: string; created_at: number }>>([]);
+  const [loadingRequests, setLoadingRequests] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/maintenance-requests');
+        if (!res.ok) throw new Error('Failed to load');
+        const data = await res.json();
+        if (active) setRecentRequests((Array.isArray(data) ? data : []).slice(0, 5));
+      } catch {
+        if (active) setRecentRequests([]);
+      } finally {
+        if (active) setLoadingRequests(false);
+      }
+    })();
+    return () => { active = false };
+  }, []);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
   const [filterPriority, setFilterPriority] = useState("all");
@@ -31,50 +53,24 @@ export default function WorkOrdersPage() {
   });
 
   // Sample work order data
-  const [workOrders, setWorkOrders] = useState([
-    {
-      id: "WO-001",
-      title: "Kitchen Faucet Repair",
-      description: "Kitchen faucet is leaking and needs repair",
-      tenantName: "John Doe",
-      property: "123 Main St, Unit 1A",
-      priority: "high",
-      status: "in_progress",
-      assignedTo: "Mike Rodriguez",
-      createdDate: "2024-12-20",
-      dueDate: "2024-12-25",
-      estimatedCost: 150,
-      actualCost: null
-    },
-    {
-      id: "WO-002",
-      title: "HVAC Maintenance",
-      description: "Annual HVAC system maintenance and filter replacement",
-      tenantName: "Jane Smith",
-      property: "456 Oak Ave, Unit 2B",
-      priority: "medium",
-      status: "pending",
-      assignedTo: "Sarah Johnson",
-      createdDate: "2024-12-18",
-      dueDate: "2024-12-30",
-      estimatedCost: 300,
-      actualCost: null
-    },
-    {
-      id: "WO-003",
-      title: "Door Lock Replacement",
-      description: "Front door lock is broken and needs replacement",
-      tenantName: "Mike Johnson",
-      property: "789 Pine St, Unit 3C",
-      priority: "high",
-      status: "completed",
-      assignedTo: "Mike Rodriguez",
-      createdDate: "2024-12-15",
-      dueDate: "2024-12-20",
-      estimatedCost: 200,
-      actualCost: 185
+  const [workOrders, setWorkOrders] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  async function refreshWorkOrders() {
+    try {
+      const res = await fetch('/api/work-orders');
+      if (!res.ok) throw new Error(`Failed: ${res.status}`);
+      const data = await res.json();
+      setWorkOrders(Array.isArray(data) ? data : []);
+    } catch (e: any) {
+      setError(e.message || 'Failed to load work orders');
+    } finally {
+      setLoading(false);
     }
-  ]);
+  }
+
+  useEffect(() => { refreshWorkOrders(); }, []);
 
   const [newWorkOrder, setNewWorkOrder] = useState({
     title: "",
@@ -140,13 +136,13 @@ export default function WorkOrdersPage() {
     setShowScheduleModal(true);
   };
 
-  const handleUpdateAssignee = () => {
-    if (!selectedWorkOrder || !newAssignee.trim()) return;
+  const handleUpdateAssignee = (assignee: string) => {
+    if (!selectedWorkOrder) return;
     
     setWorkOrders(prev => 
       prev.map(workOrder => 
         workOrder.id === selectedWorkOrder.id 
-          ? { ...workOrder, assignedTo: newAssignee.trim() }
+          ? { ...workOrder, assignedTo: assignee.trim() }
           : workOrder
       )
     );
@@ -156,13 +152,13 @@ export default function WorkOrdersPage() {
     setNewAssignee("");
   };
 
-  const handleUpdateDueDate = () => {
-    if (!selectedWorkOrder || !newDueDate) return;
+  const handleUpdateDueDate = (dueDate: string) => {
+    if (!selectedWorkOrder) return;
     
     setWorkOrders(prev => 
       prev.map(workOrder => 
         workOrder.id === selectedWorkOrder.id 
-          ? { ...workOrder, dueDate: newDueDate }
+          ? { ...workOrder, dueDate: dueDate }
           : workOrder
       )
     );
@@ -187,23 +183,11 @@ export default function WorkOrdersPage() {
     setShowEditModal(true);
   };
 
-  const handleUpdateWorkOrder = () => {
-    if (!selectedWorkOrder) return;
-    
+  const handleUpdateWorkOrder = (updatedWorkOrder: any) => {
     setWorkOrders(prev => 
       prev.map(workOrder => 
-        workOrder.id === selectedWorkOrder.id 
-          ? { 
-              ...workOrder, 
-              title: editForm.title,
-              description: editForm.description,
-              tenantName: editForm.tenantName,
-              property: editForm.property,
-              priority: editForm.priority,
-              assignedTo: editForm.assignedTo,
-              dueDate: editForm.dueDate,
-              estimatedCost: parseFloat(editForm.estimatedCost)
-            }
+        workOrder.id === updatedWorkOrder.id 
+          ? updatedWorkOrder
           : workOrder
       )
     );
@@ -258,11 +242,11 @@ export default function WorkOrdersPage() {
   };
 
   const totalWorkOrders = workOrders.length;
-  const pendingWorkOrders = workOrders.filter(wo => wo.status === "pending").length;
-  const inProgressWorkOrders = workOrders.filter(wo => wo.status === "in_progress").length;
-  const completedWorkOrders = workOrders.filter(wo => wo.status === "completed").length;
-  const totalEstimatedCost = workOrders.reduce((sum, wo) => sum + wo.estimatedCost, 0);
-  const totalActualCost = workOrders.filter(wo => wo.actualCost).reduce((sum, wo) => sum + (wo.actualCost || 0), 0);
+  const pendingWorkOrders = useMemo(() => workOrders.filter(wo => wo.status === "pending").length, [workOrders]);
+  const inProgressWorkOrders = useMemo(() => workOrders.filter(wo => wo.status === "in progress" || wo.status === "in_progress").length, [workOrders]);
+  const completedWorkOrders = useMemo(() => workOrders.filter(wo => wo.status === "completed").length, [workOrders]);
+  const totalEstimatedCost = useMemo(() => workOrders.reduce((sum, wo) => sum + (wo.estimated_cost || 0), 0), [workOrders]);
+  const totalActualCost = useMemo(() => workOrders.reduce((sum, wo) => sum + (wo.actual_cost || 0), 0), [workOrders]);
 
   return (
     <div>
@@ -270,6 +254,39 @@ export default function WorkOrdersPage() {
         <h1 className="text-3xl font-bold mb-2">Work Order Management</h1>
         <p className="text-muted-foreground">Create, assign, and track maintenance and repair work orders.</p>
       </div>
+
+      {/* Recent Maintenance Requests (from renters) */}
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle>Recent Maintenance Requests</CardTitle>
+        </CardHeader>
+        <CardContent>
+          {loadingRequests ? (
+            <div className="text-sm text-muted-foreground">Loading…</div>
+          ) : recentRequests.length === 0 ? (
+            <div className="text-sm text-muted-foreground">No recent requests.</div>
+          ) : (
+            <div className="space-y-3">
+              {recentRequests.map((r) => (
+                <div key={r.id} className="flex items-start justify-between rounded-md border p-3">
+                  <div className="mr-3">
+                    <div className="font-medium capitalize">{r.issue_type}</div>
+                    <div className="text-sm text-muted-foreground break-words">{r.description}</div>
+                    <div className="text-xs text-muted-foreground mt-1">Tenant: {r.tenant_id}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-medium capitalize">{r.status}</div>
+                    <div className="text-xs text-muted-foreground">{new Date(r.created_at).toLocaleString()}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          <div className="mt-3 text-sm">
+            <a href="/dashboard/maintenance/manage" className="text-blue-600 hover:underline">Open full maintenance manager »</a>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
@@ -373,7 +390,7 @@ export default function WorkOrdersPage() {
         </div>
       </div>
 
-      {/* Create Work Order Form */}
+      {/* Create Work Order Form (local create to API) */}
       {showCreateForm && (
         <Card className="mb-6">
           <CardHeader>
@@ -489,7 +506,11 @@ export default function WorkOrdersPage() {
           <CardTitle>Work Orders ({filteredWorkOrders.length})</CardTitle>
         </CardHeader>
         <CardContent>
-          {filteredWorkOrders.length === 0 ? (
+          {loading ? (
+            <div>Loading…</div>
+          ) : error ? (
+            <div className="text-sm text-red-600">{error}</div>
+          ) : filteredWorkOrders.length === 0 ? (
             <div className="text-center py-8">
               <Wrench className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-500">No work orders found</p>
@@ -515,9 +536,9 @@ export default function WorkOrdersPage() {
                   {filteredWorkOrders.map((workOrder) => (
                     <tr key={workOrder.id} className="border-b hover:bg-gray-50">
                       <td className="p-2 font-medium">{workOrder.id}</td>
-                      <td className="p-2">{workOrder.title}</td>
-                      <td className="p-2">{workOrder.tenantName}</td>
-                      <td className="p-2">{workOrder.property}</td>
+                      <td className="p-2">{workOrder.title || '-'}</td>
+                      <td className="p-2">{workOrder.tenant_id || '-'}</td>
+                      <td className="p-2">{workOrder.property || '-'}</td>
                       <td className="p-2">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(workOrder.priority)}`}>
                           {workOrder.priority}
@@ -530,18 +551,18 @@ export default function WorkOrdersPage() {
                           className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(workOrder.status)}`}
                         >
                           <option value="pending">Pending</option>
-                          <option value="in_progress">In Progress</option>
+                          <option value="in progress">In Progress</option>
                           <option value="completed">Completed</option>
                           <option value="cancelled">Cancelled</option>
                         </select>
                       </td>
-                      <td className="p-2">{workOrder.assignedTo}</td>
-                      <td className="p-2">{workOrder.dueDate}</td>
+                      <td className="p-2">{workOrder.assigned_to || ''}</td>
+                      <td className="p-2">{workOrder.due_date ? new Date(workOrder.due_date).toLocaleDateString() : ''}</td>
                       <td className="p-2">
                         {workOrder.actualCost ? (
-                          <span>${workOrder.actualCost}</span>
+                          <span>${workOrder.actual_cost || 0}</span>
                         ) : (
-                          <span>${workOrder.estimatedCost}</span>
+                          <span>${workOrder.estimated_cost || 0}</span>
                         )}
                       </td>
                       <td className="p-2">
@@ -591,221 +612,49 @@ export default function WorkOrdersPage() {
       </Card>
 
       {/* Assign Technician Modal */}
-      {showAssignModal && selectedWorkOrder && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Assign Technician</h3>
-            <div className="space-y-4">
-              <div>
-                <Label htmlFor="workOrderTitle">Work Order</Label>
-                <Input
-                  id="workOrderTitle"
-                  value={selectedWorkOrder.title}
-                  disabled
-                  className="bg-gray-50"
-                />
-              </div>
-              <div>
-                <Label htmlFor="assignee">Assign To</Label>
-                <Input
-                  id="assignee"
-                  value={newAssignee}
-                  onChange={(e) => setNewAssignee(e.target.value)}
-                  placeholder="Enter technician name"
-                  required
-                />
-              </div>
-            </div>
-            <div className="flex gap-2 mt-6">
-              <Button onClick={handleUpdateAssignee} disabled={!newAssignee.trim()}>
-                Update Assignment
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setShowAssignModal(false);
-                  setSelectedWorkOrder(null);
-                  setNewAssignee("");
-                }}
-              >
-                Cancel
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+      <WorkOrderAssignModal
+        isOpen={showAssignModal}
+        onClose={() => {
+          setShowAssignModal(false);
+          setSelectedWorkOrder(null);
+          setNewAssignee("");
+        }}
+        workOrder={selectedWorkOrder}
+        onSave={handleUpdateAssignee}
+      />
 
       {/* Schedule Work Order Modal */}
-      {showScheduleModal && selectedWorkOrder && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Schedule Work Order</h3>
-            <div className="space-y-4">
-              <div>
-                <Label htmlFor="workOrderTitleSchedule">Work Order</Label>
-                <Input
-                  id="workOrderTitleSchedule"
-                  value={selectedWorkOrder.title}
-                  disabled
-                  className="bg-gray-50"
-                />
-              </div>
-              <div>
-                <Label htmlFor="dueDate">Due Date</Label>
-                <Input
-                  id="dueDate"
-                  type="date"
-                  value={newDueDate}
-                  onChange={(e) => setNewDueDate(e.target.value)}
-                  required
-                />
-              </div>
-            </div>
-            <div className="flex gap-2 mt-6">
-              <Button onClick={handleUpdateDueDate} disabled={!newDueDate}>
-                Update Schedule
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setShowScheduleModal(false);
-                  setSelectedWorkOrder(null);
-                  setNewDueDate("");
-                }}
-              >
-                Cancel
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+      <WorkOrderScheduleModal
+        isOpen={showScheduleModal}
+        onClose={() => {
+          setShowScheduleModal(false);
+          setSelectedWorkOrder(null);
+          setNewDueDate("");
+        }}
+        workOrder={selectedWorkOrder}
+        onSave={handleUpdateDueDate}
+      />
 
       {/* Edit Work Order Modal */}
-      {showEditModal && selectedWorkOrder && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <h3 className="text-lg font-semibold mb-4">Edit Work Order</h3>
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="editTitle">Work Order Title</Label>
-                  <Input
-                    id="editTitle"
-                    value={editForm.title}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, title: e.target.value }))}
-                    placeholder="Enter work order title"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="editPriority">Priority</Label>
-                  <select
-                    id="editPriority"
-                    value={editForm.priority}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, priority: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    required
-                  >
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                  </select>
-                </div>
-                <div>
-                  <Label htmlFor="editTenantName">Tenant Name</Label>
-                  <Input
-                    id="editTenantName"
-                    value={editForm.tenantName}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, tenantName: e.target.value }))}
-                    placeholder="Enter tenant name"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="editProperty">Property Address</Label>
-                  <Input
-                    id="editProperty"
-                    value={editForm.property}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, property: e.target.value }))}
-                    placeholder="Enter property address"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="editAssignedTo">Assign To</Label>
-                  <Input
-                    id="editAssignedTo"
-                    value={editForm.assignedTo}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, assignedTo: e.target.value }))}
-                    placeholder="Enter technician name"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="editDueDate">Due Date</Label>
-                  <Input
-                    id="editDueDate"
-                    type="date"
-                    value={editForm.dueDate}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, dueDate: e.target.value }))}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="editEstimatedCost">Estimated Cost</Label>
-                  <Input
-                    id="editEstimatedCost"
-                    type="number"
-                    value={editForm.estimatedCost}
-                    onChange={(e) => setEditForm(prev => ({ ...prev, estimatedCost: e.target.value }))}
-                    placeholder="0.00"
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="editDescription">Description</Label>
-                <textarea
-                  id="editDescription"
-                  value={editForm.description}
-                  onChange={(e) => setEditForm(prev => ({ ...prev, description: e.target.value }))}
-                  placeholder="Enter detailed description of the work needed"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                  rows={3}
-                  required
-                />
-              </div>
-            </div>
-            <div className="flex gap-2 mt-6">
-              <Button 
-                onClick={handleUpdateWorkOrder} 
-                disabled={!editForm.title.trim() || !editForm.description.trim() || !editForm.tenantName.trim() || !editForm.property.trim() || !editForm.assignedTo.trim() || !editForm.dueDate || !editForm.estimatedCost}
-              >
-                Update Work Order
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setShowEditModal(false);
-                  setSelectedWorkOrder(null);
-                  setEditForm({
-                    title: "",
-                    description: "",
-                    tenantName: "",
-                    property: "",
-                    priority: "medium",
-                    assignedTo: "",
-                    dueDate: "",
-                    estimatedCost: ""
-                  });
-                }}
-              >
-                Cancel
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+      <WorkOrderEditModal
+        isOpen={showEditModal}
+        onClose={() => {
+          setShowEditModal(false);
+          setSelectedWorkOrder(null);
+          setEditForm({
+            title: "",
+            description: "",
+            tenantName: "",
+            property: "",
+            priority: "medium",
+            assignedTo: "",
+            dueDate: "",
+            estimatedCost: ""
+          });
+        }}
+        workOrder={selectedWorkOrder}
+        onSave={handleUpdateWorkOrder}
+      />
     </div>
   );
 }

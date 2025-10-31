@@ -1,0 +1,1494 @@
+
+> rentflow@1.0.0 dev
+> next dev -p 3004
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3004
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 4.6s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 2.1s (72 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 301.2s (511 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 587ms (259 modules)
+
+warn - The `content` option in your Tailwind CSS configuration is missing or empty.
+warn - Configure your content sources or your generated CSS will be missing styles.
+warn - https://tailwindcss.com/docs/content-configuration
+ ✓ Compiled in 4.5s (331 modules)
+ ✓ Compiled in 635ms (259 modules)
+ ✓ Compiled in 4.2s (331 modules)
+ ✓ Compiled in 429ms (259 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 936ms (243 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 2022ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 55.6s (586 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 37553ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 65166ms
+ GET / 200 in 67259ms
+ GET /dashboard 200 in 67645ms
+ ○ Compiling /dashboard/properties ...
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled /dashboard/reports in 436.2s (815 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/work-orders. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/properties. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/reports. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/reports 200 in 24438ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled (801 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 151ms
+ GET / 200 in 165ms
+ GET /dashboard 200 in 170ms
+ ○ Compiling /dashboard/settings ...
+ ✓ Compiled /dashboard/settings in 1800ms (835 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 2214ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 107ms
+ GET /login 200 in 117ms
+ GET /dashboard 200 in 126ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 148ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 470ms
+ ○ Compiling /dashboard/my-lease ...
+ ✓ Compiled /dashboard/my-lease in 825ms (845 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 1140ms
+ ○ Compiling /dashboard/payments ...
+ ✓ Compiled /dashboard/payments in 1551ms (853 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 2042ms
+ ○ Compiling /dashboard/maintenance ...
+ ✓ Compiled /dashboard/maintenance in 1621ms (861 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 1923ms
+ ○ Compiling /dashboard/messages ...
+ ✓ Compiled /dashboard/messages in 1184ms (871 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 1469ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 186ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 358ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 4215ms
+ GET /login 200 in 4258ms
+ GET /dashboard 200 in 4272ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 307ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 397ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 196ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 247ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 401ms
+ GET /login 200 in 404ms
+ GET / 200 in 416ms
+ GET /dashboard 200 in 474ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 71ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 95ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 215ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 218ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 232ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1068ms
+ GET /login 200 in 1014ms
+ GET /dashboard 200 in 1035ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 367ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 251ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 119ms
+ GET /login 200 in 122ms
+ GET /dashboard 200 in 133ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 273ms
+ ○ Compiling /api/payments ...
+ ✓ Compiled /api/payments in 1598ms (441 modules)
+Database schema initialized
+ POST /api/payments 200 in 2280ms
+ ✓ Compiled /dashboard/maintenance in 471ms (446 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 1202ms
+ ○ Compiling /dashboard/messages ...
+ ✓ Compiled /dashboard/messages in 1897ms (453 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 2886ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 717ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 311ms
+ GET /dashboard/settings 200 in 311ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 228ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 238ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 216ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 74ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1729ms
+ GET /login 200 in 1761ms
+ GET /dashboard 200 in 1873ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 1822ms
+ GET / 200 in 1883ms
+ GET /dashboard 200 in 1940ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 615ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 72ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 167ms
+ GET /login 200 in 197ms
+ GET /dashboard 200 in 218ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1111ms
+ GET /login 200 in 1165ms
+ GET /dashboard 200 in 1233ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard?role=renter 200 in 269ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 387ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 237ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 228ms
+Database schema initialized
+ POST /api/payments 200 in 94ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 135ms
+ GET /dashboard/payments 200 in 136ms
+ POST /api/payments 200 in 40ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 257ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 320ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 228ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 82ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 137ms
+ ○ Compiling /api/maintenance-requests ...
+ ✓ Compiled /api/maintenance-requests in 650ms (451 modules)
+Database schema initialized
+Database query error (attempt 1/3): LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 20 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:61)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+ POST /api/maintenance-requests 200 in 1065ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 455ms
+Database query error (attempt 2/3): LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:9)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Database query error (attempt 3/3): LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:9)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Error creating maintenance request: LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:9)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+ ○ Compiling /api/messages ...
+ ✓ Compiled /api/messages in 653ms (444 modules)
+Database schema initialized
+Error sending message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5738:19)
+    at successSteps (node:internal/deps/undici/undici:5719:27)
+    at consumeBody (node:internal/deps/undici/undici:5725:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5665:18)
+    at POST (webpack-internal:///(rsc)/./app/api/messages/route.ts:46:32)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 840ms (453 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 1433ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 270ms
+ ○ Compiling / ...
+ ✓ Compiled / in 7.6s (408 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 11653ms
+ GET /login 200 in 11665ms
+ GET / 200 in 11962ms
+ GET /dashboard?role=renter 200 in 3003ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 298ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 112ms
+ GET /login 200 in 129ms
+ GET /dashboard 200 in 136ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 202ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 344ms
+ ○ Compiling /api/payments ...
+ ✓ Compiled /api/payments in 1087ms (441 modules)
+Database schema initialized
+ POST /api/payments 200 in 1407ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 295ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 195ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 401ms
+ ○ Compiling /dashboard/settings ...
+ ✓ Compiled /dashboard/settings in 817ms (453 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 1273ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 155ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 415ms
+ ○ Compiling /api/maintenance-requests ...
+ ✓ Compiled /api/maintenance-requests in 638ms (433 modules)
+Database schema initialized
+Database query error (attempt 1/3): LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 20 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:61)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+ POST /api/maintenance-requests 200 in 1055ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 115ms
+Database query error (attempt 2/3): LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:9)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Database query error (attempt 3/3): LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:9)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Error creating maintenance request: LibsqlError: SQLITE_ERROR: table maintenance_requests has no column named property_id
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: table maintenance_requests has no column named property_id
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:43:9)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+ ✓ Compiled /api/messages in 456ms (435 modules)
+Database schema initialized
+Error sending message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5738:19)
+    at successSteps (node:internal/deps/undici/undici:5719:27)
+    at consumeBody (node:internal/deps/undici/undici:5725:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5665:18)
+    at POST (webpack-internal:///(rsc)/./app/api/messages/route.ts:46:32)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 673ms (444 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 829ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 2s (448 modules)
+ ✓ Compiled (455 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 7219ms
+ GET / 200 in 7428ms
+ GET /dashboard 200 in 7446ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 478ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 700ms
+ GET /login 200 in 704ms
+ GET /dashboard 200 in 690ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard?role=renter 200 in 223ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 208ms
+ GET / 200 in 217ms
+ GET /dashboard 200 in 227ms
+ ✓ Compiled in 4.3s (846 modules)
+ ✓ Compiled in 734ms (443 modules)
+ ✓ Compiled in 968ms (443 modules)
+ ✓ Compiled in 1215ms (443 modules)
+ ✓ Compiled in 3.3s (918 modules)
+ ✓ Compiled in 411ms (443 modules)
+ ✓ Compiled in 703ms (443 modules)
+ ✓ Compiled in 3.1s (444 modules)
+ ✓ Compiled in 720ms (444 modules)
+ ✓ Compiled in 2.7s (919 modules)
+ ✓ Compiled in 2.3s (444 modules)
+ ✓ Compiled in 4.1s (444 modules)
+ ✓ Compiled in 2.9s (444 modules)
+ ✓ Compiled in 3.8s (919 modules)
+ ✓ Compiled in 3.4s (847 modules)
+ ✓ Compiled in 1855ms (847 modules)
+ ✓ Compiled in 2.4s (847 modules)
+ ✓ Compiled in 1728ms (444 modules)
+ ✓ Compiled in 1085ms (444 modules)
+ ✓ Compiled in 1090ms (444 modules)
+ ✓ Compiled in 772ms (444 modules)
+ ✓ Compiled in 977ms (444 modules)
+ ✓ Compiled in 2.7s (919 modules)
+ ✓ Compiled in 3.2s (919 modules)
+ ✓ Compiled in 534ms (444 modules)
+ ✓ Compiled in 3s (444 modules)
+ ✓ Compiled in 1113ms (444 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 755ms
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /dashboard in 21.2s (438 modules)
+ ✓ Compiled (450 modules)
+ GET /manifest.webmanifest 200 in 45895ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 45499ms
+ GET /login 200 in 45491ms
+ GET /dashboard 200 in 45855ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 4362ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 105ms
+ GET /manifest.webmanifest 200 in 57ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 2294ms
+ GET / 200 in 2373ms
+ GET /dashboard 200 in 2515ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1245ms
+ GET /login 200 in 1484ms
+ GET /dashboard 200 in 1593ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard?role=renter 200 in 1193ms
+ GET /manifest.webmanifest 200 in 168ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 98ms
+ GET /manifest.webmanifest 200 in 172ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 343ms
+ GET /manifest.webmanifest 200 in 39ms
+ ○ Compiling /dashboard/my-lease ...
+ ✓ Compiled /dashboard/my-lease in 1449ms (456 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 2024ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /manifest.webmanifest 200 in 168ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 1780ms
+ GET /manifest.webmanifest 200 in 175ms
+ ○ Compiling /api/payments ...
+ ✓ Compiled /api/payments in 2.4s (486 modules)
+Database schema initialized
+ POST /api/payments 200 in 3039ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 424ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 255ms
+ GET /manifest.webmanifest 200 in 69ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 270ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 229ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 74ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 420ms
+ GET /manifest.webmanifest 200 in 41ms
+ ○ Compiling /api/messages ...
+ ✓ Compiled /api/messages in 725ms (484 modules)
+Database schema initialized
+Error sending message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5738:19)
+    at successSteps (node:internal/deps/undici/undici:5719:27)
+    at consumeBody (node:internal/deps/undici/undici:5725:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5665:18)
+    at POST (webpack-internal:///(rsc)/./app/api/messages/route.ts:46:32)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 834ms
+ GET /manifest.webmanifest 200 in 990ms
+ ○ Compiling / ...
+ ✓ Compiled /dashboard in 10.1s (443 modules)
+ ✓ Compiled (451 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 31865ms
+ GET / 200 in 34799ms
+ GET /dashboard 200 in 34963ms
+ GET /dashboard?role=renter 200 in 23331ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 853ms
+ GET /manifest.webmanifest 200 in 159ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 387ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 150ms
+ GET /manifest.webmanifest 200 in 124ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 393ms
+ GET /manifest.webmanifest 200 in 52ms
+ ○ Compiling /api/payments ...
+ ✓ Compiled /api/payments in 572ms (481 modules)
+Database schema initialized
+ POST /api/payments 200 in 800ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 290ms
+ GET /login 200 in 315ms
+ GET /dashboard 200 in 336ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 576ms
+ GET /dashboard/payments 200 in 516ms
+ ○ Compiling /dashboard/maintenance ...
+ ✓ Compiled /dashboard/maintenance in 1210ms (486 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 2294ms
+ GET /manifest.webmanifest 200 in 70ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 329ms
+ GET /manifest.webmanifest 200 in 45ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 275ms
+ GET /manifest.webmanifest 200 in 36ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 167ms
+ GET /manifest.webmanifest 200 in 72ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 140ms
+ GET /manifest.webmanifest 200 in 64ms
+ ○ Compiling /api/maintenance-requests ...
+ ✓ Compiled /api/maintenance-requests in 1181ms (488 modules)
+Database schema initialized
+Error creating maintenance request: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5738:19)
+    at successSteps (node:internal/deps/undici/undici:5719:27)
+    at consumeBody (node:internal/deps/undici/undici:5725:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5665:18)
+    at POST (webpack-internal:///(rsc)/./app/api/maintenance-requests/route.ts:41:32)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 397ms
+ GET /manifest.webmanifest 200 in 109ms
+ ○ Compiling /api/messages ...
+ ✓ Compiled /api/messages in 1033ms (488 modules)
+Database schema initialized
+Error sending message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5738:19)
+    at successSteps (node:internal/deps/undici/undici:5719:27)
+    at consumeBody (node:internal/deps/undici/undici:5725:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5665:18)
+    at POST (webpack-internal:///(rsc)/./app/api/messages/route.ts:46:32)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 205ms
+ GET /manifest.webmanifest 200 in 54ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 3308ms
+ GET /login 200 in 3652ms
+ GET /dashboard 200 in 11623ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard?role=renter 200 in 3487ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 551ms
+ GET /manifest.webmanifest 200 in 64ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 309ms
+ GET /manifest.webmanifest 200 in 54ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 317ms
+ GET /manifest.webmanifest 200 in 37ms
+ ○ Compiling /api/payments ...
+ ✓ Compiled /api/payments in 1033ms (486 modules)
+Database schema initialized
+ POST /api/payments 200 in 1267ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 255ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 279ms
+ GET / 200 in 319ms
+ GET /dashboard 200 in 337ms
+ GET /manifest.webmanifest 200 in 71ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 368ms
+ GET /manifest.webmanifest 200 in 31ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 345ms
+ GET /dashboard/messages 200 in 361ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 514ms
+ GET /manifest.webmanifest 200 in 35ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 325ms
+ GET /manifest.webmanifest 200 in 137ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 366ms
+ GET /manifest.webmanifest 200 in 63ms
+ ✓ Compiled /api/maintenance-requests in 413ms (488 modules)
+Database schema initialized
+ POST /api/maintenance-requests 200 in 508ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 130ms
+ GET /manifest.webmanifest 200 in 66ms
+ ○ Compiling /api/messages ...
+ ✓ Compiled /api/messages in 1603ms (490 modules)
+Database schema initialized
+Error sending message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5738:19)
+    at successSteps (node:internal/deps/undici/undici:5719:27)
+    at consumeBody (node:internal/deps/undici/undici:5725:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5665:18)
+    at POST (webpack-internal:///(rsc)/./app/api/messages/route.ts:46:32)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 193ms
+ GET /manifest.webmanifest 200 in 1306ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /login 200 in 2598ms
+ GET / 200 in 2480ms
+ GET /dashboard 200 in 2507ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /manifest.webmanifest 200 in 52ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard?role=renter 200 in 361ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard 200 in 76ms
+ GET /manifest.webmanifest 200 in 394ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/my-lease. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/my-lease 200 in 276ms
+ GET /manifest.webmanifest 200 in 37ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 285ms
+ GET /manifest.webmanifest 200 in 48ms
+Database schema initialized
+ POST /api/payments 200 in 82ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 133ms
+ GET /login 200 in 147ms
+ GET /dashboard 200 in 163ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 142ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 333ms
+ GET /manifest.webmanifest 200 in 30ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 382ms
+ GET /manifest.webmanifest 200 in 43ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/settings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/settings 200 in 285ms
+ GET /manifest.webmanifest 200 in 50ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments 200 in 101ms
+ GET /manifest.webmanifest 200 in 33ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/maintenance. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/maintenance 200 in 640ms
+ GET /manifest.webmanifest 200 in 48ms
+Database schema initialized
+ POST /api/maintenance-requests 200 in 82ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/messages. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/messages 200 in 242ms
+ ✓ Compiled in 3.5s (844 modules)
+ ✓ Compiled in 1552ms (844 modules)
+ ✓ Compiled in 1540ms (444 modules)
+ ✓ Compiled in 660ms (444 modules)
+ ✓ Compiled in 1118ms (444 modules)
+ ✓ Compiled in 1362ms (444 modules)
+ ✓ Compiled in 1548ms (444 modules)
+ ✓ Compiled in 855ms (444 modules)
+ ✓ Compiled in 1979ms (444 modules)
+ ✓ Compiled in 979ms (444 modules)
+ ✓ Compiled in 1185ms (444 modules)
+ ✓ Compiled in 4.2s (916 modules)
+ ✓ Compiled in 460ms (444 modules)
+ ✓ Compiled in 3.3s (444 modules)
+ ✓ Compiled in 962ms (444 modules)
+ ✓ Compiled in 5.3s (844 modules)
+ ✓ Compiled in 1586ms (844 modules)
+ ✓ Compiled in 4.2s (844 modules)
+ ✓ Compiled in 2.5s (844 modules)
+ ✓ Compiled in 4.1s (844 modules)
+ ✓ Compiled in 3.4s (844 modules)
+ ✓ Compiled in 595ms (444 modules)
+ ✓ Compiled in 2.6s (844 modules)
+ ✓ Compiled in 1085ms (444 modules)
+ ✓ Compiled in 1153ms (444 modules)
+ ✓ Compiled in 1001ms (444 modules)
+ ✓ Compiled in 836ms (444 modules)
+ ⨯ ./app/login/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/login/page.tsx[0m:149:1]
+ [2m149[0m |   };
+ [2m150[0m | 
+ [2m151[0m |   return (
+ [2m152[0m |     <div className="min-h-screen grid md:grid-cols-2 p-0 md:p-0 relative">
+     : [31;1m     ^^^[0m
+ [2m153[0m |       {/* Left: Property image */}
+ [2m154[0m |       <div
+ [2m155[0m |         className="hidden md:block relative"
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/login/page.tsx
+ ⨯ ./app/login/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/login/page.tsx[0m:149:1]
+ [2m149[0m |   };
+ [2m150[0m | 
+ [2m151[0m |   return (
+ [2m152[0m |     <div className="min-h-screen grid md:grid-cols-2 p-0 md:p-0 relative">
+     : [31;1m     ^^^[0m
+ [2m153[0m |       {/* Left: Property image */}
+ [2m154[0m |       <div
+ [2m155[0m |         className="hidden md:block relative"
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/login/page.tsx
+ ⨯ ./app/login/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/ronellbradley/Desktop/RentFlow/app/login/page.tsx[0m:149:1]
+ [2m149[0m |   };
+ [2m150[0m | 
+ [2m151[0m |   return (
+ [2m152[0m |     <div className="min-h-screen grid md:grid-cols-2 p-0 md:p-0 relative">
+     : [31;1m     ^^^[0m
+ [2m153[0m |       {/* Left: Property image */}
+ [2m154[0m |       <div
+ [2m155[0m |         className="hidden md:block relative"
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/login/page.tsx
+ ✓ Compiled in 2.3s (444 modules)
+ ✓ Compiled in 1282ms (444 modules)
+ ✓ Compiled in 1121ms (444 modules)
+ ✓ Compiled in 900ms (444 modules)
+ ✓ Compiled in 1031ms (444 modules)
+ ✓ Compiled in 709ms (444 modules)
+ ✓ Compiled in 768ms (444 modules)
+ ✓ Compiled in 1061ms (444 modules)
+ ✓ Compiled in 1237ms (444 modules)
+ ✓ Compiled in 770ms (444 modules)
+ ✓ Compiled in 5.8s (444 modules)
+ ✓ Compiled in 1411ms (444 modules)
+ ⨯ ./app/globals.css:29:3
+Syntax error: /Users/ronellbradley/Desktop/RentFlow/app/globals.css Unclosed block
+
+  27 |   }
+  28 | 
+> 29 |   .dark {
+     |   ^
+  30 |     --background: 222.2 84% 4.9%;
+  31 |     --foreground: 210 40% 98%;
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/Users/ronellbradley/Desktop/RentFlow/app/globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+ ✓ Compiled in 3.9s (844 modules)
+ ✓ Compiled in 696ms (444 modules)
+ ✓ Compiled in 1567ms (444 modules)
+ ✓ Compiled in 3.2s (844 modules)
+ ✓ Compiled in 134.3s (916 modules)
+ ○ Compiling /api/settings ...
+ ✓ Compiled /api/settings in 767ms (433 modules)
+Database schema initialized
+ POST /api/settings 200 in 1175ms
+ GET /api/settings 200 in 90ms
+ ✓ Compiled in 1039ms (400 modules)
+ ✓ Compiled in 3.4s (916 modules)
+ ✓ Compiled in 2s (916 modules)
+ ✓ Compiled in 3.1s (916 modules)
+ ✓ Compiled in 6s (916 modules)
+ ✓ Compiled in 7.6s (844 modules)
+ ✓ Compiled in 3.7s (844 modules)
+ ✓ Compiled in 2.6s (444 modules)
+ ✓ Compiled in 1158ms (444 modules)
+ ✓ Compiled in 1051ms (444 modules)
+ ✓ Compiled in 4.1s (916 modules)
+ ✓ Compiled in 1825ms (916 modules)
+ ✓ Compiled in 3.9s (844 modules)
+ ✓ Compiled in 1864ms (444 modules)
+ ✓ Compiled in 4.9s (844 modules)
+ ○ Compiling /api/billing/subscribe ...
+ ✓ Compiled /api/billing/subscribe in 4s (629 modules)
+ POST /api/billing/subscribe 500 in 4401ms
+ ✓ Compiled /api/billing/connect in 328ms (631 modules)
+ POST /api/billing/connect 500 in 443ms
+ ✓ Compiled /api/billing/pay in 356ms (633 modules)
+ POST /api/billing/pay 500 in 424ms
+ ○ Compiling /api/billing/status ...
+ ✓ Compiled /api/billing/status in 720ms (638 modules)
+Database schema initialized
+Database query error (attempt 1/3): LibsqlError: SQLITE_ERROR: no such column: subscription_status
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: no such column: subscription_status
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at GET (webpack-internal:///(rsc)/./app/api/billing/status/route.ts:15:74)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Database query error (attempt 2/3): LibsqlError: SQLITE_ERROR: no such column: subscription_status
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: no such column: subscription_status
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async GET (webpack-internal:///(rsc)/./app/api/billing/status/route.ts:15:22)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+Database query error (attempt 3/3): LibsqlError: SQLITE_ERROR: no such column: subscription_status
+    at mapSqliteError (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:392:16)
+    at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:297:15)
+    at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+    ... 19 lines matching cause stack trace ...
+    at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'SQLITE_ERROR',
+  rawCode: 1,
+  [cause]: SqliteError: no such column: subscription_status
+      at convertError (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:59:12)
+      at Database.prepare (/Users/ronellbradley/Desktop/RentFlow/node_modules/libsql/index.js:131:13)
+      at executeStmt (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:268:28)
+      at Sqlite3Client.execute (file:///Users/ronellbradley/Desktop/RentFlow/node_modules/@libsql/client/lib-esm/sqlite3.js:81:16)
+      at query (webpack-internal:///(rsc)/./lib/db.ts:24:41)
+      at async GET (webpack-internal:///(rsc)/./app/api/billing/status/route.ts:15:22)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+      at async eT.execute (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+      at async eT.handle (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+      at async doRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1366:42)
+      at async cacheEntry.responseCache.get.routeKind (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1588:28)
+      at async DevServer.renderToResponseWithComponentsImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1496:28)
+      at async DevServer.renderPageComponent (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1924:24)
+      at async DevServer.renderToResponseImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:1962:32)
+      at async DevServer.pipeImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:922:25)
+      at async NextNodeServer.handleCatchallRenderRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/next-server.js:272:17)
+      at async DevServer.handleRequestImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/base-server.js:818:17)
+      at async /Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+      at async Span.traceAsyncFn (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/trace/trace.js:154:20)
+      at async DevServer.handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+      at async invokeRender (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:179:21)
+      at async handleRequest (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:359:24)
+      at async requestHandlerImpl (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/router-server.js:383:13)
+      at async Server.requestListener (/Users/ronellbradley/Desktop/RentFlow/node_modules/next/dist/server/lib/start-server.js:141:13) {
+    code: 'SQLITE_ERROR',
+    rawCode: 1
+  }
+}
+ GET /api/billing/status 200 in 3850ms
+ POST /api/billing/subscribe 500 in 81ms
+ POST /api/billing/connect 500 in 51ms
+ POST /api/billing/subscribe 500 in 145ms
+ POST /api/billing/connect 500 in 70ms
+[?25h

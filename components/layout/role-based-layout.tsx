@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,10 +22,11 @@ import {
   MessageSquare,
   Menu,
   X,
+  AlertCircle,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { resolveClientRole } from "@/lib/auth";
+import { useEffect as ReactUseEffect } from "react";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -36,28 +38,51 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const [userRole, setUserRole] = useState<'manager' | 'renter' | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [subStatus, setSubStatus] = useState<string | null>(null);
 
   useEffect(() => {
     const role = resolveClientRole();
     setUserRole(role);
   }, []);
 
+  useEffect(() => {
+    if ((userRole ?? 'renter') === 'manager') {
+      fetch('/api/billing/status').then(r => r.json()).then(d => setSubStatus(d.subscription_status || 'unknown')).catch(() => {});
+    }
+  }, [userRole]);
+
   const managerNavItems = [
     { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     { href: "/dashboard/properties", icon: Building2, label: "Properties" },
     { href: "/dashboard/tenants", icon: Users, label: "Tenants" },
     { href: "/dashboard/leases", icon: FileText, label: "Leases" },
+    { href: "/dashboard/documents", icon: FileText, label: "Documents" },
+    { href: "/dashboard/templates", icon: FileText, label: "Templates" },
     { href: "/dashboard/invoices", icon: DollarSign, label: "Invoices" },
+    { href: "/dashboard/payments/dunning", icon: AlertCircle, label: "Dunning Settings" },
+    { href: "/dashboard/accounting/rent-ledger", icon: DollarSign, label: "Rent Ledger" },
+    { href: "/dashboard/accounting/late-fees", icon: Settings, label: "Late Fees" },
+    { href: "/dashboard/accounting/owner-statements", icon: FileText, label: "Owner Statements" },
     { href: "/dashboard/inspections", icon: ClipboardCheck, label: "Inspections" },
     { href: "/dashboard/work-orders", icon: Wrench, label: "Work Orders" },
+    { href: "/dashboard/maintenance/manage", icon: Wrench, label: "Maintenance" },
+    { href: "/dashboard/vendors", icon: Users, label: "Vendors" },
+    { href: "/dashboard/messages/manage", icon: MessageSquare, label: "Messages" },
     { href: "/dashboard/reports", icon: Map, label: "Reports" },
     { href: "/dashboard/settings", icon: Settings, label: "Settings" },
+    { href: "/dashboard/settings/notifications", icon: Bell, label: "Notifications" },
+    { href: "/dashboard/settings/triggers", icon: Bell, label: "Automated Triggers" },
+    { href: "/dashboard/settings/billing", icon: CreditCard, label: "Billing" },
   ];
 
   const renterNavItems = [
     { href: "/dashboard", icon: LayoutDashboard, label: "My Dashboard" },
     { href: "/dashboard/my-lease", icon: FileText, label: "My Lease" },
+    { href: "/dashboard/documents", icon: FileText, label: "Documents" },
     { href: "/dashboard/payments", icon: DollarSign, label: "Payments" },
+    { href: "/dashboard/payments/ach-setup", icon: CreditCard, label: "Setup ACH" },
+    { href: "/dashboard/payments/schedules", icon: Calendar, label: "Payment Schedules" },
+    { href: "/dashboard/payments/prorate", icon: DollarSign, label: "Prorate Calculator" },
     { href: "/dashboard/maintenance", icon: Wrench, label: "Maintenance" },
     { href: "/dashboard/messages", icon: MessageSquare, label: "Messages" },
     { href: "/dashboard/settings", icon: Settings, label: "Settings" },
@@ -91,7 +116,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-              {navItems.map((item) => (
+              {(userRole ?? 'renter') === 'manager' && subStatus && subStatus !== 'active' && (
+                <div className="mb-3 rounded-md border border-yellow-300 bg-yellow-50 p-3 text-xs text-yellow-800">
+                  Your subscription is not active. <a href="/dashboard/settings/billing" className="underline">Subscribe now</a> to unlock all features.
+                </div>
+              )}
+              {navItems.map((item) => {
+                const IconComponent = item.icon;
+                return (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -99,10 +131,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                     pathname === item.href ? "bg-muted text-primary" : ""
                   }`}
                 >
-                  <item.icon className="h-4 w-4" />
+                    <IconComponent className="h-4 w-4" />
                   {item.label}
                 </Link>
-              ))}
+                );
+              })}
               <Button
                 onClick={handleLogout}
                 className="mt-4 flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
@@ -111,6 +144,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <LogOut className="h-4 w-4" />
                 Logout
               </Button>
+              <div className="mt-6 px-3 py-2 text-xs text-muted-foreground">
+                Product of Bradley Virtual Solutions, LLC
+              </div>
             </nav>
           </div>
         </div>
@@ -137,7 +173,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
             <nav className="flex-1 px-2 py-4">
               <div className="space-y-1">
-                {navItems.map((item) => (
+                {navItems.map((item) => {
+                  const IconComponent = item.icon;
+                  return (
                   <Link
                     key={item.href}
                     href={item.href}
@@ -148,10 +186,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                         : "text-muted-foreground hover:text-primary hover:bg-muted"
                     }`}
                   >
-                    <item.icon className="h-4 w-4" />
+                      <IconComponent className="h-4 w-4" />
                     {item.label}
                   </Link>
-                ))}
+                  );
+                })}
                 <Button
                   onClick={() => {
                     closeMobileMenu();

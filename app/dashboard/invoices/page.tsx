@@ -6,12 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { DollarSign, Plus, Search, Filter, Download, Eye, Edit, Trash2, Calendar, User, Building2 } from "lucide-react";
+import { InvoiceViewModal } from "@/components/modals/invoice-view-modal";
+import { InvoiceEditModal } from "@/components/modals/invoice-edit-modal";
 
 export default function InvoicesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showViewModal, setShowViewModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [selectedInvoice, setSelectedInvoice] = useState<any | null>(null);
 
   // Sample invoice data
   const [invoices, setInvoices] = useState([
@@ -87,6 +92,64 @@ export default function InvoicesPage() {
         invoice.id === invoiceId ? { ...invoice, status: newStatus } : invoice
       )
     );
+  };
+
+  const handleViewInvoice = (invoice: any) => {
+    setSelectedInvoice(invoice);
+    setShowViewModal(true);
+  };
+
+  const handleEditInvoice = (invoice: any) => {
+    setSelectedInvoice(invoice);
+    setShowEditModal(true);
+  };
+
+  const handleSaveInvoice = (updatedInvoice: any) => {
+    setInvoices(prev => 
+      prev.map(invoice => 
+        invoice.id === updatedInvoice.id ? updatedInvoice : invoice
+      )
+    );
+  };
+
+  const handleDownloadInvoice = async (invoice: any) => {
+    try {
+      // Show loading state
+      alert('Generating PDF...');
+      
+      const response = await fetch(`/api/invoices/${invoice.id}/pdf`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(invoice),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText || 'Failed to generate PDF');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `invoice-${invoice.id}.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      
+      // Clean up
+      setTimeout(() => {
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+      }, 100);
+      
+      alert(`Invoice ${invoice.id} downloaded successfully!`);
+    } catch (error) {
+      console.error('Error downloading invoice:', error);
+      const message = error instanceof Error ? error.message : 'Please try again.';
+      alert(`Failed to download invoice PDF: ${message}`);
+    }
   };
 
   const filteredInvoices = invoices.filter(invoice => {
@@ -315,13 +378,28 @@ export default function InvoicesPage() {
                       </td>
                       <td className="p-2">
                         <div className="flex gap-1">
-                          <Button variant="outline" size="sm">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => handleViewInvoice(invoice)}
+                            title="View Invoice"
+                          >
                             <Eye className="h-4 w-4" />
                           </Button>
-                          <Button variant="outline" size="sm">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => handleEditInvoice(invoice)}
+                            title="Edit Invoice"
+                          >
                             <Edit className="h-4 w-4" />
                           </Button>
-                          <Button variant="outline" size="sm">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => handleDownloadInvoice(invoice)}
+                            title="Download PDF"
+                          >
                             <Download className="h-4 w-4" />
                           </Button>
                         </div>
@@ -334,6 +412,26 @@ export default function InvoicesPage() {
           )}
         </CardContent>
       </Card>
+
+      {/* Modals */}
+      <InvoiceViewModal
+        isOpen={showViewModal}
+        onClose={() => {
+          setShowViewModal(false);
+          setSelectedInvoice(null);
+        }}
+        invoice={selectedInvoice}
+      />
+
+      <InvoiceEditModal
+        isOpen={showEditModal}
+        onClose={() => {
+          setShowEditModal(false);
+          setSelectedInvoice(null);
+        }}
+        invoice={selectedInvoice}
+        onSave={handleSaveInvoice}
+      />
     </div>
   );
 }

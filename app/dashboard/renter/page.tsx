@@ -1,10 +1,37 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, FileText, DollarSign, Wrench, Calendar, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ScheduleTourModal from "@/components/modals/schedule-tour-modal";
 
 export default function RenterDashboard() {
+  const [tourOpen, setTourOpen] = useState(false);
+  const [myRequests, setMyRequests] = useState<Array<{ id: string; description: string; status: string; created_at: number; tenant_id: string; issue_type?: string }>>([]);
+  const [loadingRequests, setLoadingRequests] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/maintenance-requests');
+        if (!res.ok) throw new Error('Failed to load requests');
+        const data = await res.json();
+        const email = typeof window !== 'undefined' ? (localStorage.getItem('userEmail') || '') : '';
+        const inferredTenantId = email === 'renter@example.com' ? 'tenant_1' : 'tenant_cli';
+        const mine = Array.isArray(data)
+          ? data.filter((r: any) => r?.tenant_id === inferredTenantId)
+          : [];
+        if (active) setMyRequests(mine.slice(0, 5));
+      } catch {
+        if (active) setMyRequests([]);
+      } finally {
+        if (active) setLoadingRequests(false);
+      }
+    })();
+    return () => { active = false };
+  }, []);
   return (
     <div>
       <div className="mb-8">
@@ -95,25 +122,87 @@ export default function RenterDashboard() {
             <CardTitle>Quick Actions</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Button className="w-full justify-start" variant="outline">
+            <Button
+              className="w-full justify-start"
+              variant="outline"
+              onClick={() => {
+                try { window?.localStorage?.setItem('userRole', 'renter'); } catch {}
+                window.location.href = '/dashboard/payments';
+              }}
+            >
               <DollarSign className="mr-2 h-4 w-4" />
               Pay Rent Online
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button
+              className="w-full justify-start"
+              variant="outline"
+              onClick={() => {
+                try { window?.localStorage?.setItem('userRole', 'renter'); } catch {}
+                window.location.href = '/dashboard/maintenance';
+              }}
+            >
               <Wrench className="mr-2 h-4 w-4" />
               Submit Maintenance Request
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button
+              className="w-full justify-start"
+              variant="outline"
+              onClick={() => {
+                try { window?.localStorage?.setItem('userRole', 'renter'); } catch {}
+                window.location.href = '/dashboard/my-lease';
+              }}
+            >
               <FileText className="mr-2 h-4 w-4" />
               View Lease Agreement
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button
+              className="w-full justify-start"
+              variant="outline"
+              onClick={() => {
+                alert('Scheduling a tour: choose a property and preferred time. Redirecting...');
+                try { window?.localStorage?.setItem('userRole', 'renter'); } catch {}
+                setTourOpen(true);
+              }}
+            >
               <Calendar className="mr-2 h-4 w-4" />
               Schedule Property Tour
             </Button>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>My Requests</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {loadingRequests ? (
+              <div className="text-sm text-muted-foreground">Loading…</div>
+            ) : myRequests.length === 0 ? (
+              <div className="text-sm text-muted-foreground">No requests yet.</div>
+            ) : (
+              <div className="space-y-3">
+                {myRequests.map((req) => (
+                  <div key={req.id} className="flex items-start justify-between rounded-md border p-3">
+                    <div className="mr-3">
+                      <div className="font-medium">
+                        {req.issue_type ? req.issue_type.toUpperCase() : 'REQUEST'}
+                      </div>
+                      <div className="text-sm text-muted-foreground break-words">
+                        {req.description || '—'}
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-medium capitalize">{req.status || 'open'}</div>
+                      <div className="text-xs text-muted-foreground">{new Date(req.created_at).toLocaleDateString()}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </CardContent>
+        </Card>
       </div>
+      <ScheduleTourModal open={tourOpen} onOpenChange={setTourOpen} />
     </div>
   );
 }

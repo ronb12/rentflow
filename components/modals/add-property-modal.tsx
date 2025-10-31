@@ -4,24 +4,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Plus } from "lucide-react";
-
-interface PropertyFormData {
-  name: string;
-  address: string;
-  city: string;
-  state: string;
-  zipCode: string;
-  type: string;
-  bedrooms: number;
-  bathrooms: number;
-  squareFeet: number;
-  yearBuilt: number;
-  organizationId: string;
-  isActive: boolean;
-}
 
 interface AddPropertyModalProps {
   onPropertyAdded: () => void;
@@ -30,19 +15,14 @@ interface AddPropertyModalProps {
 export function AddPropertyModal({ onPropertyAdded }: AddPropertyModalProps) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState<PropertyFormData>({
+  const [formData, setFormData] = useState({
     name: "",
     address: "",
-    city: "",
-    state: "",
-    zipCode: "",
     type: "apartment",
-    bedrooms: 1,
-    bathrooms: 1,
-    squareFeet: 0,
-    yearBuilt: new Date().getFullYear(),
-    organizationId: "org_1",
-    isActive: true,
+    bedrooms: "",
+    bathrooms: "",
+    squareFeet: "",
+    rent: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -53,31 +33,34 @@ export function AddPropertyModal({ onPropertyAdded }: AddPropertyModalProps) {
       const response = await fetch("/api/properties", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          bedrooms: parseInt(formData.bedrooms),
+          bathrooms: parseFloat(formData.bathrooms),
+          squareFeet: parseInt(formData.squareFeet),
+          rent: parseFloat(formData.rent),
+        }),
       });
 
       if (response.ok) {
         setFormData({
           name: "",
           address: "",
-          city: "",
-          state: "",
-          zipCode: "",
           type: "apartment",
-          bedrooms: 1,
-          bathrooms: 1,
-          squareFeet: 0,
-          yearBuilt: new Date().getFullYear(),
-          organizationId: "org_1",
-          isActive: true,
+          bedrooms: "",
+          bathrooms: "",
+          squareFeet: "",
+          rent: "",
         });
         setOpen(false);
         onPropertyAdded();
+        alert("Property added successfully!");
       } else {
-        console.error("Failed to create property");
+        alert("Failed to add property. Please try again.");
       }
     } catch (error) {
-      console.error("Error creating property:", error);
+      console.error("Error adding property:", error);
+      alert("Error adding property. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -95,7 +78,7 @@ export function AddPropertyModal({ onPropertyAdded }: AddPropertyModalProps) {
         <DialogHeader>
           <DialogTitle>Add New Property</DialogTitle>
           <DialogDescription>
-            Enter comprehensive details for the new property listing.
+            Add a new property to your portfolio.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
@@ -106,211 +89,105 @@ export function AddPropertyModal({ onPropertyAdded }: AddPropertyModalProps) {
               </Label>
               <Input
                 id="name"
-                name="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="col-span-3"
-                placeholder="e.g., Sunset Apartments Unit 101"
+                placeholder="Sunset Apartments Unit 3B"
                 required
               />
             </div>
-            
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="address" className="text-right">
-                Street Address *
+                Address *
               </Label>
               <Input
                 id="address"
-                name="address"
                 value={formData.address}
                 onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                 className="col-span-3"
-                placeholder="123 Main Street"
+                placeholder="123 Main Street, City, State 12345"
                 required
               />
             </div>
-
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="city" className="text-right">
-                City *
-              </Label>
-              <Input
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                className="col-span-3"
-                placeholder="Anytown"
-                required
-              />
-            </div>
-
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="state" className="text-right">
-                State *
-              </Label>
-              <Select value={formData.state} onValueChange={(value) => setFormData({ ...formData, state: value })}>
-                <SelectTrigger className="col-span-3">
-                  <SelectValue placeholder="Select state" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="AL">Alabama</SelectItem>
-                  <SelectItem value="AK">Alaska</SelectItem>
-                  <SelectItem value="AZ">Arizona</SelectItem>
-                  <SelectItem value="AR">Arkansas</SelectItem>
-                  <SelectItem value="CA">California</SelectItem>
-                  <SelectItem value="CO">Colorado</SelectItem>
-                  <SelectItem value="CT">Connecticut</SelectItem>
-                  <SelectItem value="DE">Delaware</SelectItem>
-                  <SelectItem value="FL">Florida</SelectItem>
-                  <SelectItem value="GA">Georgia</SelectItem>
-                  <SelectItem value="HI">Hawaii</SelectItem>
-                  <SelectItem value="ID">Idaho</SelectItem>
-                  <SelectItem value="IL">Illinois</SelectItem>
-                  <SelectItem value="IN">Indiana</SelectItem>
-                  <SelectItem value="IA">Iowa</SelectItem>
-                  <SelectItem value="KS">Kansas</SelectItem>
-                  <SelectItem value="KY">Kentucky</SelectItem>
-                  <SelectItem value="LA">Louisiana</SelectItem>
-                  <SelectItem value="ME">Maine</SelectItem>
-                  <SelectItem value="MD">Maryland</SelectItem>
-                  <SelectItem value="MA">Massachusetts</SelectItem>
-                  <SelectItem value="MI">Michigan</SelectItem>
-                  <SelectItem value="MN">Minnesota</SelectItem>
-                  <SelectItem value="MS">Mississippi</SelectItem>
-                  <SelectItem value="MO">Missouri</SelectItem>
-                  <SelectItem value="MT">Montana</SelectItem>
-                  <SelectItem value="NE">Nebraska</SelectItem>
-                  <SelectItem value="NV">Nevada</SelectItem>
-                  <SelectItem value="NH">New Hampshire</SelectItem>
-                  <SelectItem value="NJ">New Jersey</SelectItem>
-                  <SelectItem value="NM">New Mexico</SelectItem>
-                  <SelectItem value="NY">New York</SelectItem>
-                  <SelectItem value="NC">North Carolina</SelectItem>
-                  <SelectItem value="ND">North Dakota</SelectItem>
-                  <SelectItem value="OH">Ohio</SelectItem>
-                  <SelectItem value="OK">Oklahoma</SelectItem>
-                  <SelectItem value="OR">Oregon</SelectItem>
-                  <SelectItem value="PA">Pennsylvania</SelectItem>
-                  <SelectItem value="RI">Rhode Island</SelectItem>
-                  <SelectItem value="SC">South Carolina</SelectItem>
-                  <SelectItem value="SD">South Dakota</SelectItem>
-                  <SelectItem value="TN">Tennessee</SelectItem>
-                  <SelectItem value="TX">Texas</SelectItem>
-                  <SelectItem value="UT">Utah</SelectItem>
-                  <SelectItem value="VT">Vermont</SelectItem>
-                  <SelectItem value="VA">Virginia</SelectItem>
-                  <SelectItem value="WA">Washington</SelectItem>
-                  <SelectItem value="WV">West Virginia</SelectItem>
-                  <SelectItem value="WI">Wisconsin</SelectItem>
-                  <SelectItem value="WY">Wyoming</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="zipCode" className="text-right">
-                ZIP Code *
-              </Label>
-              <Input
-                id="zipCode"
-                name="zipCode"
-                value={formData.zipCode}
-                onChange={(e) => setFormData({ ...formData, zipCode: e.target.value })}
-                className="col-span-3"
-                placeholder="12345"
-                pattern="[0-9]{5}(-[0-9]{4})?"
-                required
-              />
-            </div>
-
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="type" className="text-right">
-                Property Type *
+                Type *
               </Label>
-              <Select value={formData.type} onValueChange={(value) => setFormData({ ...formData, type: value })}>
+              <Select
+                value={formData.type}
+                onValueChange={(value) => setFormData({ ...formData, type: value })}
+              >
                 <SelectTrigger className="col-span-3">
-                  <SelectValue placeholder="Select property type" />
+                  <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="apartment">Apartment</SelectItem>
-                  <SelectItem value="house">Single Family House</SelectItem>
-                  <SelectItem value="condo">Condominium</SelectItem>
-                  <SelectItem value="townhouse">Townhouse</SelectItem>
-                  <SelectItem value="trailer">Mobile Home/Trailer</SelectItem>
-                  <SelectItem value="duplex">Duplex</SelectItem>
-                  <SelectItem value="studio">Studio</SelectItem>
-                  <SelectItem value="commercial">Commercial</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                <SelectContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                  <SelectItem value="apartment" className="text-gray-900 dark:text-gray-100">Apartment</SelectItem>
+                  <SelectItem value="house" className="text-gray-900 dark:text-gray-100">House</SelectItem>
+                  <SelectItem value="condo" className="text-gray-900 dark:text-gray-100">Condo</SelectItem>
+                  <SelectItem value="townhouse" className="text-gray-900 dark:text-gray-100">Townhouse</SelectItem>
+                  <SelectItem value="commercial" className="text-gray-900 dark:text-gray-100">Commercial</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="bedrooms" className="text-right">
                 Bedrooms *
               </Label>
               <Input
                 id="bedrooms"
-                name="bedrooms"
                 type="number"
-                min="0"
-                max="10"
                 value={formData.bedrooms}
-                onChange={(e) => setFormData({ ...formData, bedrooms: Number(e.target.value) })}
+                onChange={(e) => setFormData({ ...formData, bedrooms: e.target.value })}
                 className="col-span-3"
+                placeholder="2"
+                min="0"
                 required
               />
             </div>
-
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="bathrooms" className="text-right">
                 Bathrooms *
               </Label>
               <Input
                 id="bathrooms"
-                name="bathrooms"
                 type="number"
-                min="0"
-                max="10"
-                step="0.5"
                 value={formData.bathrooms}
-                onChange={(e) => setFormData({ ...formData, bathrooms: Number(e.target.value) })}
+                onChange={(e) => setFormData({ ...formData, bathrooms: e.target.value })}
                 className="col-span-3"
+                placeholder="1.5"
+                min="0"
+                step="0.5"
                 required
               />
             </div>
-
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="squareFeet" className="text-right">
                 Square Feet
               </Label>
               <Input
                 id="squareFeet"
-                name="squareFeet"
                 type="number"
-                min="0"
                 value={formData.squareFeet}
-                onChange={(e) => setFormData({ ...formData, squareFeet: Number(e.target.value) })}
+                onChange={(e) => setFormData({ ...formData, squareFeet: e.target.value })}
                 className="col-span-3"
                 placeholder="1200"
+                min="0"
               />
             </div>
-
             <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="yearBuilt" className="text-right">
-                Year Built
+              <Label htmlFor="rent" className="text-right">
+                Monthly Rent *
               </Label>
               <Input
-                id="yearBuilt"
-                name="yearBuilt"
+                id="rent"
                 type="number"
-                min="1800"
-                max={new Date().getFullYear()}
-                value={formData.yearBuilt}
-                onChange={(e) => setFormData({ ...formData, yearBuilt: Number(e.target.value) })}
+                value={formData.rent}
+                onChange={(e) => setFormData({ ...formData, rent: e.target.value })}
                 className="col-span-3"
-                placeholder="2020"
+                placeholder="1200"
+                min="0"
+                step="0.01"
+                required
               />
             </div>
           </div>
@@ -319,7 +196,7 @@ export function AddPropertyModal({ onPropertyAdded }: AddPropertyModalProps) {
               Cancel
             </Button>
             <Button type="submit" disabled={loading}>
-              {loading ? "Creating..." : "Create Property"}
+              {loading ? "Adding..." : "Add Property"}
             </Button>
           </DialogFooter>
         </form>
@@ -327,3 +204,4 @@ export function AddPropertyModal({ onPropertyAdded }: AddPropertyModalProps) {
     </Dialog>
   );
 }
+

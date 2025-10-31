@@ -197,9 +197,9 @@ export function DocumentCreateModal({ isOpen, onClose, onSuccess }: DocumentCrea
               <SelectTrigger>
                 <SelectValue placeholder="Choose a document template" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                 {templates.map((template) => (
-                  <SelectItem key={template.id} value={template.id}>
+                  <SelectItem key={template.id} value={template.id} className="text-gray-900 dark:text-gray-100">
                     <div>
                       <div className="font-medium">{template.name}</div>
                       <div className="text-sm text-gray-500">{template.description}</div>
@@ -273,6 +273,7 @@ export function DocumentCreateModal({ isOpen, onClose, onSuccess }: DocumentCrea
     </Dialog>
   );
 }
+
 
 
 

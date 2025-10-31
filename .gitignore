@@ -44,3 +44,13 @@ firebase-debug.log
 firestore-debug.log
 ui-debug.log
 .vercel
+
+# Secrets
+.env.local
+.env.*.local
+# Sensitive email tests
+test-*sender*.js
+test-real-email.js
+test-business-sender.js
+test-sendgrid*.js
+diagnose-sendgrid.js

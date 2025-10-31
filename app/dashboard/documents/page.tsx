@@ -9,6 +9,8 @@ import { Upload, FileText, Plus, Search, Filter, Download, Eye, Trash2 } from 'l
 import { DocumentUploadModal } from '@/components/modals/document-upload-modal';
 import { DocumentCreateModal } from '@/components/modals/document-create-modal';
 import { DocumentSignModal } from '@/components/modals/document-sign-modal';
+import { DocumentViewModal } from '@/components/modals/document-view-modal';
+import { resolveClientRole } from '@/lib/auth';
 
 export interface Document {
   id: string;
@@ -37,10 +39,16 @@ export default function DocumentsPage() {
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showSignModal, setShowSignModal] = useState(false);
+  const [showViewModal, setShowViewModal] = useState(false);
   const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
+  const [userRole, setUserRole] = useState<'manager' | 'renter' | null>(null);
 
   useEffect(() => {
     loadDocuments();
+  }, []);
+
+  useEffect(() => {
+    setUserRole(resolveClientRole());
   }, []);
 
   useEffect(() => {
@@ -101,33 +109,37 @@ export default function DocumentsPage() {
     }
   };
 
+  const getCurrentTenantId = (): string => {
+    if (typeof window === 'undefined') return 'tenant_1';
+    const email = localStorage.getItem('userEmail') || '';
+    return email === 'renter@example.com' ? 'tenant_1' : 'tenant_cli';
+  };
+
+  const notifyManager = async (message: string) => {
+    try {
+      await fetch('/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tenantId: getCurrentTenantId(),
+          message,
+          status: 'sent',
+          senderRole: userRole === 'manager' ? 'manager' : 'renter',
+        })
+      });
+    } catch (e) {
+      // best-effort notification
+    }
+  };
+
   const handleSignDocument = (document: Document) => {
     setSelectedDocument(document);
     setShowSignModal(true);
   };
 
-  const handleViewDocument = async (document: Document) => {
-    try {
-      if (document.fileName) {
-        // If document has a file, fetch and display it
-        const response = await fetch(`/api/documents/${document.id}/file`);
-        if (response.ok) {
-          const blob = await response.blob();
-          const url = window.URL.createObjectURL(blob);
-          window.open(url, '_blank');
-          // Clean up after a delay
-          setTimeout(() => window.URL.revokeObjectURL(url), 1000);
-        } else {
-          alert('Document file not found. Please upload the document file.');
-        }
-      } else {
-        // Show document details in a modal or alert
-        alert(`Document: ${document.name}\nType: ${document.type}\nStatus: ${document.status}\nCreated: ${new Date(document.createdAt).toLocaleDateString()}`);
-      }
-    } catch (error) {
-      console.error('Error viewing document:', error);
-      alert('Failed to view document. Please try again.');
-    }
+  const handleViewDocument = async (doc: Document) => {
+    setSelectedDocument(doc);
+    setShowViewModal(true);
   };
 
   const handleDownloadDocument = async (doc: Document) => {
@@ -138,13 +150,13 @@ export default function DocumentsPage() {
         if (response.ok) {
           const blob = await response.blob();
           const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
+          const a = window.document.createElement('a');
           a.href = url;
           a.download = doc.fileName || `document-${doc.id}`;
-          document.body.appendChild(a);
+          window.document.body.appendChild(a);
           a.click();
           window.URL.revokeObjectURL(url);
-          document.body.removeChild(a);
+          window.document.body.removeChild(a);
         } else {
           alert('Document file not found. Please upload the document file.');
         }
@@ -160,13 +172,13 @@ export default function DocumentsPage() {
         
         const blob = new Blob([content], { type: 'text/plain' });
         const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const a = window.document.createElement('a');
         a.href = url;
         a.download = `${doc.name || 'document'}.txt`;
-        document.body.appendChild(a);
+        window.document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
+        window.document.body.removeChild(a);
       }
     } catch (error) {
       console.error('Error downloading document:', error);
@@ -216,10 +228,12 @@ export default function DocumentsPage() {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Documents</h1>
         <div className="flex gap-2">
-          <Button onClick={() => setShowCreateModal(true)}>
-            <Plus className="h-4 w-4 mr-2" />
-            Create Document
-          </Button>
+          {userRole === 'manager' && (
+            <Button onClick={() => setShowCreateModal(true)}>
+              <Plus className="h-4 w-4 mr-2" />
+              Create Document
+            </Button>
+          )}
           <Button onClick={() => setShowUploadModal(true)}>
             <Upload className="h-4 w-4 mr-2" />
             Upload Document
@@ -246,115 +260,108 @@ export default function DocumentsPage() {
               <SelectTrigger className="w-40">
                 <SelectValue placeholder="Type" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Types</SelectItem>
-                <SelectItem value="lease">Lease</SelectItem>
-                <SelectItem value="contract">Contract</SelectItem>
-                <SelectItem value="invoice">Invoice</SelectItem>
-                <SelectItem value="receipt">Receipt</SelectItem>
-                <SelectItem value="notice">Notice</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+              <SelectContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                <SelectItem value="all" className="text-gray-900 dark:text-gray-100">All Types</SelectItem>
+                <SelectItem value="lease" className="text-gray-900 dark:text-gray-100">Lease</SelectItem>
+                <SelectItem value="contract" className="text-gray-900 dark:text-gray-100">Contract</SelectItem>
+                <SelectItem value="invoice" className="text-gray-900 dark:text-gray-100">Invoice</SelectItem>
+                <SelectItem value="receipt" className="text-gray-900 dark:text-gray-100">Receipt</SelectItem>
+                <SelectItem value="notice" className="text-gray-900 dark:text-gray-100">Notice</SelectItem>
+                <SelectItem value="other" className="text-gray-900 dark:text-gray-100">Other</SelectItem>
               </SelectContent>
             </Select>
             <Select value={filterStatus} onValueChange={setFilterStatus}>
               <SelectTrigger className="w-40">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="draft">Draft</SelectItem>
-                <SelectItem value="pending_signature">Pending Signature</SelectItem>
-                <SelectItem value="signed">Signed</SelectItem>
-                <SelectItem value="archived">Archived</SelectItem>
+              <SelectContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                <SelectItem value="all" className="text-gray-900 dark:text-gray-100">All Status</SelectItem>
+                <SelectItem value="draft" className="text-gray-900 dark:text-gray-100">Draft</SelectItem>
+                <SelectItem value="pending_signature" className="text-gray-900 dark:text-gray-100">Pending Signature</SelectItem>
+                <SelectItem value="signed" className="text-gray-900 dark:text-gray-100">Signed</SelectItem>
+                <SelectItem value="archived" className="text-gray-900 dark:text-gray-100">Archived</SelectItem>
               </SelectContent>
             </Select>
           </div>
         </CardContent>
       </Card>
 
-      {/* Documents Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredDocuments.length === 0 ? (
-          <Card className="col-span-full">
-            <CardContent className="py-12 text-center">
+      {/* Documents List (Table) */}
+      <Card>
+        <CardContent className="pt-6">
+          {filteredDocuments.length === 0 ? (
+            <div className="py-12 text-center">
               <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <p className="text-muted-foreground mb-4">No documents found</p>
-              <Button onClick={() => setShowCreateModal(true)}>
-                <Plus className="h-4 w-4 mr-2" />
-                Create Your First Document
-              </Button>
-            </CardContent>
-          </Card>
-        ) : (
-          filteredDocuments.map((document) => (
-            <Card key={document.id} className="hover:shadow-md transition-shadow">
-              <CardHeader className="pb-3">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl">{getTypeIcon(document.type)}</span>
-                    <CardTitle className="text-lg">{document.name}</CardTitle>
-                  </div>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(document.status)}`}>
-                    {document.status.replace('_', ' ')}
-                  </span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="text-sm text-gray-600">
-                  <p><strong>Type:</strong> {document.type}</p>
-                  <p><strong>Category:</strong> {document.category}</p>
-                  {document.fileSize && (
-                    <p><strong>Size:</strong> {formatFileSize(document.fileSize)}</p>
-                  )}
-                  <p><strong>Created:</strong> {new Date(document.createdAt).toLocaleDateString()}</p>
-                  {document.signedAt && (
-                    <p><strong>Signed:</strong> {new Date(document.signedAt).toLocaleDateString()}</p>
-                  )}
-                </div>
-                
-                <div className="flex gap-2">
-                  <Button 
-                    size="sm" 
-                    variant="outline"
-                    onClick={() => handleViewDocument(document)}
-                    title="View Document"
-                  >
-                    <Eye className="h-4 w-4 mr-1" />
-                    View
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline"
-                    onClick={() => handleDownloadDocument(document)}
-                    title="Download Document"
-                  >
-                    <Download className="h-4 w-4 mr-1" />
-                    Download
-                  </Button>
-                  {document.status === 'pending_signature' && (
-                    <Button size="sm" onClick={() => handleSignDocument(document)}>
-                      Sign
-                    </Button>
-                  )}
-                  <Button 
-                    size="sm" 
-                    variant="destructive" 
-                    onClick={() => handleDeleteDocument(document.id)}
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))
-        )}
-      </div>
+              {userRole === 'manager' && (
+                <Button onClick={() => setShowCreateModal(true)}>
+                  <Plus className="h-4 w-4 mr-2" />
+                  Create Document
+                </Button>
+              )}
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left border-b">
+                    <th className="py-2 pr-4">Name</th>
+                    <th className="py-2 pr-4">Type</th>
+                    <th className="py-2 pr-4">Category</th>
+                    <th className="py-2 pr-4">Size</th>
+                    <th className="py-2 pr-4">Created</th>
+                    <th className="py-2 pr-4">Status</th>
+                    <th className="py-2 pr-4">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredDocuments.map((document) => (
+                    <tr key={document.id} className="border-b last:border-0 hover:bg-gray-50">
+                      <td className="py-2 pr-4 font-medium flex items-center gap-2">
+                        <span className="text-lg">{getTypeIcon(document.type)}</span>
+                        {document.name}
+                      </td>
+                      <td className="py-2 pr-4 capitalize">{document.type}</td>
+                      <td className="py-2 pr-4 capitalize">{document.category}</td>
+                      <td className="py-2 pr-4">{document.fileSize ? formatFileSize(document.fileSize) : '-'}</td>
+                      <td className="py-2 pr-4">{new Date(document.createdAt).toLocaleDateString()}</td>
+                      <td className="py-2 pr-4">
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(document.status)}`}>
+                          {document.status.replace('_', ' ')}
+                        </span>
+                      </td>
+                      <td className="py-2 pr-4">
+                        <div className="flex gap-2 flex-wrap">
+                          <Button size="sm" variant="outline" onClick={() => handleViewDocument(document)} title="View">
+                            <Eye className="h-4 w-4" />
+                          </Button>
+                          <Button size="sm" variant="outline" onClick={() => handleDownloadDocument(document)} title="Download">
+                            <Download className="h-4 w-4" />
+                          </Button>
+                          {(['pending_signature','draft'].includes(document.status) || !document.signedAt) && (
+                            <Button size="sm" onClick={() => handleSignDocument(document)} title="Sign">Sign</Button>
+                          )}
+                          {userRole === 'manager' && (
+                            <Button size="sm" variant="destructive" onClick={() => handleDeleteDocument(document.id)} title="Delete">
+                              <Trash2 className="h-4 w-4" />
+                            </Button>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </CardContent>
+      </Card>
 
       {/* Modals */}
       <DocumentUploadModal
         isOpen={showUploadModal}
         onClose={() => setShowUploadModal(false)}
-        onSuccess={loadDocuments}
+        onSuccess={async () => { await loadDocuments(); await notifyManager('A document was uploaded.'); }}
       />
       
       <DocumentCreateModal
@@ -367,7 +374,13 @@ export default function DocumentsPage() {
         isOpen={showSignModal}
         onClose={() => setShowSignModal(false)}
         document={selectedDocument}
-        onSuccess={loadDocuments}
+        onSuccess={async () => { await loadDocuments(); await notifyManager('A document was signed.'); }}
+      />
+
+      <DocumentViewModal
+        isOpen={showViewModal}
+        onClose={() => setShowViewModal(false)}
+        document={selectedDocument as any}
       />
     </div>
   );

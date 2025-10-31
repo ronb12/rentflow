@@ -52,6 +52,12 @@ class SendGridService {
         subject: template.subject,
         text: template.text,
         html: template.html,
+        // Enable sandbox mode for development (emails won't actually be sent)
+        mail_settings: {
+          sandbox_mode: {
+            enable: process.env.NODE_ENV === 'development'
+          }
+        }
       };
 
       await sgMail.send(msg);

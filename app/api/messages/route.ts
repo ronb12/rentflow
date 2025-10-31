@@ -40,19 +40,38 @@ export async function POST(req: NextRequest) {
     const id = `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const now = Date.now();
 
-    await query(
-      `INSERT INTO messages 
-       (id, tenant_id, message, status, created_at, updated_at) 
-       VALUES (?, ?, ?, ?, ?, ?)`,
-      [
-        id,
-        data.tenantId || "tenant_1",
-        data.message || "",
-        data.status || "sent",
-        now,
-        now,
-      ]
-    );
+    // Try insert with extended columns; fallback to legacy if columns not present
+    try {
+      await query(
+        `INSERT INTO messages 
+         (id, tenant_id, message, status, created_at, updated_at, sender_role, is_read) 
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          id,
+          data.tenantId || "tenant_1",
+          data.message || "",
+          data.status || "sent",
+          now,
+          now,
+          data.senderRole || "renter",
+          data.isRead ? 1 : 0,
+        ]
+      );
+    } catch (e) {
+      await query(
+        `INSERT INTO messages 
+         (id, tenant_id, message, status, created_at, updated_at) 
+         VALUES (?, ?, ?, ?, ?, ?)`,
+        [
+          id,
+          data.tenantId || "tenant_1",
+          data.message || "",
+          data.status || "sent",
+          now,
+          now,
+        ]
+      );
+    }
 
     return NextResponse.json({ id, ...data, message: "Message sent successfully" });
   } catch (error) {
@@ -61,5 +80,25 @@ export async function POST(req: NextRequest) {
       { error: "Failed to send message" },
       { status: 500 }
     );
+  }
+}
+
+// PATCH /api/messages to mark read for a tenant or a specific id
+export async function PATCH(req: NextRequest) {
+  try {
+    await ensureSchema();
+    const body = await req.json();
+    const now = Date.now();
+    if (body.id) {
+      await query(`UPDATE messages SET is_read = 1, updated_at = ? WHERE id = ?`, [now, body.id]);
+    } else if (body.tenantId) {
+      await query(`UPDATE messages SET is_read = 1, updated_at = ? WHERE tenant_id = ?`, [now, body.tenantId]);
+    } else {
+      return NextResponse.json({ error: 'id or tenantId required' }, { status: 400 });
+    }
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error('Error updating messages:', error);
+    return NextResponse.json({ error: 'Failed to update messages' }, { status: 500 });
   }
 }

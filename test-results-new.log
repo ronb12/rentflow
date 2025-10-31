@@ -1,0 +1,58 @@
+🚀 Starting comprehensive RentFlow app test suite...
+
+
+📍 Navigating to homepage...
+
+📋 Testing Tenants Page...
+  Testing Navigation: Tenants Page
+    ✅ Tenants Page - Loaded successfully
+  Testing Modal: Add Tenant Modal
+    ❌ Add Tenant Modal - Error: Modal did not open
+
+🏢 Testing Properties Page...
+  Testing Navigation: Properties Page
+    ✅ Properties Page - Loaded successfully
+  Testing Modal: Add Property Modal
+    Trying alternative selector: button
+    Trying alternative selector: button[class*="default"]
+    Trying alternative selector: .inline-flex
+    Trying alternative selector: button
+    ❌ Add Property Modal - Error: Button not found with any selector
+
+📄 Testing Leases Page...
+  Testing Navigation: Leases Page
+    ✅ Leases Page - Loaded successfully
+  Testing Modal: Add Lease Modal
+    Trying alternative selector: button
+    Trying alternative selector: button[class*="default"]
+    Trying alternative selector: .inline-flex
+    Trying alternative selector: button
+    ❌ Add Lease Modal - Error: Button not found with any selector
+
+📁 Testing Documents Page...
+  Testing Navigation: Documents Page
+    ✅ Documents Page - Loaded successfully
+  Testing Modal: Upload Document Modal
+    ❌ Upload Document Modal - Error: Modal did not open
+  Testing Modal: Create Document Modal
+    ❌ Create Document Modal - Error: Modal did not open
+
+💰 Testing Invoices Page...
+  Testing Navigation: Invoices Page
+    ✅ Invoices Page - Loaded successfully
+❌ Test suite error: Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:456:15)
+    at async #evaluate (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:389:60)
+    at async ExecutionContext.evaluateHandle (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:330:16)
+    at async IsolatedWorld.evaluateHandle (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/IsolatedWorld.js:89:16)
+    at async CdpFrame.$$ (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Frame.js:412:30)
+    at async CdpPage.$$ (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:315:20)
+    at async testFullApp (/Users/ronellbradley/Desktop/RentFlow/test-full-app.js:188:28)
+Fatal error: Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:456:15)
+    at async #evaluate (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:389:60)
+    at async ExecutionContext.evaluateHandle (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:330:16)
+    at async IsolatedWorld.evaluateHandle (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/IsolatedWorld.js:89:16)
+    at async CdpFrame.$$ (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Frame.js:412:30)
+    at async CdpPage.$$ (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:315:20)
+    at async testFullApp (/Users/ronellbradley/Desktop/RentFlow/test-full-app.js:188:28)

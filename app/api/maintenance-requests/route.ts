@@ -18,19 +18,10 @@ export async function GET() {
     return NextResponse.json(rows);
   } catch (error) {
     console.error("Error fetching maintenance requests:", error);
-    // Return mock data for testing when database fails
-    return NextResponse.json([
-      {
-        id: "maint_1",
-        tenant_id: "tenant_1",
-        issue_type: "plumbing",
-        description: "Kitchen faucet is leaking",
-        priority: "medium",
-        status: "pending",
-        created_at: Date.now(),
-        updated_at: Date.now()
-      }
-    ]);
+    return NextResponse.json(
+      { error: "Failed to fetch maintenance requests" },
+      { status: 500 }
+    );
   }
 }
 
@@ -39,7 +30,7 @@ export async function POST(req: NextRequest) {
   try {
     await ensureSchema();
     const data = await req.json();
-    const id = `maint_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const id = `maintenance_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const now = Date.now();
 
     await query(
@@ -48,22 +39,52 @@ export async function POST(req: NextRequest) {
        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id,
-        data.tenantId || "tenant_1",
+        data.tenantId || "",
         data.issueType || "other",
         data.description || "",
         data.priority || "medium",
-        data.status || "pending",
+        data.status || "open",
         now,
         now,
       ]
     );
 
-    return NextResponse.json({ id, ...data, message: "Maintenance request submitted successfully" });
+    return NextResponse.json({ id, ...data });
   } catch (error) {
-    console.error("Error submitting maintenance request:", error);
+    console.error("Error creating maintenance request:", error);
     return NextResponse.json(
-      { error: "Failed to submit maintenance request" },
+      { error: "Failed to create maintenance request" },
       { status: 500 }
     );
   }
 }
+
+// PATCH /api/maintenance-requests
+export async function PATCH(req: NextRequest) {
+  try {
+    await ensureSchema();
+    const data = await req.json();
+    const id = (data.id || '').toString();
+    const status = (data.status || '').toString();
+    const now = Date.now();
+
+    if (!id || !status) {
+      return NextResponse.json({ error: 'id and status are required' }, { status: 400 });
+    }
+
+    await query(
+      `UPDATE maintenance_requests SET status = ?, updated_at = ? WHERE id = ?`,
+      [status, now, id]
+    );
+
+    return NextResponse.json({ id, status });
+  } catch (error) {
+    console.error('Error updating maintenance request:', error);
+    return NextResponse.json(
+      { error: 'Failed to update maintenance request' },
+      { status: 500 }
+    );
+  }
+}
+
+
