@@ -43,7 +43,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     doc.setDrawColor(200);
     doc.rect(margin, y, 520, 90);
     let yy = y + 20;
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text('Summary', margin + 12, yy); yy += 18; doc.setFont(undefined, 'normal');
     doc.text(`Total Collections: ${formatCurrency(s.total_collections || 0)}`, margin + 12, yy); yy += 16;
     doc.text(`Total Expenses:   ${formatCurrency(s.total_expenses || 0)}`, margin + 12, yy); yy += 16;
