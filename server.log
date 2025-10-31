@@ -4079,3 +4079,10 @@ Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
  ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 3.3s (485 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/requests. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport

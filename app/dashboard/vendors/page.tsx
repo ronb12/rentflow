@@ -269,55 +269,52 @@ export default function VendorsPage() {
         </Card>
       )}
 
-      {/* Vendors List */}
+      {/* Vendors List - Table */}
       {activeTab === "vendors" && (
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {loading ? (
-            <div className="col-span-full text-center py-8">Loading vendors...</div>
-          ) : vendors.length === 0 ? (
-            <div className="col-span-full text-center py-8 text-muted-foreground">
-              No vendors found. Add your first vendor to get started.
-            </div>
-          ) : (
-            vendors.map((vendor) => (
-              <Card key={vendor.id}>
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span>{vendor.name}</span>
-                    {vendor.rating && (
-                      <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                        <span className="text-sm">{vendor.rating.toFixed(1)}</span>
-                      </div>
-                    )}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="text-sm">
-                    <div className="font-medium">{vendor.serviceType || "General"}</div>
-                    {vendor.contactName && <div className="text-muted-foreground">{vendor.contactName}</div>}
-                    {vendor.email && <div className="text-muted-foreground">{vendor.email}</div>}
-                    {vendor.phone && <div className="text-muted-foreground">{vendor.phone}</div>}
-                    {vendor.hourlyRate > 0 && (
-                      <div className="text-muted-foreground mt-2">
-                        {formatCurrency(vendor.hourlyRate)}/hour
-                      </div>
-                    )}
-                  </div>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="w-full mt-4"
-                    onClick={() => handleEdit(vendor)}
-                  >
-                    <Edit className="mr-1 h-3 w-3" />
-                    Edit
-                  </Button>
-                </CardContent>
-              </Card>
-            ))
-          )}
-        </div>
+        loading ? (
+          <div className="text-center py-8">Loading vendors...</div>
+        ) : vendors.length === 0 ? (
+          <div className="text-center py-8 text-muted-foreground">No vendors found. Add your first vendor to get started.</div>
+        ) : (
+          <div className="overflow-x-auto rounded-md border">
+            <table className="w-full text-sm">
+              <thead className="bg-muted/40">
+                <tr>
+                  <th className="text-left px-3 py-2 font-medium">Name</th>
+                  <th className="text-left px-3 py-2 font-medium">Service</th>
+                  <th className="text-left px-3 py-2 font-medium">Contact</th>
+                  <th className="text-left px-3 py-2 font-medium">Email</th>
+                  <th className="text-left px-3 py-2 font-medium">Phone</th>
+                  <th className="text-left px-3 py-2 font-medium">Rate</th>
+                  <th className="text-left px-3 py-2 font-medium">Rating</th>
+                  <th className="text-left px-3 py-2 font-medium">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {vendors.map((v) => (
+                  <tr key={v.id} className="border-t">
+                    <td className="px-3 py-2 font-medium">{v.name}</td>
+                    <td className="px-3 py-2">{v.serviceType || 'General'}</td>
+                    <td className="px-3 py-2 text-muted-foreground">{v.contactName || '—'}</td>
+                    <td className="px-3 py-2 text-muted-foreground">{v.email || '—'}</td>
+                    <td className="px-3 py-2 text-muted-foreground">{v.phone || '—'}</td>
+                    <td className="px-3 py-2">{v.hourlyRate > 0 ? `${formatCurrency(v.hourlyRate)}/hr` : '—'}</td>
+                    <td className="px-3 py-2">
+                      {v.rating ? (
+                        <span className="inline-flex items-center gap-1"><Star className="h-4 w-4 fill-yellow-400 text-yellow-400" /> {v.rating.toFixed(1)}</span>
+                      ) : '—'}
+                    </td>
+                    <td className="px-3 py-2">
+                      <Button size="sm" variant="outline" onClick={() => handleEdit(v)}>
+                        <Edit className="mr-1 h-3 w-3" /> Edit
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
       )}
 
       {/* Assignments List */}
