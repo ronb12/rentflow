@@ -7391,3 +7391,45 @@ Import trace for requested module:
  GET /api/vendors/sla 500 in 7584ms
  GET /api/payment-schedules 500 in 7179ms
  GET /api/payment-schedules 500 in 6265ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /api/payment-schedules in 5.4s (1099 modules)
+ ✓ Compiled in 0ms (425 modules)
+ ✓ Compiled in 1ms (425 modules)
+ ✓ Compiled in 1ms (425 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/vendors. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments/schedules 200 in 8958ms
+ GET /dashboard/vendors 200 in 9032ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 6.9s (1102 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /_next/static/webpack/5df4e34debf44603.webpack.hot-update.json. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /_next/static/webpack/5df4e34debf44603.webpack.hot-update.json. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments/ach-setup 200 in 15399ms
+ GET /_next/static/webpack/5df4e34debf44603.webpack.hot-update.json 404 in 8900ms
+ GET /_next/static/webpack/5df4e34debf44603.webpack.hot-update.json 404 in 6837ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/schedules. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/vendors. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/payments/schedules 200 in 1797ms
+ GET /dashboard/payments/schedules 200 in 1811ms
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /dashboard/payments/ach-setup. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /dashboard/vendors 200 in 1897ms
+ GET /dashboard/payments/ach-setup 200 in 1726ms
