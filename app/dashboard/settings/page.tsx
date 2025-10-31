@@ -7,7 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Separator } from "@/components/ui/separator";
-import { User, Bell, Shield, CreditCard, Globe } from "lucide-react";
+import { User, Bell, Shield, CreditCard, Globe, Trash2 } from "lucide-react";
+import AddPaymentMethodModal from "@/components/add-payment-method-modal";
+import EditPaymentMethodModal from "@/components/edit-payment-method-modal";
 
 export default function SettingsPage() {
   const [profileData, setProfileData] = useState({
@@ -33,6 +35,24 @@ export default function SettingsPage() {
     marketingEmails: false
   });
 
+  // Payment methods state
+  const [paymentMethods, setPaymentMethods] = useState([
+    {
+      id: "card_1",
+      type: "credit_card" as const,
+      name: "Visa ending in 1234",
+      expiry: "12/25",
+      isDefault: true
+    },
+    {
+      id: "bank_1", 
+      type: "bank_account" as const,
+      name: "Bank Account ending in 5678",
+      accountType: "Checking",
+      isDefault: false
+    }
+  ]);
+
   const handleProfileUpdate = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Profile updated successfully!");
@@ -41,6 +61,41 @@ export default function SettingsPage() {
   const handlePasswordChange = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Password change request sent to your email!");
+  };
+
+  const handleAddPaymentMethod = (newMethod: any) => {
+    setPaymentMethods(prev => [...prev, newMethod]);
+  };
+
+  const handleEditPaymentMethod = (methodId: string, updatedMethod: any) => {
+    setPaymentMethods(prev => 
+      prev.map(method => 
+        method.id === methodId ? updatedMethod : method
+      )
+    );
+  };
+
+  const handleDeletePaymentMethod = (methodId: string) => {
+    const method = paymentMethods.find(m => m.id === methodId);
+    if (method && confirm(`Are you sure you want to delete "${method.name}"?`)) {
+      setPaymentMethods(prev => prev.filter(m => m.id !== methodId));
+      
+      // If we deleted the default method, set another as default
+      if (method.isDefault && paymentMethods.length > 1) {
+        const remainingMethods = paymentMethods.filter(m => m.id !== methodId);
+        if (remainingMethods.length > 0) {
+          setPaymentMethods(prev => 
+            prev.map(m => ({ ...m, isDefault: m.id === remainingMethods[0].id }))
+          );
+        }
+      }
+    }
+  };
+
+  const handleSetDefault = (methodId: string) => {
+    setPaymentMethods(prev => 
+      prev.map(method => ({ ...method, isDefault: method.id === methodId }))
+    );
   };
 
   return (
@@ -294,36 +349,57 @@ export default function SettingsPage() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="flex items-center justify-between p-4 border rounded-lg">
-              <div className="flex items-center space-x-3">
-                <CreditCard className="h-6 w-6 text-blue-500" />
-                <div>
-                  <p className="font-medium">Visa ending in 1234</p>
-                  <p className="text-sm text-muted-foreground">Expires 12/25</p>
+            {paymentMethods.length === 0 ? (
+              <div className="text-center py-8 text-muted-foreground">
+                <CreditCard className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                <p>No payment methods added yet</p>
+              </div>
+            ) : (
+              paymentMethods.map((method) => (
+                <div key={method.id} className="flex items-center justify-between p-4 border rounded-lg">
+                  <div className="flex items-center space-x-3 flex-1">
+                    <CreditCard className={`h-6 w-6 ${method.type === 'credit_card' ? 'text-blue-500' : 'text-green-500'}`} />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <p className="font-medium">{method.name}</p>
+                        {method.isDefault && (
+                          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Default</span>
+                        )}
+                      </div>
+                      {method.expiry && <p className="text-sm text-muted-foreground">Expires {method.expiry}</p>}
+                      {method.accountType && <p className="text-sm text-muted-foreground">{method.accountType} Account</p>}
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {!method.isDefault && (
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => handleSetDefault(method.id)}
+                        className="text-blue-600 hover:text-blue-700"
+                      >
+                        Set Default
+                      </Button>
+                    )}
+                    <EditPaymentMethodModal 
+                      paymentMethod={method}
+                      onUpdatePaymentMethod={handleEditPaymentMethod}
+                    />
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => handleDeletePaymentMethod(method.id)}
+                      className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                      title="Delete payment method"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              <div className="flex space-x-2">
-                <Button variant="outline" size="sm">Edit</Button>
-                <Button variant="outline" size="sm">Remove</Button>
-              </div>
-            </div>
-            <div className="flex items-center justify-between p-4 border rounded-lg">
-              <div className="flex items-center space-x-3">
-                <CreditCard className="h-6 w-6 text-green-500" />
-                <div>
-                  <p className="font-medium">Bank Account ending in 5678</p>
-                  <p className="text-sm text-muted-foreground">Checking Account</p>
-                </div>
-              </div>
-              <div className="flex space-x-2">
-                <Button variant="outline" size="sm">Edit</Button>
-                <Button variant="outline" size="sm">Remove</Button>
-              </div>
-            </div>
-            <Button variant="outline" className="w-full">
-              <CreditCard className="mr-2 h-4 w-4" />
-              Add New Payment Method
-            </Button>
+              ))
+            )}
+            
+            <AddPaymentMethodModal onAddPaymentMethod={handleAddPaymentMethod} />
           </div>
         </CardContent>
       </Card>

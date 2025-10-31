@@ -1,0 +1,12 @@
+RentFlow Automated Test Document
+
+This is an automated test document created at 2025-10-28T23:59:34.705Z.
+
+Test Details:
+- Property: Automated Test Property 123
+- Tenant: Automated Test Tenant
+- Document Type: Automated Test
+- Status: Testing Upload Functionality
+- Test Run: 1761695974705
+
+This document verifies that the file upload system is working correctly in the automated test environment.

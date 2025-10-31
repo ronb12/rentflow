@@ -1,0 +1,40 @@
+🚀 Starting comprehensive RentFlow app test suite...
+
+
+📍 Navigating to homepage...
+
+📋 Testing Tenants Page...
+  Testing Navigation: Tenants Page
+    ✅ Tenants Page - Loaded successfully
+  Testing Modal: Add Tenant Modal
+    ❌ Add Tenant Modal - Error: Waiting for selector `button:has-text("Add Tenant")` failed: Waiting failed: 5000ms exceeded
+
+🏢 Testing Properties Page...
+  Testing Navigation: Properties Page
+    ✅ Properties Page - Loaded successfully
+  ℹ️  Add Property button not found, skipping
+
+📄 Testing Leases Page...
+  Testing Navigation: Leases Page
+    ✅ Leases Page - Loaded successfully
+  ℹ️  Add Lease button not found, skipping
+
+📁 Testing Documents Page...
+  Testing Navigation: Documents Page
+    ❌ Documents Page - Error: Navigation timeout of 30000 ms exceeded
+❌ Test suite error: TimeoutError: Navigation timeout of 30000 ms exceeded
+    at new Deferred (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:60:34)
+    at Deferred.create (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:21:16)
+    at new LifecycleWatcher (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/LifecycleWatcher.js:69:60)
+    at CdpFrame.goto (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:29)
+    at CdpFrame.<anonymous> (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/decorators.js:109:27)
+    at CdpPage.goto (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:574:43)
+    at testFullApp (/Users/ronellbradley/Desktop/RentFlow/test-full-app.js:148:16)
+Fatal error: TimeoutError: Navigation timeout of 30000 ms exceeded
+    at new Deferred (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:60:34)
+    at Deferred.create (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:21:16)
+    at new LifecycleWatcher (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/LifecycleWatcher.js:69:60)
+    at CdpFrame.goto (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:29)
+    at CdpFrame.<anonymous> (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/util/decorators.js:109:27)
+    at CdpPage.goto (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:574:43)
+    at testFullApp (/Users/ronellbradley/Desktop/RentFlow/test-full-app.js:148:16)

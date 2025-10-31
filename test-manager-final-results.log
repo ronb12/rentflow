@@ -1,0 +1,13 @@
+🧪 Starting Manager Modals and Buttons Test...
+
+1️⃣ Navigating to login page...
+2️⃣ Logging in as manager...
+   Current URL after login: http://localhost:3004/login
+❌ Error during testing: Error: Navigating frame was detached
+    at #onFrameDetached (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/LifecycleWatcher.js:103:47)
+    at /Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/third_party/mitt/mitt.js:62:7
+    at Array.map (<anonymous>)
+    at Object.emit (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/third_party/mitt/mitt.js:61:20)
+    at CdpFrame.emit (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/common/EventEmitter.js:83:23)
+    at #removeFramesRecursively (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/FrameManager.js:451:15)
+    at #onClientDisconnect (/Users/ronellbradley/Desktop/RentFlow/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/FrameManager.js:94:42)

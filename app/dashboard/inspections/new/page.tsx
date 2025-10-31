@@ -48,11 +48,11 @@ export default function NewInspectionPage() {
         propertyId: formData.propertyId,
         inspectionType: formData.inspectionType as any,
         status: "queued",
-        date: new Date(formData.date),
+        date: formData.date,
         conditionNotes: formData.conditionNotes,
         photos,
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       };
 
       // Save to IndexedDB first (offline)

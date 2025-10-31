@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <rect fill="#3b82f6" width="512" height="512" rx="112"/>
-  <rect fill="#ffffff" x="120" y="160" width="272" height="192" rx="12"/>
-  <rect fill="#ffffff" x="176" y="224" width="160" height="120"/>
-  <rect fill="#ffffff" x="176" y="360" width="160" height="32" rx="4"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="80" fill="url(#g)"/>
+  <path d="M128 352h96V216h-96v136zm160 0h96V160h-96v192z" fill="#fff"/>
 </svg>
 

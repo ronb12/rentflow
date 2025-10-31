@@ -1,21 +1,13 @@
-/**
- * Image compression utilities to reduce Storage costs
- * Compresses images before upload to stay within free tier limits
- */
-
-export async function compressImage(file: File, maxWidth = 1920, quality = 0.8): Promise<Blob> {
+export async function compressImage(file: File, maxWidth = 1920, quality = 0.8): Promise<File> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-
     reader.onload = (e) => {
       const img = new Image();
-      
       img.onload = () => {
-        const canvas = document.createElement("canvas");
+        const canvas = document.createElement('canvas');
         let width = img.width;
         let height = img.height;
 
-        // Calculate new dimensions
         if (width > maxWidth) {
           height = (height * maxWidth) / width;
           width = maxWidth;
@@ -24,9 +16,9 @@ export async function compressImage(file: File, maxWidth = 1920, quality = 0.8):
         canvas.width = width;
         canvas.height = height;
 
-        const ctx = canvas.getContext("2d");
+        const ctx = canvas.getContext('2d');
         if (!ctx) {
-          reject(new Error("Could not get canvas context"));
+          reject(new Error('Could not get canvas context'));
           return;
         }
 
@@ -34,35 +26,25 @@ export async function compressImage(file: File, maxWidth = 1920, quality = 0.8):
 
         canvas.toBlob(
           (blob) => {
-            if (blob) {
-              resolve(blob);
-            } else {
-              reject(new Error("Failed to compress image"));
+            if (!blob) {
+              reject(new Error('Failed to compress image'));
+              return;
             }
+            const compressedFile = new File([blob], file.name, {
+              type: file.type,
+              lastModified: Date.now(),
+            });
+            resolve(compressedFile);
           },
-          "image/jpeg",
+          file.type,
           quality
         );
       };
-
-      img.onerror = () => reject(new Error("Failed to load image"));
+      img.onerror = reject;
       img.src = e.target?.result as string;
     };
-
-    reader.onerror = () => reject(new Error("Failed to read file"));
+    reader.onerror = reject;
     reader.readAsDataURL(file);
   });
-}
-
-export async function getImageSize(blob: Blob): Promise<number> {
-  return blob.size;
-}
-
-export function formatBytes(bytes: number): string {
-  if (bytes === 0) return "0 Bytes";
-  const k = 1024;
-  const sizes = ["Bytes", "KB", "MB", "GB"];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return Math.round(bytes / Math.pow(k, i) * 100) / 100 + " " + sizes[i];
 }
 

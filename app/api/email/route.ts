@@ -80,3 +80,4 @@ export async function GET() {
     fromName: process.env.SENDGRID_FROM_NAME || 'RentFlow',
   });
 }
+

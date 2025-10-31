@@ -4,15 +4,29 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Users, DollarSign, ClipboardCheck, TrendingUp, AlertTriangle, Home, FileText, Wrench, AlertCircle, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import { resolveClientRole } from "@/lib/auth";
+import ScheduleTourModal from "@/components/modals/schedule-tour-modal";
 
 export default function DashboardPage() {
   const [userRole, setUserRole] = useState<'manager' | 'renter' | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [tourOpen, setTourOpen] = useState(false);
+  
   useEffect(() => {
-    setUserRole(resolveClientRole());
+    try {
+      const role = resolveClientRole();
+      setUserRole(role);
+    } catch (error) {
+      console.error("Error resolving role:", error);
+      setUserRole('renter'); // Default fallback
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  if (!userRole) return null;
+  if (loading) return <div>Loading...</div>;
+  if (!userRole) return <div>Loading dashboard...</div>;
 
   if (userRole === 'renter') {
     return (
@@ -105,25 +119,63 @@ export default function DashboardPage() {
               <CardTitle>Quick Actions</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Button className="w-full justify-start" variant="outline">
+              <Button
+                className="w-full justify-start"
+                variant="outline"
+                onClick={() => {
+                  try {
+                    window?.localStorage?.setItem('userRole', 'renter');
+                  } catch {}
+                  window.location.href = '/dashboard/payments';
+                }}
+              >
                 <DollarSign className="mr-2 h-4 w-4" />
                 Pay Rent Online
               </Button>
-              <Button className="w-full justify-start" variant="outline">
+              <Button
+                className="w-full justify-start"
+                variant="outline"
+                onClick={() => {
+                  try {
+                    window?.localStorage?.setItem('userRole', 'renter');
+                  } catch {}
+                  window.location.href = '/dashboard/maintenance';
+                }}
+              >
                 <Wrench className="mr-2 h-4 w-4" />
                 Submit Maintenance Request
               </Button>
-              <Button className="w-full justify-start" variant="outline">
+              <Button
+                className="w-full justify-start"
+                variant="outline"
+                onClick={() => {
+                  try {
+                    window?.localStorage?.setItem('userRole', 'renter');
+                  } catch {}
+                  window.location.href = '/dashboard/my-lease';
+                }}
+              >
                 <FileText className="mr-2 h-4 w-4" />
                 View Lease Agreement
               </Button>
-              <Button className="w-full justify-start" variant="outline">
+              <Button
+                className="w-full justify-start"
+                variant="outline"
+                onClick={() => {
+                  // Placeholder flow: route to properties where tours would be selected
+                  try {
+                    window?.localStorage?.setItem('userRole', 'renter');
+                  } catch {}
+                  setTourOpen(true);
+                }}
+              >
                 <Calendar className="mr-2 h-4 w-4" />
                 Schedule Property Tour
               </Button>
             </CardContent>
           </Card>
         </div>
+        <ScheduleTourModal open={tourOpen} onOpenChange={setTourOpen} />
       </div>
     );
   }

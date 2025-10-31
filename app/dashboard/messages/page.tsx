@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Send, Plus } from "lucide-react";
@@ -9,6 +9,34 @@ export default function MessagesPage() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [messageStatus, setMessageStatus] = useState("");
+  const [history, setHistory] = useState<Array<{ id: string; tenant_id: string; message: string; created_at: number; sender_role?: string }>>([]);
+  const [loadingHistory, setLoadingHistory] = useState(true);
+  const threadRef = useRef<HTMLDivElement | null>(null);
+
+  // Infer current tenant id from email (demo accounts)
+  function getCurrentTenantId(): string {
+    if (typeof window === 'undefined') return 'tenant_1';
+    const email = localStorage.getItem('userEmail') || '';
+    return email === 'renter@example.com' ? 'tenant_1' : 'tenant_cli';
+  }
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/messages');
+        const data = await res.json();
+        const tenantId = getCurrentTenantId();
+        const mine = Array.isArray(data) ? data.filter((m: any) => m.tenant_id === tenantId) : [];
+        if (active) setHistory(mine.sort((a: any, b: any) => a.created_at - b.created_at));
+      } catch {
+        if (active) setHistory([]);
+      } finally {
+        if (active) setLoadingHistory(false);
+      }
+    })();
+    return () => { active = false };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,9 +50,10 @@ export default function MessagesPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          tenantId: 'tenant_1',
+          tenantId: getCurrentTenantId(),
           message: message,
-          status: 'sent'
+          status: 'sent',
+          senderRole: 'renter'
         }),
       });
 
@@ -33,6 +62,19 @@ export default function MessagesPage() {
       if (response.ok) {
         setMessageStatus("Message sent successfully!");
         setMessage(""); // Reset form
+        // Refresh history
+        try {
+          const res = await fetch('/api/messages');
+          if (res.ok) {
+            const data = await res.json();
+            const tenantId = getCurrentTenantId();
+            const mine = Array.isArray(data) ? data.filter((m: any) => m.tenant_id === tenantId) : [];
+            setHistory(mine.sort((a: any, b: any) => a.created_at - b.created_at));
+            setTimeout(() => {
+              if (threadRef.current) threadRef.current.scrollTop = threadRef.current.scrollHeight;
+            }, 100);
+          }
+        } catch {}
       } else {
         setMessageStatus(`Error: ${result.error}`);
       }
@@ -55,31 +97,24 @@ export default function MessagesPage() {
             <CardTitle>Conversation with Property Management</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4 h-96 overflow-y-auto">
-              <div className="flex justify-end">
-                <div className="bg-blue-500 text-white p-3 rounded-lg max-w-xs">
-                  <p>Hi, I wanted to ask about the parking situation for guests.</p>
-                  <p className="text-xs opacity-75 mt-1">Dec 20, 2024 2:30 PM</p>
-                </div>
-              </div>
-              <div className="flex justify-start">
-                <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
-                  <p>Hello! Guests can park in the visitor spaces near the entrance. Please let us know if you need additional parking.</p>
-                  <p className="text-xs text-gray-500 mt-1">Dec 20, 2024 2:45 PM</p>
-                </div>
-              </div>
-              <div className="flex justify-end">
-                <div className="bg-blue-500 text-white p-3 rounded-lg max-w-xs">
-                  <p>Thank you! Also, when will the maintenance request for my kitchen faucet be completed?</p>
-                  <p className="text-xs opacity-75 mt-1">Dec 20, 2024 3:15 PM</p>
-                </div>
-              </div>
-              <div className="flex justify-start">
-                <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
-                  <p>Our maintenance team is scheduled to visit tomorrow morning between 9-11 AM. They&apos;ll contact you directly when they arrive.</p>
-                  <p className="text-xs text-gray-500 mt-1">Dec 20, 2024 3:30 PM</p>
-                </div>
-              </div>
+            <div ref={threadRef} className="space-y-4 h-96 overflow-y-auto">
+              {loadingHistory ? (
+                <div className="text-sm text-muted-foreground">Loading…</div>
+              ) : history.length === 0 ? (
+                <div className="text-sm text-muted-foreground">No messages yet.</div>
+              ) : (
+                history.map((m) => {
+                  const fromManager = (m.sender_role || 'renter') === 'manager';
+                  return (
+                    <div key={m.id} className={`flex ${fromManager ? 'justify-start' : 'justify-end'}`}>
+                      <div className={`${fromManager ? 'bg-gray-100 text-gray-900' : 'bg-blue-500 text-white'} p-3 rounded-lg max-w-xs`}>
+                        <p>{m.message}</p>
+                        <p className={`text-xs opacity-75 mt-1 ${fromManager ? 'text-gray-600' : ''}`}>{new Date(m.created_at).toLocaleString()}</p>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
             </div>
             <div className="mt-4 flex space-x-2">
               <form onSubmit={handleSubmit} className="flex space-x-2 w-full">
@@ -128,10 +163,8 @@ export default function MessagesPage() {
               className="w-full justify-start" 
               variant="outline"
               onClick={() => {
-                // Show all messages in conversation
-                const conversation = document.querySelector('.space-y-4.h-96.overflow-y-auto');
-                if (conversation) {
-                  conversation.scrollIntoView({ behavior: 'smooth' });
+                if (threadRef.current) {
+                  threadRef.current.scrollTop = threadRef.current.scrollHeight;
                 }
               }}
             >

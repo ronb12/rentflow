@@ -3,14 +3,12 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AddPropertyModal } from "@/components/modals/add-property-modal";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 import ProtectedPage from "@/components/ProtectedPage";
 
 export default function PropertiesPage() {
   const [properties, setProperties] = useState<any[]>([]);
-
-  useEffect(() => {
-    loadProperties();
-  }, []);
 
   const loadProperties = async () => {
     try {
@@ -24,6 +22,10 @@ export default function PropertiesPage() {
       console.error("Failed to load properties:", error);
     }
   };
+
+  useEffect(() => {
+    loadProperties();
+  }, []);
 
   return (
     <ProtectedPage allowedRoles={['manager']}>

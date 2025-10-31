@@ -3,6 +3,7 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { docStore, DocumentData } from '@/lib/docStore';
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -43,27 +44,7 @@ const upload = multer({
   }
 });
 
-export interface DocumentData {
-  id: string;
-  name: string;
-  type: 'lease' | 'contract' | 'invoice' | 'receipt' | 'notice' | 'other';
-  category: 'legal' | 'financial' | 'maintenance' | 'communication' | 'other';
-  filePath?: string;
-  fileName?: string;
-  fileSize?: number;
-  mimeType?: string;
-  tenantId?: string;
-  propertyId?: string;
-  status: 'draft' | 'pending_signature' | 'signed' | 'archived';
-  createdAt: string;
-  updatedAt: string;
-  signedAt?: string;
-  signedBy?: string;
-  templateData?: any;
-}
-
-// Mock database - replace with your actual database
-let documents: DocumentData[] = [];
+// Always use shared in-memory store (no module-level copy)
 
 // GET /api/documents - List all documents
 export async function GET(request: NextRequest) {
@@ -74,7 +55,95 @@ export async function GET(request: NextRequest) {
     const type = searchParams.get('type');
     const status = searchParams.get('status');
 
-    let filteredDocuments = documents;
+    // Seed sample documents on first access (in-memory)
+    // Ensure sample documents exist for demo. If store is empty or too few items
+    // (e.g., after first sign created only one doc), merge in missing samples
+    const ensureSeed = () => {
+      const now = new Date();
+      const fmt = (d: Date) => d.toISOString();
+      const seeds = [
+        {
+          id: 'seed_lease',
+          name: 'Residential Lease Agreement',
+          type: 'lease' as const,
+          category: 'legal' as const,
+          status: 'pending_signature' as const,
+          createdAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 14)),
+          updatedAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 7)),
+          tenantId: 'tenant_1',
+          propertyId: 'prop_101',
+          templateData: {
+            html: `
+              <style>
+                .doc h1{font-size:22px;font-weight:700;margin:0 0 12px}
+                .doc h2{font-size:16px;font-weight:600;margin:16px 0 8px}
+                .doc p,.doc li{font-size:14px;color:#111827}
+                .doc .muted{color:#6b7280;font-size:12px;margin:0 0 16px}
+                .doc table{width:100%;border-collapse:collapse;margin:8px 0}
+                .doc td{border:1px solid #e5e7eb;padding:8px}
+              </style>
+              <div class="doc">
+                <h1>Residential Lease Agreement</h1>
+                <p class="muted">This Residential Lease Agreement ("Agreement") is made between the Property Manager ("Landlord") and the Renter ("Tenant").</p>
+                <h2>1. Premises</h2>
+                <p>Property Address: 123 Main Street, Unit 1A, City, ST 00000</p>
+                <h2>2. Term</h2>
+                <table>
+                  <tr><td>Start Date</td><td>Jan 1, 2025</td></tr>
+                  <tr><td>End Date</td><td>Dec 31, 2025</td></tr>
+                </table>
+                <h2>3. Rent</h2>
+                <p>Monthly rent: $1,200 due on the 1st of each month.</p>
+                <h2>4. Security Deposit</h2>
+                <p>Security deposit: $1,200 due prior to move-in.</p>
+                <h2>5. Utilities and Maintenance</h2>
+                <p>Tenant is responsible for electricity and internet. Landlord provides water and trash.</p>
+                <h2>6. Rules and Regulations</h2>
+                <ul>
+                  <li>No smoking inside the premises.</li>
+                  <li>No pets unless otherwise approved in writing.</li>
+                  <li>Quiet hours 10 PM - 7 AM.</li>
+                </ul>
+                <h2>7. Signatures</h2>
+                <p>By signing, both parties agree to the terms of this Agreement.</p>
+              </div>
+            `
+          }
+        },
+        {
+          id: 'seed_checklist',
+          name: 'Move-In Inspection Checklist',
+          type: 'contract' as const,
+          category: 'maintenance' as const,
+          status: 'draft' as const,
+          createdAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 10)),
+          updatedAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 3)),
+          tenantId: 'tenant_1',
+          propertyId: 'prop_101'
+        },
+        {
+          id: 'seed_receipt_oct',
+          name: 'Rent Receipt - October',
+          type: 'receipt' as const,
+          category: 'financial' as const,
+          status: 'signed' as const,
+          createdAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 25)),
+          updatedAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 25)),
+          signedAt: fmt(new Date(now.getTime() - 1000 * 60 * 60 * 24 * 25)),
+          signedBy: 'Property Manager',
+          tenantId: 'tenant_1',
+          propertyId: 'prop_101'
+        }
+      ];
+      for (const s of seeds) {
+        if (!docStore.documents.find(d => d.id === s.id)) {
+          docStore.documents.push(s as any);
+        }
+      }
+    };
+    if (docStore.documents.length < 2) ensureSeed();
+
+    let filteredDocuments = docStore.documents;
 
     if (tenantId) {
       filteredDocuments = filteredDocuments.filter(doc => doc.tenantId === tenantId);
@@ -115,7 +184,7 @@ export async function POST(request: NextRequest) {
       templateData
     };
 
-    documents.push(newDocument);
+    docStore.documents.push(newDocument);
 
     return NextResponse.json(newDocument, { status: 201 });
   } catch (error) {
@@ -131,18 +200,18 @@ export async function PUT(request: NextRequest) {
     const id = searchParams.get('id');
     const body = await request.json();
 
-    const documentIndex = documents.findIndex(doc => doc.id === id);
+    const documentIndex = docStore.documents.findIndex(doc => doc.id === id);
     if (documentIndex === -1) {
       return NextResponse.json({ error: 'Document not found' }, { status: 404 });
     }
 
-    documents[documentIndex] = {
-      ...documents[documentIndex],
+    docStore.documents[documentIndex] = {
+      ...docStore.documents[documentIndex],
       ...body,
       updatedAt: new Date().toISOString()
     };
 
-    return NextResponse.json(documents[documentIndex]);
+    return NextResponse.json(docStore.documents[documentIndex]);
   } catch (error) {
     console.error('Error updating document:', error);
     return NextResponse.json({ error: 'Failed to update document' }, { status: 500 });
@@ -155,13 +224,13 @@ export async function DELETE(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
 
-    const documentIndex = documents.findIndex(doc => doc.id === id);
+    const documentIndex = docStore.documents.findIndex(doc => doc.id === id);
     if (documentIndex === -1) {
       return NextResponse.json({ error: 'Document not found' }, { status: 404 });
     }
 
     // Delete file if it exists
-    const document = documents[documentIndex];
+    const document = docStore.documents[documentIndex];
     if (document.filePath) {
       try {
         fs.unlinkSync(document.filePath);
@@ -170,7 +239,7 @@ export async function DELETE(request: NextRequest) {
       }
     }
 
-    documents.splice(documentIndex, 1);
+    docStore.documents.splice(documentIndex, 1);
 
     return NextResponse.json({ message: 'Document deleted successfully' });
   } catch (error) {

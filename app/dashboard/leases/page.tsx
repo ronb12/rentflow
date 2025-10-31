@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AddLeaseModal } from "@/components/modals/add-lease-modal";
-import { FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus } from "lucide-react";
 
 export default function LeasesPage() {
   const [leases, setLeases] = useState<any[]>([]);
