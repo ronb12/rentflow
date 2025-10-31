@@ -37,7 +37,7 @@ export async function GET(
       category: row.category,
       version: row.version,
       templateContent: row.template_content,
-      mergeFields: row.merge_fields ? JSON.parse(row.merge_fields) : [],
+      mergeFields: row.merge_fields ? JSON.parse(String(row.merge_fields)) : [],
       isActive: row.is_active === 1,
       createdAt: row.created_at,
       updatedAt: row.updated_at,
@@ -105,7 +105,7 @@ export async function PATCH(
       category: row.category,
       version: row.version,
       templateContent: row.template_content,
-      mergeFields: row.merge_fields ? JSON.parse(row.merge_fields) : [],
+      mergeFields: row.merge_fields ? JSON.parse(String(row.merge_fields)) : [],
       isActive: row.is_active === 1,
       updatedAt: row.updated_at,
     });

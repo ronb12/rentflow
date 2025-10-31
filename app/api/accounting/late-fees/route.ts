@@ -41,21 +41,22 @@ export async function POST(request: NextRequest) {
     const due = new Date(dueDate);
     const now = new Date();
     const daysLate = Math.floor((now.getTime() - due.getTime()) / (1000 * 60 * 60 * 24));
-    const gracePeriod = rule.grace_period_days || 5;
+    const gracePeriod = Number(rule.grace_period_days ?? 5);
 
     if (daysLate <= gracePeriod) {
       return NextResponse.json({ lateFeeAmount: 0, appliedRule: rule, daysLate });
     }
 
-    let lateFee = 0;
+    let lateFee: number = 0;
 
     if (rule.fee_type === 'fixed') {
-      lateFee = rule.fixed_amount || 0;
+      lateFee = Number(rule.fixed_amount ?? 0);
     } else if (rule.fee_type === 'percentage') {
-      const percentage = (rule.percentage_amount || 0) / 100;
-      lateFee = Math.round(amount * percentage);
-      if (rule.max_fee_amount && lateFee > rule.max_fee_amount) {
-        lateFee = rule.max_fee_amount;
+      const percentage = Number(rule.percentage_amount ?? 0) / 100;
+      lateFee = Math.round(Number(amount) * percentage);
+      const maxFee = rule.max_fee_amount != null ? Number(rule.max_fee_amount) : null;
+      if (maxFee != null && lateFee > maxFee) {
+        lateFee = maxFee;
       }
     }
 

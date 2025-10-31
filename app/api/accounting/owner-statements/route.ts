@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
        AND paid_date <= ?`,
       [organizationId, start, end]
     );
-    const totalCollections = collectionsRows[0]?.total || 0;
+    const totalCollections = Number(collectionsRows[0]?.total ?? 0);
 
     // Calculate expenses from work_orders (maintenance costs)
     const expensesRows = await query(
@@ -92,9 +92,9 @@ export async function POST(request: NextRequest) {
        AND updated_at <= ?`,
       [organizationId, start, end]
     );
-    const totalExpenses = expensesRows[0]?.total || 0;
+    const totalExpenses = Number(expensesRows[0]?.total ?? 0);
 
-    const netAmount = totalCollections - totalExpenses;
+    const netAmount = Number(totalCollections) - Number(totalExpenses);
 
     const id = `stmt_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const now = Date.now();

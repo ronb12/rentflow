@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
           data.rentDueReminder !== false ? 1 : 0,
           data.lateNotice !== false ? 1 : 0,
           data.maintenanceUpdate !== false ? 1 : 0,
-          data.documentSigning !== false ? 1 additional : 0,
+          data.documentSigning !== false ? 1 : 0,
           organizationId,
           now,
           now,

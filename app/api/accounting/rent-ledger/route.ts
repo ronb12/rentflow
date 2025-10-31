@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query, initSchema } from '@/lib/db';
 
+let schemaInitialized = false;
+async function ensureSchema() {
+  if (!schemaInitialized) {
+    await initSchema();
+    schemaInitialized = true;
+  }
+}
+
 export async function GET(request: NextRequest) {
   try {
-    await initSchema();
+    await ensureSchema();
     const { searchParams } = new URL(request.url);
     const leaseId = searchParams.get('leaseId');
     const status = searchParams.get('status');

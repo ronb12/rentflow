@@ -147,16 +147,21 @@ export async function PUT(request: NextRequest) {
     let noticeLevel = 0;
     let noticeType = '';
 
-    if (daysLate >= settings.final_notice_days) {
+    const firstDays = Number(settings.first_notice_days ?? 3);
+    const secondDays = Number(settings.second_notice_days ?? 7);
+    const thirdDays = Number(settings.third_notice_days ?? 14);
+    const finalDays = Number(settings.final_notice_days ?? 30);
+
+    if (daysLate >= finalDays) {
       noticeLevel = 4;
       noticeType = 'final';
-    } else if (daysLate >= settings.third_notice_days) {
+    } else if (daysLate >= thirdDays) {
       noticeLevel = 3;
       noticeType = 'third';
-    } else if (daysLate >= settings.second_notice_days) {
+    } else if (daysLate >= secondDays) {
       noticeLevel = 2;
       noticeType = 'second';
-    } else if (daysLate >= settings.first_notice_days) {
+    } else if (daysLate >= firstDays) {
       noticeLevel = 1;
       noticeType = 'first';
     }

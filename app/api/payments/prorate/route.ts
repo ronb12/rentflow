@@ -31,31 +31,31 @@ export async function POST(request: NextRequest) {
 
     const rule = ruleRows[0];
     const method = rule?.proration_method || prorationMethod;
-    const daysInMonth = rule?.days_in_month || 30;
+    const daysInMonth = Number(rule?.days_in_month ?? 30);
 
     const start = new Date(startDate);
     const end = new Date(endDate);
     const daysInPeriod = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
     
-    let proratedAmount = 0;
+    let proratedAmount: number = 0;
 
     if (method === 'daily') {
       // Daily proration
-      const dailyRate = monthlyRent / daysInMonth;
+      const dailyRate = Number(monthlyRent) / Number(daysInMonth);
       proratedAmount = Math.round(dailyRate * daysInPeriod * 100);
     } else if (method === 'exact') {
       // Exact days in month
       const daysInActualMonth = new Date(start.getFullYear(), start.getMonth() + 1, 0).getDate();
-      const dailyRate = monthlyRent / daysInActualMonth;
+      const dailyRate = Number(monthlyRent) / Number(daysInActualMonth);
       proratedAmount = Math.round(dailyRate * daysInPeriod * 100);
     }
 
     return NextResponse.json({
       proratedAmount,
-      monthlyRent: Math.round(monthlyRent * 100),
+      monthlyRent: Math.round(Number(monthlyRent) * 100),
       daysInPeriod,
       prorationMethod: method,
-      dailyRate: method === 'daily' ? monthlyRent / daysInMonth : monthlyRent / new Date(start.getFullYear(), start.getMonth() + 1, 0).getDate(),
+      dailyRate: method === 'daily' ? Number(monthlyRent) / Number(daysInMonth) : Number(monthlyRent) / new Date(start.getFullYear(), start.getMonth() + 1, 0).getDate(),
       calculation: {
         startDate: start.toISOString(),
         endDate: end.toISOString(),
